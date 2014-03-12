@@ -5,9 +5,9 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.OData;
-using ODataBreezejsSample.Models;
+using TradesAllocationApp.Models;
 
-namespace ODataBreezejsSample.Controllers
+namespace TradesAllocationApp.Controllers
 {
     public class TodoListsController : ODataController
     {

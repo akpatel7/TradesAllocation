@@ -4,6 +4,8 @@
 
 @Html.Partial("~/Views/Shared/_AllocationHeader.cshtml")
 
+
+
 <div ng-app="app" ng-include="'/app/partials/eztree.html'"></div>
 
 @section scripts
@@ -27,6 +29,10 @@
     <script src="~/app/datacontext.js"></script>
     <script src="~/app/entityManagerFactory.js"></script>
     <script src="~/app/logger.js"></script>
+
+    <!-- UI Custom Libs-->
+    @*<script src="~/Scripts/jquery.ui.touch-punch.min.js"></script>*@
+    <script src="~/Scripts/jquery.mjs.nestedSortable.js"></script>
     <script src="~/app/ezTree.js"></script>
     @*<script src="~/app/todolists.js"></script>
         <script src="~/app/todolist-detail.js"></script>*@

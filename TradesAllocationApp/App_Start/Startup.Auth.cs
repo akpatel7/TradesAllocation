@@ -3,7 +3,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
 
-namespace ODataBreezejsSample
+namespace TradesAllocationApp
 {
     public partial class Startup
     {

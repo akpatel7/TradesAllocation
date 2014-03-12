@@ -1,12 +1,12 @@
 ﻿using Microsoft.Data.Edm;
-using ODataBreezejsSample.Models;
+using TradesAllocationApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.OData.Batch;
 
-namespace ODataBreezejsSample
+namespace TradesAllocationApp
 {
     public static class WebApiConfig
     {

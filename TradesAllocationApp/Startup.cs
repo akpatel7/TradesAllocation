@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(ODataBreezejsSample.Startup))]
-namespace ODataBreezejsSample
+[assembly: OwinStartupAttribute(typeof(TradesAllocationApp.Startup))]
+namespace TradesAllocationApp
 {
     public partial class Startup
     {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ODataBreezejsSample.Models
+namespace TradesAllocationApp.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

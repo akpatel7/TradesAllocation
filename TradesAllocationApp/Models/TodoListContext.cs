@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 
-namespace ODataBreezejsSample.Models
+namespace TradesAllocationApp.Models
 {
     public class TodoListContext : DbContext
     {

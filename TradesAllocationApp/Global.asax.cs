@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace ODataBreezejsSample
+namespace TradesAllocationApp
 {
     public class MvcApplication : System.Web.HttpApplication
     {

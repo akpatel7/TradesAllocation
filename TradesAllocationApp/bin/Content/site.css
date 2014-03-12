@@ -1,0 +1,163 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.ng-cloak {
+    display: none
+}
+
+/* Application styles */
+
+input.todolist-title {
+    font-size:x-large; 
+    width: 60%
+}
+
+input.todoitem-description {
+    font-size:large; 
+    width: 60%
+}
+
+.app-command-bar {
+    padding: 0.5em 0;
+}
+
+.app-todo-text {
+   padding: 0.25em 0; 
+}
+
+/* Bootstrap overrides */
+.alert {
+    padding: 0.5em;
+}
+.glyphicon-remove {
+    color:crimson;
+}
+
+.panel-heading .glyphicon-remove {
+    color:#ff9c00;
+    font-size: 70%;
+}
+
+/* Animations */
+
+.animate-if.ng-enter, .animate-if.ng-leave {
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.25s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.25s;
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.25s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.25s;
+}
+ 
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+  opacity:0;
+}
+ 
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+[ng-cloak] {
+  display: none;
+}
+* {
+  box-sizing: border-box
+}
+/*
+body {
+  font: 12px/16px helvetica, arial, sans-serif;
+  background: #eee;
+}*/
+ol {
+  margin:4px 0;
+  border: 0 none transparent;
+  padding: 0;
+  background:#eee;
+}
+li {
+  list-style:none;
+  margin: 1px;
+  border: 1px solid #ddd;
+  padding: 8px 8px 4px 8px;
+  background: #fff;
+}
+.ui-sortable li {
+  cursor: move;
+}
+.live input, .shadow input {
+  margin: 0;
+  border: 1px solid #ddd;
+  padding: 1px;
+  font: inherit;
+  font-weight: bold;
+  height:2em;
+}
+.ui-state-highlight {
+  border: 1px solid #fc0;
+  background: #ffe;
+}
+.live, .shadow {
+  float: left;
+  width: 45%;
+  margin-right: 5%;
+}
+.shadow {
+  opacity: 0.7;
+}
+.debug {
+  clear: both;
+}
+.debug textarea {
+  width: 100%;
+  height: 40em;
+  font: 10px/13px monospace;
+}
+textarea, input {
+  outline: none;
+}
+.pregnant {
+  border: 1px solid #ddd;
+}
+.bg0 { background:#fcc; }
+.bg1 { background:#ffc; }
+.bg2 { background:#cfc; }
+.bg3 { background:#cff; }
+.bg4 { background:#ccf; }
+.bg5 { background:#fcf; }
+.minimized > ol > li { display:none; }
+.minimized > ol {   border: 0 none transparent; }
+.toggle { border: 0 none transparent; background:transparent; width:2em; color:#aaa; }
+button { cursor: pointer }

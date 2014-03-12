@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
-using ODataBreezejsSample.Models;
+using TradesAllocationApp.Models;
 
-namespace ODataBreezejsSample.Controllers
+namespace TradesAllocationApp.Controllers
 {
     [Authorize]
     public class AccountController : Controller
