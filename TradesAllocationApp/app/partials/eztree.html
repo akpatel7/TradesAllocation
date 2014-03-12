@@ -1,0 +1,38 @@
+﻿<!--<div ng-app="app" ng-cloak>-->
+    <div ng-controller="TreeController">
+        <div>
+            <button ng-click="addChild(data)">+ New</button>
+        </div>
+        <div class="live">
+            <ol ui-nested-sortable="{
+        listType: 'ol',
+        items: 'li',
+        doNotClear: true,
+        placeholder: 'ui-state-highlight',
+        forcePlaceholderSize: true,
+        toleranceElement: '> div'
+      }" ui-nested-sortable-stop="update($event, $ui)">
+                <li ez-tree="child in data.children at ol" ng-class="{minimized:child.minimized}">
+                    <div>
+                        <button class="toggle" ng-click="toggleMinimized(child)" ng-switch on="child.minimized"><span ng-switch-when="true">&#x25B6;</span><span ng-switch-default>&#x25BC;</span></button>
+                        <input ng-model="child.title" />
+                        <button ng-click="addChild(child)">+</button>
+                        <button ng-click="remove(child)">x</button>
+                    </div>
+                    <ol ng-class="{pregnant:child.children.length}"></ol>
+                </li>
+            </ol>
+        </div>
+        <div class="shadow">
+            <ol>
+                <li ez-tree="child in data.children at ol" class="bg{{$depth%6}}" ng-class="{minimized:child.minimized}">
+                    <div>
+                        <input disabled value="{{child.title}}" /> <em>({{$depth}})</em>
+
+                    </div>
+                    <ol ng-class="{pregnant:child.children.length}"></ol>
+                </li>
+            </ol>
+        </div>
+    </div>
+<!--</div>-->
