@@ -3,3 +3,7 @@ TradesAllocationApp/App_Data/TradesAllocationApp.Models.TodoListContext_log.ldf
 TradesAllocationApp/TradeAllocationsApp.v12.suo
 TradesAllocationApp/app/.idea/workspace.xml
 *.cache
+TradesAllocationApp/bin/TradesAllocationApp.dll
+TradesAllocationApp/bin/TradesAllocationApp.pdb
+TradesAllocationApp/obj/Debug/TradesAllocationApp.dll
+TradesAllocationApp/obj/Debug/TradesAllocationApp.pdb
