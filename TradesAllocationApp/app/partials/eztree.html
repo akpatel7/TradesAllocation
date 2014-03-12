@@ -14,17 +14,99 @@
       }" ui-nested-sortable-stop="update($event, $ui)">
                 <li ez-tree="child in data.children at ol" ng-class="{minimized:child.minimized}">
                     <div><label>Level: {{$depth + 1}}</label></div>
-                    <div>
-                        <input ng-model="child.title" />
-                        <button class="toggle btn" ng-click="toggleMinimized(child)" ng-switch on="child.minimized"><span ng-switch-when="true">&#x25B6;</span><span ng-switch-default>&#x25BC;</span></button>
-                        <button class="btn btn-danger" ng-click="remove(child)"><span class="glyphicon glyphicon-trash"></span></button>
-                        <button class="btn btn-success" ng-click="addChild(child)"><span class="glyphicon glyphicon-plus"></span></button>
+                    <div class="control-group">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <label>Object:</label>
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control" ng-model="child.object" id="portofolio-name" ng-required="true">
+                            </div>
+                            <div class="col-xs-1">
+                                <label>Comments:</label>
+                            </div>
+                            <div class="col-xs-6">
+                                <input type="text" class="form-control" ng-model="child.comments" id="portofolio-name" ng-required="true">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <label>Allocation:</label>
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control" ng-model="child.allocation" id="portofolio-name" ng-required="true">
+                            </div>
+                            <div class="col-xs-1">
+                                <label>Absolute Return:</label>
+                            </div>
+                            <div class="col-xs-2">
+                                <select id="absReturnType" class="form-control" ng-model="child.absReturnType" ng-required="true">
+                                    <option value="1">BPS</option>
+                                    <option value="2">Currency</option>
+                                    <option value="3">Percent</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-2">
+                                <select id="absReturnCurrency" class="form-control" ng-model="child.absCurrencyId" ng-required="true">
+                                    <option value="">{Currency}</option>
+                                    <option value="1">Canadian Dollar</option>
+                                    <option value="2">British Pound</option>
+                                    <option value="3">India Rupee</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-2">
+                                <input type="text" class="form-control" ng-model="child.absReturn" id="absReturn" placeholder="{Return}" ng-required="true">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <label>Benchmark:</label>
+                            </div>
+                            <div class="col-xs-2">
+                                <select id="benchmark" class="form-control" ng-model="child.absBenchmark" ng-required="true">
+                                    <option value="1">Allocation</option>
+                                    <option value="2">Range</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-2">
+                                <input type="text" ng-model="child.benchmarkLow" style='width:50px'>
+                                <label>to</label>
+                                <input type="text" ng-model="child.benchmarkHigh" style='width:50px'>
+                            </div>
+                            <div class="col-xs-1">
+                                <label>Return rel to Benchmark:</label>
+                            </div>
+                            <div class="col-xs-2">
+                                <select id="absReturnType" class="form-control" ng-model="child.absReturnType" ng-required="true">
+                                    <option value="1">BPS</option>
+                                    <option value="2">Currency</option>
+                                    <option value="3">Percent</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-2">
+                                <select id="absReturnCurrency" class="form-control" ng-model="child.absCurrencyId" ng-required="true">
+                                    <option value="">{Currency}</option>
+                                    <option value="1">Canadian Dollar</option>
+                                    <option value="2">British Pound</option>
+                                    <option value="3">India Rupee</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-2">
+                                <input type="text" class="form-control" ng-model="child.absReturn" id="absReturn" placeholder="{Return}" ng-required="true">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <span class="pull-right">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <button class="toggle btn pull-right" ng-click="toggleMinimized(child)" ng-switch on="child.minimized"><span ng-switch-when="true">&#x25B6;</span><span ng-switch-default>&#x25BC;</span></button>
+                            <button class="btn btn-danger pull-right" ng-click="remove(child)"><span class="glyphicon glyphicon-trash"></span></button>
+                            <button class="btn btn-success pull-right" ng-click="addChild(child)"><span class="glyphicon glyphicon-plus"></span></button>
+                        </div>
                     </div>
                     <ol ng-class="{pregnant:child.children.length}"></ol>
                 </li>
             </ol>
         </div>
-        <div class="shadow">
+        <!--<div class="shadow">
             <ol>
                 <li ez-tree="child in data.children at ol" class="bg{{$depth%6}}" ng-class="{minimized:child.minimized}">
                     <div>
@@ -34,6 +116,6 @@
                     <ol ng-class="{pregnant:child.children.length}"></ol>
                 </li>
             </ol>
-        </div>
+        </div>-->
     </div>
 </div>

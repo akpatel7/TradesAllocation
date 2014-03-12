@@ -118,7 +118,15 @@ app.controller('TreeController', function ($scope, $timeout) {
 
     $scope.data = {
         children: [{
-            title: '',
+            object: '',
+            allocation: '',
+            benchmarkLow: '',
+            benchmarkHigh: '',
+            comments: '',
+            absReturnType: '',
+            absCurrencyid: '',
+            absReturn: '',
+            returnRelToBenchmark: '',
             children: []
         }]
     };
@@ -127,7 +135,15 @@ app.controller('TreeController', function ($scope, $timeout) {
     };
     $scope.addChild = function (child) {
         child.children.push({
-            title: '',
+            object: '',
+            allocation: '',
+            benchmarkLow: '',
+            benchmarkHigh: '',
+            comments: '',
+            absReturnType: '',
+            absCurrencyid: '',
+            absReturn: '',
+            returnRelToBenchmark: '',
             children: []
         });
     };
