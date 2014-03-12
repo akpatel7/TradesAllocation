@@ -218,6 +218,7 @@
     <Content Include="app\ezTree.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="app\formcontroller.js" />
     <Content Include="app\images\logo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

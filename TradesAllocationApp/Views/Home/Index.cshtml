@@ -4,9 +4,138 @@
 
 @Html.Partial("~/Views/Shared/_AllocationHeader.cshtml")
 
+<div ng-app="app" ng-controller="Controller">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="service">Service:</label>
+                </div>
+                <div class="col-sm-3">
+                    <select id="portofolio-service" class="form-control" ng-model="portofolio.service" ng-required="true">
+                        <option value="">{Service}</option>
+                        <option value="1">BCA</option>
+                        <option value="2">GIS</option>
+                        <option value="3">GPS</option>
+                        <option value="4">USBS</option>
+                        <option value="5">USIS</option>
+                        <option value="6">GRES</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="service">Portofolio Type:</label>
+                </div>
+                <div class="col-sm-3">
+                    <select id="portofolio-service" class="form-control" ng-model="portofolio.type" ng-required="true">
+                        <option value="">{Portofolio Type}</option>
+                        <option value="1">Absolute</option>
+                        <option value="2">Weighted</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="service">Portofolio Name:</label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" ng-model="portofolio.name" id="portofolio-name" placeholder="{Portofolio Name}" ng-required="true">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="service">Portofolio Benchmark:</label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" ng-model="portofolio.benchmark" id="portofolio-service" placeholder="{Benchmark}" ng-required="true">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="service">Portofolio Duration:</label>
+                </div>
+                <div class="col-sm-3">
+                    <select id="portofolio-service" class="form-control" ng-model="portofolio.duration">
+                        <option value="">{Duration}</option>
+                        <option value="1">Below Benchmark</option>
+                        <option value="2">Slightly below benchmark</option>
+                        <option value="3">Benchmark</option>
+                        <option value="4">Slightly above benchmark</option>
+                        <option value="5">Above Benchmark</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="service">Updated/Created Date:</label>
+                </div>
+                <div class="col-md-3">
+                    <p class="input-group">
+                        <input type="text" class="form-control" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-text="Close" ng-required="true"/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="service">Portofolio Comments:</label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" ng-model="portofolio.comments" id="portofolio-service" placeholder="{Comments}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="service">Portofolio Performance Model:</label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" ng-model="portofolio.performanceModel" id="portofolio-service" placeholder="{Performance Model}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="service">Portofolio Status:</label>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" ng-model="portofolio.status" id="portofolio-service" placeholder="{Status}">
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row" ng-include="'/app/partials/eztree.html'"></div>
+    <div class="row">
+        <button class="btn btn-primary pull-left" ng-click="reset()">Cancel</button><span> </span>
+        <button class="btn btn-primary pull-right" ng-click="update(portofolio)">Create</button><span> </span>
+        <button class="btn btn-primary pull-right" ng-click="update(portofolio)">Create and add another</button><span> </span>      
+    </div>
+   
+    <div class="row">
+        <br />
+        <br />
+        <pre>form = {{portofolio | json}}</pre>
+        <pre>master = {{master | json}}</pre>
+    </div>
+</div>
 
+<script>
+    function Controller($scope) {
+        $scope.master = {};
 
-<div ng-app="app" ng-include="'/app/partials/eztree.html'"></div>
+        $scope.update = function (user) {
+            $scope.master = angular.copy(user);
+        };
+
+        $scope.reset = function () {
+            $scope.user = angular.copy($scope.master);
+        };
+
+        $scope.reset();
+    }
+</script>
+
 
 @section scripts
 {
@@ -36,4 +165,5 @@
     <script src="~/app/ezTree.js"></script>
     @*<script src="~/app/todolists.js"></script>
         <script src="~/app/todolist-detail.js"></script>*@
+    <!--controllers-->
 }

@@ -1,7 +1,7 @@
-﻿<!--<div ng-app="app" ng-cloak>-->
+﻿<div ng-app="app" ng-cloak>
     <div ng-controller="TreeController">
         <div>
-            <button ng-click="addChild(data)">+ New</button>
+            <button class="btn btn-success" ng-click="addChild(data)"><span class="glyphicon glyphicon-plus"></span>New Allocation</button>
         </div>
         <div class="live">
             <ol ui-nested-sortable="{
@@ -13,11 +13,12 @@
         toleranceElement: '> div'
       }" ui-nested-sortable-stop="update($event, $ui)">
                 <li ez-tree="child in data.children at ol" ng-class="{minimized:child.minimized}">
+                    <div><label>Level: {{$depth + 1}}</label></div>
                     <div>
-                        <button class="toggle" ng-click="toggleMinimized(child)" ng-switch on="child.minimized"><span ng-switch-when="true">&#x25B6;</span><span ng-switch-default>&#x25BC;</span></button>
                         <input ng-model="child.title" />
-                        <button ng-click="addChild(child)">+</button>
-                        <button ng-click="remove(child)">x</button>
+                        <button class="toggle btn" ng-click="toggleMinimized(child)" ng-switch on="child.minimized"><span ng-switch-when="true">&#x25B6;</span><span ng-switch-default>&#x25BC;</span></button>
+                        <button class="btn btn-danger" ng-click="remove(child)"><span class="glyphicon glyphicon-trash"></span></button>
+                        <button class="btn btn-success" ng-click="addChild(child)"><span class="glyphicon glyphicon-plus"></span></button>
                     </div>
                     <ol ng-class="{pregnant:child.children.length}"></ol>
                 </li>
@@ -35,4 +36,4 @@
             </ol>
         </div>
     </div>
-<!--</div>-->
+</div>

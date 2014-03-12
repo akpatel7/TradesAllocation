@@ -118,7 +118,7 @@ app.controller('TreeController', function ($scope, $timeout) {
 
     $scope.data = {
         children: [{
-            title: 'hello, world',
+            title: '',
             children: []
         }]
     };
