@@ -54,7 +54,6 @@ C:\Dev\BCA\TradesAllocation\TradesAllocationApp\bin\Scripts\toastr.min.js.map
 C:\Dev\BCA\TradesAllocation\TradesAllocationApp\bin\Scripts\jquery-1.10.2.intellisense.js
 C:\Dev\BCA\TradesAllocation\TradesAllocationApp\bin\Scripts\breeze.intellisense.js
 C:\Dev\BCA\TradesAllocation\TradesAllocationApp\bin\Scripts\jquery.validate-vsdoc.js
-C:\Dev\BCA\TradesAllocation\TradesAllocationApp\bin\TradesAllocationApp.dll.config
 C:\Dev\BCA\TradesAllocation\TradesAllocationApp\bin\TradesAllocationApp.dll
 C:\Dev\BCA\TradesAllocation\TradesAllocationApp\bin\TradesAllocationApp.pdb
 C:\Dev\BCA\TradesAllocation\TradesAllocationApp\bin\Antlr3.Runtime.dll

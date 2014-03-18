@@ -184,6 +184,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\EdmBuilder.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\ODataConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -201,6 +202,7 @@
     <Compile Include="Models\TodoListContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Trades\AllocationEntities.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js">
@@ -330,6 +332,11 @@
     <Content Include="Content\site.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts-Build\App\Directives\Allocations\lazyDirectives.js" />
+    <Content Include="Scripts-Build\App\Directives\TreeGrid.js" />
+    <Content Include="Scripts-Build\App\Lib\requirejs\require.js" />
+    <Content Include="Scripts-Build\App\Lib\TreeGrid\GridE.js" />
+    <Content Include="Scripts-Build\App\main.js" />
     <Content Include="Scripts\angular-animate.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -345,6 +352,10 @@
     <Content Include="Scripts\angular.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\App\Controllers\Allocations\AllocationsTreeGridController.js" />
+    <Content Include="Scripts\App\Directives\TreeGrid.js" />
+    <Content Include="Scripts\App\Directives\TreeGridConfig.js" />
+    <Content Include="Scripts\App\Services\AllocationsDataService.js" />
     <Content Include="Scripts\bootstrap.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -364,6 +375,7 @@
       <DependentUpon>toastr.css</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\less\tree-grid-menu.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -417,6 +429,235 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\Lib\TreeGrid\BCA\Backgrounds.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\Button.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\FastPanel1.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\FastPanel2.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\Filter.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\Gantt.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\GanttLineA.png" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\GanttLineB.png" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\GanttLineC.png" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\GanttLineD.png" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\Grid.css" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\HScroll.png" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\Menu.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\Panel.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\Sort.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\Toolbar.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\Tree.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\TreeN.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\BCA\VScroll.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\Backgrounds.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\BackgroundsRight.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\Button.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\ButtonSpace.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\FastPanel1.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\FastPanel2.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\Filter.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\Gantt.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\GanttLineA.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\GanttLineB.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\GanttLineC.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\GanttLineD.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\Grid.css" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\HScroll.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\Menu.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\Panel.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\Sort.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\Toolbar.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\Toolbar.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\Tree.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\TreeN.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Borders\VScroll.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\Backgrounds.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\Button.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\FastPanel1.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\FastPanel2.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\Filter.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\Gantt.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\GanttLineA.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\GanttLineB.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\GanttLineC.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\GanttLineD.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\Grid.css" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\HScroll.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\MainBG.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\Menu.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\Panel.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\Sort.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\Toolbar.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\Tree.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\TreeN.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Colors\VScroll.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Defaults.xml" />
+    <Content Include="Scripts\Lib\TreeGrid\Ding.wav" />
+    <Content Include="Scripts\Lib\TreeGrid\Drag.cur" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\Backgrounds.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\BackgroundsRight.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\Button.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\ButtonSpace.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\FastPanel1.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\FastPanel2.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\Filter.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\Gantt.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\GanttLineA.png" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\GanttLineB.png" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\GanttLineC.png" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\GanttLineD.png" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\Grid.css" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\HScroll.png" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\Menu.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\Panel.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\Sort.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\Toolbar.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\Toolbar.png" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\Tree.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\TreeN.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\ExtJS\VScroll.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\GridE.js" />
+    <Content Include="Scripts\Lib\TreeGrid\GridEOnDemand.js" />
+    <Content Include="Scripts\Lib\TreeGrid\Help.html" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\Backgrounds.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\Button.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\FastPanel1.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\FastPanel2.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\Filter.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\Gantt.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\GanttLineA.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\GanttLineB.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\GanttLineC.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\GanttLineD.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\Grid.css" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\HScroll.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\Menu.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\Panel.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\Sort.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\Toolbar.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\Tree.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\TreeN.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Light\VScroll.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\Backgrounds.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\BackgroundsRight.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\Button.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\ButtonSpace.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\FastPanel1.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\FastPanel2.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\Filter.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\Gantt.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\GanttLineA.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\GanttLineB.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\GanttLineC.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\GanttLineD.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\Grid.css" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\HScroll.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\Menu.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\Panel.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\Sort.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\Toolbar.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\Toolbar.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\Tree.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\TreeN.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Modern\VScroll.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\NoDrag.cur" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\Backgrounds.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\Button.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\FastPanel1.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\FastPanel2.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\Filter.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\Gantt.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\GanttLineA.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\GanttLineB.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\GanttLineC.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\GanttLineD.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\Grid.css" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\HScroll.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\Menu.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\Panel.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\Sort.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\Toolbar.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\Tree.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\TreeN.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Office\VScroll.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\Button.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\FastPanel1.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\FastPanel2.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\Filter.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\Gantt.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\GanttLineA.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\GanttLineB.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\GanttLineC.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\GanttLineD.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\Grid.css" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\HScroll.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\Menu.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\Panel.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\Sort.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\Toolbar.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\Tree.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\TreeN.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Plain\VScroll.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\Backgrounds.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\BackgroundsRight.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\Button.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\ButtonSpace.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\FastPanel1.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\FastPanel2.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\Filter.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\Gantt.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\GanttLineA.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\GanttLineB.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\GanttLineC.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\GanttLineD.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\Grid.css" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\HScroll.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\Menu.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\Panel.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\Sort.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\Toolbar.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\Toolbar.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\Tree.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\TreeN.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Query\VScroll.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\Backgrounds.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\Button.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\FastPanel1.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\FastPanel2.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\Filter.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\Gantt.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\GanttLineA.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\GanttLineB.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\GanttLineC.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\GanttLineD.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\Grid.css" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\HScroll.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\Menu.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\Panel.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\Sort.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\Toolbar.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\Tree.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\TreeN.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Robust\VScroll.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\Backgrounds.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\Button.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\FastPanel1.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\FastPanel2.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\Filter.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\Gantt.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\GanttLineA.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\GanttLineB.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\GanttLineC.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\GanttLineD.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\Grid.css" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\HScroll.png" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\Menu.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\Panel.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\Sort.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\Toolbar.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\Tree.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\TreeN.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Standard\VScroll.gif" />
+    <Content Include="Scripts\Lib\TreeGrid\Text.xml" />
     <Content Include="Scripts\modernizr-2.6.2.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -426,6 +667,8 @@
     <Content Include="Scripts\respond.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\Specs\unit\Controllers\Allocations\AllocationsTreeGridController.spec.js" />
+    <Content Include="Scripts\Specs\unit\Directives\TreeGrid.spec.js" />
     <Content Include="Scripts\toastr.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -435,6 +678,7 @@
     <Content Include="Scripts\_references.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SqlScripts\AllocationsInstanceData.sql" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -470,6 +714,7 @@
     <Content Include="Views\Shared\_AllocationHeader.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\constants\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
