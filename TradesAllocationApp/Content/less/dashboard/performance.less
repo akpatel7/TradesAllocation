@@ -1,0 +1,119 @@
+
+.performance, .GridMain1 .GridMain2 .performance {
+
+    .dropdown-menu.ng-valid-date {
+        background-color: #fff;
+
+        button {
+            background: none;
+            border: none;
+        }
+    }
+
+    .chart {
+        position: relative;
+    }
+
+    .empty {
+        font-size: 2em;
+        color: #999;
+        margin-left: 5em;
+        padding: 2em 0;
+    }
+
+    .chartWrapper {
+        height: 400px;
+        position: relative;
+    }
+
+    .performanceChart {
+        position: absolute;
+        left: 130px;
+    }
+
+    .rangeSelector {
+        padding: 1em 1em;
+        background-color: @blueBC;
+        color: @blueC;
+        font-size: 0.9em;
+
+        strong {
+            text-transform: uppercase;
+            color: @blueG;
+            padding-right: 1em;
+        }
+
+        select {
+            width: 9em;
+            margin-right: 5em;
+            background-color: #2c2c2c;
+            background-image: none;
+            background-repeat: no-repeat;
+            filter: none;
+
+
+            option[disabled="disabled"] {
+                color: @blueD;
+            }
+        }
+
+        i {
+            padding-left: 0.5em;
+            color: @blueG;
+        }
+
+            i:hover {
+                cursor: pointer;
+            }
+
+        input, select {
+            margin: 0 0.5em;
+            background: @blueBC;
+            color: @blueG;
+            border-color: @blueC;
+        }
+
+        input {
+            width: 100px;
+        }
+
+        .zoom {
+            width: 150px;
+        }
+    }
+
+    .axis-label.rightAxis {
+        left: 1120px;
+    }
+
+    .axis-label {
+        position: absolute;
+        top: 200px;
+        height: 50px;
+        -moz-transform: rotate(-90.0deg); /* FF3.5+ */
+        -o-transform: rotate(-90.0deg); /* Opera 10.5 */
+        -webkit-transform: rotate(-90.0deg); /* Saf3.1+, Chrome */
+        -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)"; /* IE8 */
+        font-size: @fontSizeMedium;
+        text-align: center;
+        font-family: 'Proximanova-Bold';
+        float: left;
+
+        &.absolute {
+            color: @black;
+            padding: 3px 10px;
+        }
+
+        > .relative {
+            color: @blueC;
+            padding: 3px 10px;
+        }
+
+        > .versus {
+            color: @blueB;
+            background-color: @blueC;
+            padding: 3px 10px;
+            margin-top: 2px;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+﻿.following-action-func() {
+     &:hover {
+        text-decoration: none;
+    }
+    // off / muted mode
+    .icon-arrow-right-off,
+    .icon-arrow-right-hover {
+        display: inline;
+        color: @blueC;
+        background-color: transparent;
+    }
+    // on /active mode
+    .icon-arrow-right-on {
+        color: @blueH;
+        display: inline;
+    }
+    // half state mode
+    .icon-arrow-right-half {
+        color: @blueH;
+        display: inline;
+    }
+}
+
+.following-action {
+    .following-action-func();
+}
+

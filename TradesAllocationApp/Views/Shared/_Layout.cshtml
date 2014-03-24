@@ -1,49 +1,64 @@
-﻿<!DOCTYPE html>
-<html>
+﻿@using System.Configuration
+@using System.Web.Optimization
+@using BCAResearch.Auth
+
+
+<!DOCTYPE html>
+
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-controller="AppController">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Breeze/OData</title>
-    <link rel="shortcut icon" type="image/png" href="/app/images/logo.png">
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=edge;" />
+    <meta name="description" content="BCA Analytics">
+    <meta name="author" content="BCA" />
+    @Html.MetaAcceptLanguage()
+    <title>@ViewBag.Title</title>
+    <!--[if lte IE 8]>
+        <script>
+            document.createElement('ng-include');
+            document.createElement('ng-pluralize');
+            document.createElement('ng-view');
+ 
+            // Optionally these for CSS
+            document.createElement('ng:include');
+            document.createElement('ng:pluralize');
+            document.createElement('ng:view');
+        </script>
+    <![endif]-->    
+    @Styles.Render("~/Content/css/bundle")
+    <!--[if lt IE 9]>
+        <script src="~/Scripts/html5shiv.js"></script>
+        <link type="text/css" rel="stylesheet" href="~/Content/css/ie8.css" />
+    <![endif]-->
+    <script type="text/javascript">
+        window.config = {
+            isisRootApi: "@ConfigurationManager.AppSettings["ServicePath"]",
+        clientServicePath: "@ConfigurationManager.AppSettings["DashboardClientServicePath"]",
+        logoutUrl: "@(BcaCms.LoginUrl() + "/logout")",
+        loginUrl: "@(BcaCms.LoginUrl())",
+        banBaseUrl: '@ConfigurationManager.AppSettings["BanBaseUrl"]',
+        forbiddenUrl: "@BcaCms.ForbiddenUrl()",
+        dashboardBaseUrl: '@ConfigurationManager.AppSettings["DashboardBaseUrl"]',
+        reportsBaseUrl: '@ConfigurationManager.AppSettings["ReportsBaseUrl"]'
+        };
+</script>
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
+    <body >
+        <div class="wrap">
+            <header>
+            </header>
+            <div class="body @ViewBag.BrowserVersion" >
+                @RenderBody()
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Allocations Demo", "Index", "Home")</li>
-                    <li>@Html.ActionLink("BOWA", "Bowa", "Home")</li>
-                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+            <div class="push"></div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr /> 
-    </div>
-    <div>
         <footer>
-            <p>&copy; @DateTime.Now.Year - BCA Research</p>
+            @Html.Partial("~/Views/Shared/_Footer.cshtml")
         </footer>
-    </div>
+        @Html.RequireJs("main.js")
+   
+    </body>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryui")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-</body>
+
 </html>

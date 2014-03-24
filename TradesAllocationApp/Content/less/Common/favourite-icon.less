@@ -1,0 +1,26 @@
+﻿.favourite-action-func() {
+    &:hover {
+        text-decoration: none;
+    }
+    // off / muted mode
+    .icon-star-off,
+    .icon-star-hover {
+        display: inline;
+        color: @blueC;
+        background-color: transparent;
+    }
+    // on /active mode
+    .icon-star-on {
+        color: @blueH;
+        display: inline;
+    }
+    // half state mode
+    .icon-star-half-empty, .icon-star-half {
+        color: @blueH;
+        display: inline;
+    }
+}
+
+.favourite-action {
+    .favourite-action-func();
+}

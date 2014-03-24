@@ -91,7 +91,15 @@ define([], function () {
                 controller: 'AllocationsController',
                 // lazy load allocations directive (eg. TreeGrid), so we dont load big libraries upfront
                 dependencies: ['App/Directives/Allocations/lazyDirectives']                
-            }
+            },
+             '/crud/allocations': {
+            //action: 'home.allocations',
+            title: 'Allocations CRUD',
+            templateUrl: '/Templates/Trades/AllocationsCRUD.html',
+            controller: 'AllocationsController',
+            // lazy load allocations directive (eg. TreeGrid), so we dont load big libraries upfront
+            dependencies: ['App/Directives/Allocations/lazyDirectives']                
+    }
         }
     };
 

@@ -1,0 +1,74 @@
+[voting] {
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .up:after, .down:after {
+        content: '\a';
+        display: block;
+    }
+
+    i {
+        padding: 2px;
+        font-size: @fontSizeExtraLarge;
+        span {
+            span {
+                position: relative;
+                top: -0.1em;
+                left: 0.2em;
+                min-width: 1.5em;
+                font-size: @fontSizeMedium;
+                font-family: @strongFontFamily;
+
+            }
+        }
+    }
+
+    .up, .down {
+        display: inline-block;
+    }
+    a .up, a .down {
+        cursor: pointer;
+    }
+
+    a:hover .up i
+    {
+        color: @upVoteColour;
+        opacity: 0.6;
+    }
+    a:hover .down i
+    {
+        color: @downVoteColour;
+        opacity: 0.6;
+    }
+    .icon-off {
+        border-style: none;
+        color: @grayLight;
+    }
+
+    a:hover .icon-off {
+        background-color: transparent;
+        color: @grayLight;
+    }
+     
+    i.icon-on {
+        border-style: none;
+        background-color: transparent;
+        &:hover {
+            background-color: transparent;
+       }
+    }
+
+    .up {
+        .icon-on {
+            color: @upVoteColour;
+        }
+    }
+
+    .down {
+        .icon-on {
+            color: @downVoteColour;
+        }
+    }
+}

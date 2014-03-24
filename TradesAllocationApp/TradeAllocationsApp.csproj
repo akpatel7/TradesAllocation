@@ -195,6 +195,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\TodoItem.cs" />
@@ -254,6 +255,66 @@
     <Content Include="Content\breeze.directives.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\css\autoSuggest.css" />
+    <Content Include="Content\css\bootstrap-dashboard.css" />
+    <Content Include="Content\css\bootstrap-responsive.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\dashboard.css" />
+    <Content Include="Content\css\dashboard2.css" />
+    <Content Include="Content\css\ie8.css" />
+    <Content Include="Content\css\layout2.css" />
+    <Content Include="Content\css\oo_float_icon.gif" />
+    <Content Include="Content\css\oo_icon.gif" />
+    <Content Include="Content\css\oo_loading.gif" />
+    <Content Include="Content\css\oo_style.css" />
+    <Content Include="Content\css\oo_tab.png" />
+    <Content Include="Content\css\oo_tabie6.png" />
+    <Content Include="Content\css\oo_tab_icon.gif" />
+    <Content Include="Content\css\smoothness\images\animated-overlay.gif" />
+    <Content Include="Content\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\css\smoothness\jquery-ui.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\proximanova-black-webfont.svg" />
+    <Content Include="Content\fonts\proximanova-bold-webfont.svg" />
+    <Content Include="Content\fonts\proximanova-boldit-webfont.svg" />
+    <Content Include="Content\fonts\proximanova-extrabold-webfont.svg" />
+    <Content Include="Content\fonts\proximanova-light-webfont.svg" />
+    <Content Include="Content\fonts\proximanova-regitalic-webfont.svg" />
+    <Content Include="Content\fonts\proximanova-regular-webfont.svg" />
+    <Content Include="Content\fonts\proximanova-regularitalic-webfont.svg" />
+    <Content Include="Content\fonts\proximanova-semibold-webfont.svg" />
+    <Content Include="Content\fonts\proximanova-semibolditalic-webfont.svg" />
+    <Content Include="Content\fonts\proximanovacond-regular-webfont.svg" />
+    <Content Include="Content\fonts\proxima_nova_light_italic-webfont.svg" />
+    <Content Include="Content\fonts\proxima_nova_semibold_italic-webfont.svg" />
+    <Content Include="Content\img\BCAlogo-DNA.gif" />
+    <Content Include="Content\img\calendar.png" />
+    <Content Include="Content\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\img\glyphicons-halflings.png" />
+    <Content Include="Content\img\loading.gif" />
+    <Content Include="Content\img\sprite-dashboard.gif" />
+    <Content Include="Content\img\trades\legend\closed.png" />
+    <Content Include="Content\img\trades\legend\drill-down.png" />
+    <Content Include="Content\img\trades\legend\export.png" />
+    <Content Include="Content\img\trades\legend\favourite.png" />
+    <Content Include="Content\img\trades\legend\filter.png" />
+    <Content Include="Content\img\trades\legend\more-info.png" />
+    <Content Include="Content\img\trades\legend\open.png" />
+    <Content Include="Content\img\trades\legend\sort.png" />
+    <Content Include="Content\img\trades\legend\strategy.png" />
+    <Content Include="Content\img\trades\legend\tactics.png" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -343,19 +404,46 @@
     <Content Include="Scripts\angular-animate.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\angular-cookies.js" />
+    <Content Include="Scripts\angular-cookies.min.js" />
+    <Content Include="Scripts\angular-csp.css" />
+    <Content Include="Scripts\angular-loader.js" />
+    <Content Include="Scripts\angular-loader.min.js" />
     <Content Include="Scripts\angular-mocks.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\angular-resource.js" />
+    <Content Include="Scripts\angular-resource.min.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular-sanitize.js" />
+    <Content Include="Scripts\angular-sanitize.min.js" />
+    <Content Include="Scripts\angular-scenario.js" />
+    <Content Include="Scripts\angular-touch.js" />
+    <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\angular.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\App\Controllers\Allocations\AllocationFollowController.js" />
+    <Content Include="Scripts\App\Controllers\Allocations\AllocationHistoryController.js" />
+    <Content Include="Scripts\App\Controllers\Allocations\AllocationsColumnController.js" />
     <Content Include="Scripts\App\Controllers\Allocations\AllocationsTreeGridController.js" />
+    <Content Include="Scripts\App\Controllers\Allocations\PortfolioAllocationCommentsController.js" />
+    <Content Include="Scripts\App\Controllers\Allocations\PortfolioAllocationRelatedReportsController.js" />
+    <Content Include="Scripts\App\Controllers\Allocations\PortfolioAllocationRelatedThingsController.js" />
+    <Content Include="Scripts\App\Controllers\controllers.js" />
+    <Content Include="Scripts\App\Controllers\Trades\PerformanceController.js" />
+    <Content Include="Scripts\App\Directives\Allocations\lazyDirectives.js" />
+    <Content Include="Scripts\App\Directives\directives.js" />
     <Content Include="Scripts\App\Directives\TreeGrid.js" />
     <Content Include="Scripts\App\Directives\TreeGridConfig.js" />
+    <Content Include="Scripts\App\routes.js" />
     <Content Include="Scripts\App\Services\AllocationsDataService.js" />
+    <Content Include="Scripts\App\Services\ConfigService.js" />
+    <Content Include="Scripts\App\Services\services.js" />
     <Content Include="Scripts\bootstrap.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -376,6 +464,136 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\less\tree-grid-menu.less" />
+    <Content Include="Scripts\angular-resource.min.js.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\angular-sanitize.min.js.map" />
+    <Content Include="Scripts\angular-touch.min.js.map" />
+    <Content Include="Scripts\angular-cookies.min.js.map" />
+    <Content Include="Scripts\angular-loader.min.js.map" />
+    <Content Include="Scripts\errors.json" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\proximanova-black-webfont.eot" />
+    <Content Include="Content\fonts\proximanova-black-webfont.ttf" />
+    <Content Include="Content\fonts\proximanova-black-webfont.woff" />
+    <Content Include="Content\fonts\proximanova-bold-webfont.eot" />
+    <Content Include="Content\fonts\proximanova-bold-webfont.ttf" />
+    <Content Include="Content\fonts\proximanova-bold-webfont.woff" />
+    <Content Include="Content\fonts\proximanova-boldit-webfont.eot" />
+    <Content Include="Content\fonts\proximanova-boldit-webfont.ttf" />
+    <Content Include="Content\fonts\proximanova-boldit-webfont.woff" />
+    <Content Include="Content\fonts\proximanova-extrabold-webfont.eot" />
+    <Content Include="Content\fonts\proximanova-extrabold-webfont.ttf" />
+    <Content Include="Content\fonts\proximanova-extrabold-webfont.woff" />
+    <Content Include="Content\fonts\proximanova-light-webfont.eot" />
+    <Content Include="Content\fonts\proximanova-light-webfont.ttf" />
+    <Content Include="Content\fonts\proximanova-light-webfont.woff" />
+    <Content Include="Content\fonts\proximanova-regitalic-webfont.eot" />
+    <Content Include="Content\fonts\proximanova-regitalic-webfont.ttf" />
+    <Content Include="Content\fonts\proximanova-regitalic-webfont.woff" />
+    <Content Include="Content\fonts\proximanova-regular-webfont.eot" />
+    <Content Include="Content\fonts\proximanova-regular-webfont.ttf" />
+    <Content Include="Content\fonts\proximanova-regular-webfont.woff" />
+    <Content Include="Content\fonts\proximanova-regularitalic-webfont.eot" />
+    <Content Include="Content\fonts\proximanova-regularitalic-webfont.ttf" />
+    <Content Include="Content\fonts\proximanova-regularitalic-webfont.woff" />
+    <Content Include="Content\fonts\proximanova-semibold-webfont.eot" />
+    <Content Include="Content\fonts\proximanova-semibold-webfont.ttf" />
+    <Content Include="Content\fonts\proximanova-semibold-webfont.woff" />
+    <Content Include="Content\fonts\proximanova-semibolditalic-webfont.eot" />
+    <Content Include="Content\fonts\proximanova-semibolditalic-webfont.ttf" />
+    <Content Include="Content\fonts\proximanova-semibolditalic-webfont.woff" />
+    <Content Include="Content\fonts\proximanovacond-regular-webfont.eot" />
+    <Content Include="Content\fonts\proximanovacond-regular-webfont.ttf" />
+    <Content Include="Content\fonts\proximanovacond-regular-webfont.woff" />
+    <Content Include="Content\fonts\proxima_nova_light_italic-webfont.eot" />
+    <Content Include="Content\fonts\proxima_nova_light_italic-webfont.ttf" />
+    <Content Include="Content\fonts\proxima_nova_light_italic-webfont.woff" />
+    <Content Include="Content\fonts\proxima_nova_semibold_italic-webfont.eot" />
+    <Content Include="Content\fonts\proxima_nova_semibold_italic-webfont.ttf" />
+    <Content Include="Content\fonts\proxima_nova_semibold_italic-webfont.woff" />
+    <Content Include="Content\less\bootstrap\alerts.less" />
+    <Content Include="Content\less\bootstrap\bootstrap.less" />
+    <Content Include="Content\less\bootstrap\close.less" />
+    <Content Include="Content\less\bootstrap\component-animations.less" />
+    <Content Include="Content\less\bootstrap\dropdowns.less" />
+    <Content Include="Content\less\bootstrap\forms.less" />
+    <Content Include="Content\less\bootstrap\grid.less" />
+    <Content Include="Content\less\bootstrap\layouts.less" />
+    <Content Include="Content\less\bootstrap\mixins.less" />
+    <Content Include="Content\less\bootstrap\navbar.less" />
+    <Content Include="Content\less\bootstrap\navs.less" />
+    <Content Include="Content\less\bootstrap\pagination.less" />
+    <Content Include="Content\less\bootstrap\popovers.less" />
+    <Content Include="Content\less\bootstrap\reset.less" />
+    <Content Include="Content\less\bootstrap\scaffolding.less" />
+    <Content Include="Content\less\bootstrap\tables.less" />
+    <Content Include="Content\less\bootstrap\type.less" />
+    <Content Include="Content\less\bootstrap\utilities.less" />
+    <Content Include="Content\less\bootstrap\variables.less" />
+    <Content Include="Content\less\Common\accordion.less" />
+    <Content Include="Content\less\Common\badge.less" />
+    <Content Include="Content\less\Common\bca-btn.less" />
+    <Content Include="Content\less\Common\breadcrumb.less" />
+    <Content Include="Content\less\Common\favourite-icon.less" />
+    <Content Include="Content\less\Common\filter.less" />
+    <Content Include="Content\less\Common\following-icon.less" />
+    <Content Include="Content\less\Common\fonts.less" />
+    <Content Include="Content\less\Common\footerbar.less" />
+    <Content Include="Content\less\Common\label.less" />
+    <Content Include="Content\less\Common\layout.less" />
+    <Content Include="Content\less\Common\nav-pills.less" />
+    <Content Include="Content\less\Common\navbar.less" />
+    <Content Include="Content\less\Common\responsive.less" />
+    <Content Include="Content\less\Common\scrollbar.less" />
+    <Content Include="Content\less\Common\tables.less" />
+    <Content Include="Content\less\Common\type.less" />
+    <Content Include="Content\less\Common\typeahead.less" />
+    <Content Include="Content\less\dashboard\alerts.less" />
+    <Content Include="Content\less\dashboard\allocations.less" />
+    <Content Include="Content\less\dashboard\annotations.less" />
+    <Content Include="Content\less\dashboard\bricks.less" />
+    <Content Include="Content\less\dashboard\chart.less" />
+    <Content Include="Content\less\dashboard\conviction.less" />
+    <Content Include="Content\less\dashboard\dashboard.less" />
+    <Content Include="Content\less\dashboard\date.less" />
+    <Content Include="Content\less\dashboard\dominant-view.less" />
+    <Content Include="Content\less\dashboard\evolutions.less" />
+    <Content Include="Content\less\dashboard\favourites.less" />
+    <Content Include="Content\less\dashboard\house-view-widget.less" />
+    <Content Include="Content\less\dashboard\ie8.less" />
+    <Content Include="Content\less\dashboard\legend.less" />
+    <Content Include="Content\less\dashboard\moreInfo.less" />
+    <Content Include="Content\less\dashboard\notifications.less" />
+    <Content Include="Content\less\dashboard\performance.less" />
+    <Content Include="Content\less\dashboard\popover.less" />
+    <Content Include="Content\less\dashboard\research.less" />
+    <Content Include="Content\less\dashboard\resetGrid.less" />
+    <Content Include="Content\less\dashboard\search.less" />
+    <Content Include="Content\less\dashboard\skinny-tiles.less" />
+    <Content Include="Content\less\dashboard\theme-tile.less" />
+    <Content Include="Content\less\dashboard\themes.less" />
+    <Content Include="Content\less\dashboard\tiles.less" />
+    <Content Include="Content\less\dashboard\trades.less" />
+    <Content Include="Content\less\dashboard\treegrid-menu.less" />
+    <Content Include="Content\less\dashboard\view-position.less" />
+    <Content Include="Content\less\dashboard\view-tile.less" />
+    <Content Include="Content\less\dashboard\views.less" />
+    <Content Include="Content\less\dashboard\voting.less" />
+    <Content Include="Content\less\dashboard\widget.less" />
+    <Content Include="Content\less\icons\bootstrap.less" />
+    <Content Include="Content\less\icons\core.less" />
+    <Content Include="Content\less\icons\extras.less" />
+    <Content Include="Content\less\icons\font-awesome-ie7.less" />
+    <Content Include="Content\less\icons\font-awesome.less" />
+    <Content Include="Content\less\icons\icon-highlights.less" />
+    <Content Include="Content\less\icons\icons.less" />
+    <Content Include="Content\less\icons\mixins.less" />
+    <Content Include="Content\less\icons\path.less" />
+    <Content Include="Content\less\icons\variables.less" />
+    <Content Include="Content\less\bootstrap-dashboard.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -400,6 +618,8 @@
     <Content Include="Scripts\datajs-1.1.1.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\GruntFile.js" />
+    <Content Include="Scripts\html5shiv.js" />
     <Content Include="Scripts\jquery-1.10.2.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -658,6 +878,7 @@
     <Content Include="Scripts\Lib\TreeGrid\Standard\TreeN.gif" />
     <Content Include="Scripts\Lib\TreeGrid\Standard\VScroll.gif" />
     <Content Include="Scripts\Lib\TreeGrid\Text.xml" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -667,18 +888,34 @@
     <Content Include="Scripts\respond.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\Specs\karma.conf.js" />
+    <Content Include="Scripts\Specs\unit\Controllers\Allocations\AllocationHistoryController.spec.js" />
     <Content Include="Scripts\Specs\unit\Controllers\Allocations\AllocationsTreeGridController.spec.js" />
+    <Content Include="Scripts\Specs\unit\Controllers\Allocations\PortfolioAllocationCommentsController.spec.js" />
+    <Content Include="Scripts\Specs\unit\Controllers\Allocations\PortfolioAllocationFilterController.spec.js" />
+    <Content Include="Scripts\Specs\unit\Controllers\Allocations\PortfolioAllocationRelatedReportsController.spec.js" />
+    <Content Include="Scripts\Specs\unit\Controllers\Allocations\PortfolioAllocationRelatedThingsController.spec.js" />
+    <Content Include="Scripts\Specs\unit\Controllers\Trades\AllocationsColumnsController.spec.js" />
+    <Content Include="Scripts\Specs\unit\Controllers\Trades\PerformanceController.spec.js" />
     <Content Include="Scripts\Specs\unit\Directives\TreeGrid.spec.js" />
+    <Content Include="Scripts\Specs\unit\main-test.js" />
     <Content Include="Scripts\toastr.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\toastr.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\ui-bootstrap-0.10.0.js" />
+    <Content Include="Scripts\ui-bootstrap-0.10.0.min.js" />
+    <Content Include="Scripts\ui-bootstrap-tpls-0.10.0.js" />
+    <Content Include="Scripts\ui-bootstrap-tpls-0.10.0.min.js" />
     <Content Include="Scripts\_references.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SqlScripts\AllocationsInstanceData.sql" />
+    <Content Include="Templates\Trades\Allocations.html" />
+    <Content Include="Templates\Trades\AllocationsColumnsPopover.html" />
+    <Content Include="Templates\Trades\AllocationsCRUD.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -712,6 +949,9 @@
     <Content Include="Views\Home\Bowa.cshtml" />
     <Content Include="Views\Shared\_BowaHeader.cshtml" />
     <Content Include="Views\Shared\_AllocationHeader.cshtml" />
+    <Content Include="Scripts\version.json" />
+    <Content Include="Views\Home\SimpleTreeGrid.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\constants\" />
@@ -723,6 +963,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BcaResearch\BcaResearch.csproj">
+      <Project>{0BD658B5-12D7-48C3-B1AF-5CE12806E547}</Project>
+      <Name>BcaResearch</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

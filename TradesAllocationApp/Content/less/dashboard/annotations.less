@@ -1,0 +1,86 @@
+﻿.label.report-support-action,
+.label.report-scenario-action,
+.label.report-counter-action,
+.label.report-risk-action {
+    background-color: inherit;
+    border: none;
+    color: @BCAmidBlue;
+    min-width: 70px;
+    font-family: @headingsFontFamily;
+    padding-left: 8px;
+    margin: 2px 2px;
+    display: block;
+
+    &:hover {
+        background-color: @black;
+        color: @white;
+    }
+
+    &.active {
+        background-color: @BCAblue;
+        color: @BCAgrayLight;
+    }
+}
+
+
+.annotations {
+    .subscribe-message {
+        margin-left: 10px;
+    }
+
+    .nav {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    h5 {
+        color: @gray;
+        padding-left: 10px;
+        display: inline-block;
+    }
+
+    .table {
+        tbody td:nth-child(1) {
+            color: @BCAblue;
+            font-family: @strongFontFamily;
+        }
+
+        tbody td.message {
+            color: @gray;
+            font-family: @baseFontFamily;
+        }
+
+        td.report {
+            min-width: 200px;
+        }
+
+        td.date {
+            min-width: 100px;
+        }
+    }
+
+        .table.table-condensed {
+            background-color: inherit;
+            border: none;
+        }
+
+    ul.annotations-select-box {
+        position: relative;
+        top: -18px;
+        left: 130px;
+        display: inline-block;
+        vertical-align: sub;
+
+        li {
+            a {
+                color: @BCAblue;
+                background-color: transparent;
+                border: 1px solid @BCAgrayLight;
+            }
+        }
+
+        .active-dropdown {
+            font-family: @strongerFontFamily;
+        }
+    }
+}

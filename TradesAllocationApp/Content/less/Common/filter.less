@@ -1,0 +1,226 @@
+﻿.filters-box {
+    background-color: @blueA;
+    padding-bottom: 10px;
+}
+
+.filter-top {
+    margin-top: 5px;
+
+
+    .filter-title {
+        padding: 5px;
+
+        h4 {
+            margin: 5px 0 15px 5px;
+            color: @BCAblue;
+            font-size: @fontSizeExtraLarge;
+        }
+
+        button {
+            font-size: @fontSizeSmall;
+        }
+    }
+
+    .filter-global-actions {
+        div {
+            margin: 5px;
+
+            button {
+                font-size: @fontSizeMedium;
+                border: none;
+            }
+        }
+    }
+
+    button {
+        margin: 5px 3px 0 0;
+    }
+}
+
+.accordion .accordion-heading .selected-filters {
+    text-transform: capitalize;
+    font-size: @fontSizeExtraMini;
+}
+
+.filters {
+
+    @pageMarginLeftForFilters: @pageMarginLeft + 3px;
+
+    .filters-nav {
+        position: relative;
+        background-color: @blueBC;
+        padding-top: 10px;
+        padding-left: @pageMarginLeftForFilters;
+        padding-right: @pageMarginLeftForFilters;
+
+        .header {
+            vertical-align: middle;
+            cursor: pointer;
+            color: @blueF;
+            margin: 8px 0 11px 0;
+
+            .icon-remove {
+                float: right;
+            }
+        }
+
+        [searchbox] {
+            display: inline-block;
+            position: absolute;
+            left: 152px;
+            top: 13px;
+        }
+
+        .nav-stacked {
+            display: inline-block;
+            float: left;
+            min-height: 207px;
+            width: 49%;
+            max-width: 250px;
+            margin: 0;
+            border-right: 1px solid @white;
+
+            li {
+
+                a {
+                    color: @blueE;
+                    text-decoration: none;
+                }
+
+                &.active {
+                    a {
+                        color: @white;
+                        background-color: @blueE;
+                    }
+                }
+
+                [tab-heading] {
+                    cursor: pointer;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .tabbable {
+            ul {
+                list-style: none;
+
+                li {
+                    font-size: 15px;
+
+                    a {
+                        color: @blueF;
+                        padding-left: 10px;
+                        text-decoration: none;
+                        display: block;
+                    }
+
+                    &.selected {
+                        background-color: @blueE;
+
+                        a {
+                            color: @white;
+                        }
+
+                        .icon-remove {
+                            font-size: @fontSizeMini;
+                            float: right;
+                            margin: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        .tabbable {
+            margin-top: 10px;
+        }
+
+        .tab-pane {
+            min-height: 220px;
+        }
+
+        .filter-global-actions {
+            float: left;
+            margin: 150px 30px 0 0;
+
+            > div {
+                width: 135px;
+            }
+
+            button, .clear-filters-button-space-consumer {
+                display: block;
+                width: 135px;
+                height: 28px;
+                margin: 5px 0;
+                border: none;
+            }
+        }
+    }
+
+    .filters-footer {
+        background-color: @blueBC;
+        padding: 5px @pageMarginLeftForFilters 10px @pageMarginLeftForFilters;
+
+        span {
+            color: @blueF;
+        }
+
+            span.clearFilter {
+                margin-right: 20px;
+                vertical-align: baseline;
+            }
+
+        button.clearFilter {
+            font-size: 12px;
+            padding: 2px 8px;
+            vertical-align: baseline;
+            border: none;
+        }
+    }
+
+    &.collapsed {
+        .filters-nav {
+            background-color: @blueA;
+        }
+
+        .filters-footer {
+            background-color: @blueA;
+            border-bottom: 1px solid @blueBC;
+        }
+    }
+
+    &.affix.collapsed + .affix-placeholder {
+        height: 84px;
+    }
+
+    &.affix.open + .affix-placeholder {
+        height: 314px;
+    }
+
+    + .affix-placeholder {
+        display: none;
+    }
+
+    .multi-columns {
+        margin-bottom: 1em;
+
+        ol {
+            width: 30em; /* room for 3 columns */
+        }
+
+        ul li {
+            float: left;
+            width: 24em; /* accommodate the widest item */
+            border-right: 1px solid @white;
+        }
+        /* stop the floating after the list */
+        br {
+            clear: left;
+        }
+    }
+}
+
+    

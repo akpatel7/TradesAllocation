@@ -1,0 +1,15 @@
+﻿.label {
+    font-size: @fontSizeExtraMini;
+    color: @white;
+    padding: 0px 4px;
+    text-transform: uppercase;
+    white-space: normal;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 14px; // ensure proper line-height if floated
+    vertical-align: baseline;
+
+    &:empty {
+        display: none;
+    }
+}

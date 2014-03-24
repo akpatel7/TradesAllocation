@@ -1,0 +1,75 @@
+//
+// VIEWS
+// --------------------------------------------------
+
+
+// Relative & Absolute Labels ====================================================================
+
+.label {
+    font-weight: normal;
+
+    &.absolute-views, &.absolute-view {
+        background-color: @blueF;
+    }
+
+    &.relative-views, &.relative-view {
+        background-color: @grayE;
+    }
+
+    &.conflict {
+        background-color: @white;
+        color: @black;
+        border: 1px solid @grayE;
+
+        i {
+            color: @redA;
+        }
+    }
+}
+
+// Strategic & Tactical Labels ====================================================================
+
+.label {
+
+    &.strategic-view {
+        color: @BCAmidBlue;
+        border: 1px solid @BCAmidBlue;
+        background-color: @white;
+    }
+
+    &.tactical-view {
+        color: @grayDark;
+        border: 1px solid @grayDark;
+        background-color: @white;
+    }
+}
+
+.view-themes {
+    .nav-pills > li a {
+        min-width: 25px;
+        white-space: nowrap;
+        color: @white;
+
+        .icon-caret-down {
+            padding-left: 10px;
+        }
+    }
+
+    .nav > li > a {
+        background-color: @blueF;
+
+        :hover {
+            background-color: @blueF;
+        }
+    }
+}
+
+.grid .masonry-brick {
+    .view-annotations {
+    
+    i {
+        font-size: @fontSizeExtraMini;
+    }
+
+}
+}

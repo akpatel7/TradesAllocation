@@ -1,0 +1,9 @@
+﻿.trades table.trades-list div.more-info .axis-label.absolute {
+    margin-left: 30px;
+    margin-top: 105px;
+}
+
+.trades table.trades-list div.more-info .leftAxis.axis-label.relative {
+    margin-right: -100px;
+    margin-top: 120px;
+}

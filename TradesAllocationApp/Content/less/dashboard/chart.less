@@ -1,0 +1,76 @@
+﻿.highcharts-container {
+    overflow: visible !important;
+
+}
+
+.chart-legend {
+    text-align: center;
+
+    button {
+        width: 150px;
+    }
+}
+
+.tooltip-container {
+    width: 280px;
+    text-align: center;
+    border: 1px solid @BCAblue;
+    background-color: @white;
+    position: relative;
+    z-index: 5;
+
+    &.chart-tooltip {
+        height: 90px;
+    }
+
+    &.report-tooltip {
+        white-space: normal;
+        padding-bottom: 15px;
+        text-align: left;
+    }
+
+    .arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid @BCAblue;
+        margin-top: 75px;
+        margin-left: 132px;
+    }
+
+    [position-conviction-color] {
+        margin-top: 5px;
+        margin-left: 40px;
+    }
+
+    [conviction] {
+        margin-top: 5px;
+    }
+
+    .tooltip-body {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 15px;
+    }
+
+    .title {
+        background-color: @BCAblue;
+        font-family: @headingsFontFamily;
+        color: @white;
+        padding: 5px;
+        text-align: left;
+    }
+
+    .published-date, .snippet {
+        font-family: @strongFontFamily;
+        display: block;
+        padding-bottom: 5px;
+    }
+
+    .x-label {
+        background-color: @BCAblue;
+        color: @white;
+    }
+
+}

@@ -1,0 +1,509 @@
+﻿.loading {
+    display: none;
+}
+body.authenticating > *:not(.loading) {
+    display: none;
+}
+body.authenticating > .loading {
+    display: block;
+}
+
+
+/* Widget ==================================================================== */
+.widget.opened .body {
+    display: block;
+}
+
+.widget.closed .body {
+    display: none;
+}
+
+.widget .widget-header {
+    margin-bottom: 0px;
+    padding-left: 10px;
+    color: white;
+    border-radius: 3px 3px 0px 0px;
+    text-transform: capitalize;
+}
+
+.widget {
+    border: 1px solid #083980;
+    border-radius: 5px;
+    background-color: #083980;
+}
+
+    .widget:hover {
+        border: 1px solid #0B4BA5;
+        box-shadow: 2px 2px 2px #B2B2B2;
+        background-color: #0B4BA5;
+    }
+
+.scrollable {
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    border-right: 8px solid white;
+    border-bottom: 8px solid white;
+    margin-bottom: 1px;
+    padding: 0px 0px 0px 8px;
+}
+
+.widget .body table {
+    table-layout: fixed;
+}
+
+.themes a {
+    color: black;
+    margin-left: 10px;
+}
+
+.widgetButtons {
+    margin: 10px;
+}
+
+.house-views-header {
+    border-top: 8px solid white;
+    border-right: 8px solid white;
+    border-left: 8px solid white;
+    background-color: darkgray;
+    border-bottom: 2px solid white;
+}
+
+    .house-views-header .viewable-col {
+        width: 22%;
+    }
+
+[widget] .row, [widget] .row a {
+    margin-left: 5px;
+    padding-top: 3px;
+    color: black;
+}
+
+.house-views-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+    .house-views-header > .row > .span4:first-child {
+        text-align: left;
+        text-transform: none;
+        font-weight: bold;
+    }
+
+    .house-views-header .filters a > i[class] {
+        background-image: none;
+        text-decoration: none;
+    }
+
+[widget] .dropdown-menu li a {
+    color: black;
+    font-size: 90%;
+    line-height: 90%;
+    padding-left: 20px;
+}
+
+    [widget] .dropdown-menu li a.selected {
+        padding-left: 7px;
+        font-weight: bold;
+    }
+
+[widget] .dropdown-menu li {
+    font-size: 80%;
+}
+
+.icon-remove-sign {
+    color: #FF2841;
+}
+
+.divider {
+    line-height: 50%;
+}
+/* Loading... ==================================================================== */
+div[loading-widget] {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+img.loading {
+    position: relative;
+    margin-left: -75px;
+    margin-top: -75px;
+}
+
+/* Latest Update ==================================================================== */
+.latest-update {
+    text-align: right;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 12px;
+}
+
+    .latest-update .latest-update-label {
+        display: block;
+        text-transform: uppercase;
+    }
+
+/* single House View ==================================================================== */
+[house-view] .top > * {
+    display: inline-block;
+    margin-right: 2px;
+    margin-left: 2px;
+    line-height: 12px;
+    font-size: 9px;
+    vertical-align: middle;
+}
+
+[house-view] .top {
+    padding: 5px;
+    margin-top: -5px;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+[house-view] .relative-view-label {
+    font-size: 11px;
+    color: #000000;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -5px;
+}
+
+td .view + .view {
+    margin-top: 5px;
+}
+
+[widget] .label {
+    background-color: black;
+}
+/* Conviction directive ==================================================================== */
+[conviction] {
+    display: inline-block;
+}
+
+    [conviction] .box {
+        display: block;
+        border-style: solid;
+        border-width: 1px;
+        border-top-style: none;
+        width: 6px;
+        height: 4px;
+    }
+
+        [conviction] .box:first-child {
+            border-top-style: solid;
+        }
+
+        [conviction] .box.selected {
+            background-color: black;
+            border-color: #1e1e1e;
+        }
+
+/* ViewPosition directive ==================================================================== */
+[view-position] {
+    display: inline-block;
+}
+
+    [view-position] .box {
+        border-top-style: solid;
+        border-right-style: solid;
+        border-bottom-style: solid;
+        border-left-style: none;
+        border-width: 1px;
+        border-color: grey;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        text-align: center;
+        vertical-align: middle;
+        color: grey;
+        line-height: 15px;
+        font-size: 12px;
+        margin: 0;
+    }
+
+        [view-position] .box:first-child {
+            border-left-style: solid;
+        }
+
+        [view-position] .box.selected {
+            color: black;
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+        }
+
+        [view-position] .box + .box.selected {
+            margin-left: -1px;
+        }
+
+/* Themes ==================================================================== */
+.themes > ul > li {
+    padding: 4px 4px 4px 6px;
+    /*font-weight: bold;*/
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.themes > ul {
+    max-width: 300px;
+}
+
+/* House View Widget table layout ==================================================================== */
+table.house-views, table.house-views tr, table.house-views tr td {
+    /*border-style: none;*/
+    font-size: 12px;
+}
+
+    table.house-views tbody tr td {
+        border-bottom-style: solid;
+        border-bottom-color: grey;
+        border-bottom-width: 3px;
+    }
+
+        table.house-views tbody tr td > * {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+            table.house-views tbody tr td > *:first-child {
+                margin-top: 5px;
+            }
+
+        table.house-views tbody tr td:first-child {
+            background-color: whitesmoke;
+        }
+
+    table.house-views tbody tr td {
+        background-color: transparent;
+    }
+
+        table.house-views tbody tr td.viewable-col {
+            width: 22%;
+        }
+
+    table.house-views .first {
+        width: 28%;
+    }
+
+    table.house-views .second, table.house-views .third {
+        width: 36%;
+    }
+
+[widget] .item-label {
+    width: 86%;
+}
+
+table.house-views > tbody td {
+    position: relative;
+    padding: 0;
+}
+
+    table.house-views > tbody td .description {
+        font-size: 10px;
+    }
+
+    table.house-views td ul.nav, table.house-views > tbody td .bottom {
+        position: relative;
+        bottom: 0;
+        margin: 0;
+        list-style-type: none;
+        display: block;
+        width: 100%;
+        background-color: whitesmoke;
+    }
+
+table.house-views td.no-view {
+    background-color: transparent;
+}
+
+table.house-views .viewable .item-label {
+    font-weight: bold;
+}
+
+table.house-views .view {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: white;
+}
+
+    table.house-views .view:last-child {
+        border-bottom-style: inherit;
+        border-bottom-width: inherit;
+        border-bottom-color: inherit;
+    }
+
+.spacer-bottom {
+    margin-bottom: 10px;
+}
+
+.activeViews {
+    padding-left: 8px;
+}
+
+.type-label {
+    color: gray;
+}
+/* Conviction and Position colors ==================================================================== */
+.position-2.conviction-0 .top {
+    background-color: #D8F0CB;
+}
+
+.position-2.conviction-1 .top {
+    background-color: #B0E297;
+}
+
+.position-2.conviction-2 .top {
+    background-color: #7ACE4F;
+}
+
+.position-1.conviction-0 .top {
+    background-color: #FED5BD;
+}
+
+.position-1.conviction-1 .top {
+    background-color: #FDA470;
+}
+
+.position-1.conviction-2 .top {
+    background-color: #FC8139;
+}
+
+.position-0.conviction-0 .top {
+    background-color: #F9C2CB;
+}
+
+.position-0.conviction-1 .top {
+    background-color: #F28696;
+}
+
+.position-0.conviction-2 .top {
+    background-color: #EB3D58;
+}
+
+.position-2 [view-position] .box.selected {
+    background-color: #7ACE4F;
+}
+
+.position-1 [view-position] .box.selected {
+    background-color: #FC8139;
+}
+
+.position-0 [view-position] .box.selected {
+    background-color: #EB3D58;
+}
+
+/* view horizon ==================================================================== */
+[house-view] .top [view-horizon] {
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+/* Turn on a 13x13 scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 13px;
+}
+/* Track below and above */
+::-webkit-scrollbar-track-piece {
+    background-color: gray;
+}
+/* The thumb itself */
+::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: silver;
+}
+/* The thumb itself */
+::-webkit-scrollbar-thumb:horizontal {
+    height: 50px;
+    background-color: silver;
+}
+/* Corner */
+::-webkit-scrollbar-corner:vertical {
+    background-color: black;
+}
+/* Resizer */
+::-webkit-scrollbar-resizer:vertical {
+    background-color: silver;
+}
+/* IE8 */
+body {
+    scrollbar-3dlight-color: gray;
+    scrollbar-arrow-color: gray;
+    scrollbar-darkshadow-color: gray;
+    scrollbar-face-color: silver;
+    scrollbar-highlight-color: gray;
+    scrollbar-shadow-color: gray;
+}
+
+
+/* Viewables */
+.all-views-help-legend {
+    margin-bottom: 10px;
+}
+.all-views-help-legend.thumbnail {
+    height: 60px;
+}
+
+.viewable-tile {
+    line-height: 10px;
+    padding-bottom: 20px;
+}
+
+.viewable-tile .last-update {
+    float: right;
+}
+
+.span3.thumbnail {
+    min-height: 160px;
+}
+.thumbnails {
+    margin-left: 0px;
+}
+.thumbnails.row-fluid {
+    margin-bottom: 20px;
+}
+
+.thumbnails .views-container.selected {
+    margin-left: 0;
+    border: solid 2px red;
+}
+
+.thumbnails .views-container.span12 {
+    min-height: 0;
+}
+
+.thumbnails .views-container ul.bottom {
+    list-style-type: none;
+    margin: 0;
+}
+
+.selectedViewable {
+    border-top: solid 2px red;
+    border-left: solid 2px red;
+    border-right: solid 2px red;
+}
+
+@media (max-width: 1024px) {
+    .span3.thumbnail {
+        min-height: 200px;
+    }
+    .viewable-tile .last-update {
+        float: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .span3.thumbnail {
+        min-height: 160px;
+    }
+    .viewable-tile .last-update {
+        float: right;
+    }
+}

@@ -1,0 +1,77 @@
+.skinny-tiles-container {
+    margin: @brickMargin;
+}
+
+.masonry-brick {
+    .skinny-tile {
+        background-color: @blueA;
+        border: 1px solid @blueC;
+        margin: @brickMargin;
+
+        .brick {
+
+            margin: @brickMargin * 2;
+
+            .skinny-tile-header {
+                width: 100%;
+                height: @brickHeight * 0.5;
+
+                .title {
+                    display: block;
+                    float: left;
+                    width: 80%;
+                    height: 75%;
+                    margin-right: 0px;
+                    margin-top: 0px;
+                    color: @blueF;
+                    padding: 0;
+                }
+
+                h5 {
+                    padding: 0;
+                }
+
+                .last-update {
+                    float: right;
+                }
+
+                
+                .actions {
+                    float: right;
+                    .icon-star-off,
+                    .icon-arrow-right-off {
+                        display: none;
+                    }
+                }
+
+                .links {
+                    float: right;
+                    display: none;
+                }
+
+                // HOVER STATE
+                &:hover {
+                    .actions {
+                        .icon-star,
+                        .icon-arrow-right,
+                        .icon-star-off,
+                        .icon-arrow-right-off {
+                            display: inline;
+                        }
+                    }
+
+                    .links {
+                        display: inline;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+.pagination {
+    margin-top: 10px;
+    text-align: center;
+}

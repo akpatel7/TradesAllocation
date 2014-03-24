@@ -1,0 +1,48 @@
+﻿#mercuryHeader .typeahead {
+    left:-200px;
+}
+
+.typeahead {
+	background-color: #fff;
+	max-height: 390px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+	border: 1px solid @grayC;
+
+	li a {
+		font-family: @baseFontFamily;
+		width:380px;
+		overflow: hidden;
+		font-size: @fontSizeMedium;
+
+		strong {
+			color: @white;
+		}
+		
+		.active a {
+			color: @white;
+		}
+	}
+}
+
+.typeahead li a strong{
+	color: @grayF;
+}
+
+.typeahead li.active a strong {
+    color: @white;
+    font-weight: @strongFontFamily;
+}
+
+.typeahead li.active a, 
+#mercuryHeader .typeahead li.active a:hover, 
+#mercuryHeader .typeahead li.active a strong {
+    color: @white;
+}
+
+.typeahead {
+    &.dropdown-menu > .active > a, 
+    &.dropdown-menu > .active > a:hover {
+        color: white;
+    }
+}

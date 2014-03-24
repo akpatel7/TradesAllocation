@@ -1,0 +1,49 @@
+// FOOTERBAR
+// -------------------------
+
+
+
+// Added to get Sticky Footer to Work
+// ----------------------------------
+html,
+body {
+    height: 100%;
+
+    .wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        margin: 0 auto -25px;
+
+        .push {
+            height: 30px;
+        }
+    }
+
+    .footer {
+        height: 25px;
+        background-color: @BCAblue;
+
+        .inline {
+            margin: 0px;
+        }
+
+        > ul {
+            text-align: center;
+
+            > li {
+                padding-top: 4px;
+                line-height: 20px;
+                font-family: @sansFontFamily;
+                font-size: @fontSizeMini;
+                color: @grayLighter;
+
+                > a {
+                    font-family: @sansFontFamily;
+                    font-size: @fontSizeMini;
+                    color: @grayLighter;
+                }
+            }
+        }
+    }
+}

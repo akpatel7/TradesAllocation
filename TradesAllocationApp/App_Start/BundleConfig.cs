@@ -33,6 +33,13 @@ namespace TradesAllocationApp
                       "~/Content/site.css",
                       "~/Content/todo.css"
                       ));
+
+            bundles.Add(new StyleBundle("~/Content/css/bundle").Include(
+                     "~/Content/css/bootstrap-dashboard.css",
+                     "~/Content/css/smoothness/jquery-ui.css",
+                     "~/Content/css/autoSuggest.css",
+                     "~/Content/css/oo_style.css"
+                 ));
         }
     }
 }

@@ -1,0 +1,76 @@
+﻿[accordion] .accordion {
+
+    .accordion-group {
+        border-width: 0;
+        margin: 0;
+
+        .accordion-heading a:before {
+            content: @caret-right;
+            font-family: FontAwesome;
+            width: 25px;
+            display: inline-block;
+            color: @gray;
+            text-align: center;
+        }
+        &.open .accordion-heading a:before {
+            content: @caret-down;
+            color: @black;
+        }
+
+        .accordion-heading {
+            color: @BCAblue;
+            font-family: @headingsFontFamily;
+            font-size: @fontSizeMedium;
+            text-transform: uppercase;
+
+            .accordion-toggle {
+                padding: 5px 0 2px 5px;
+            }
+        }
+
+        .accordion-body {
+            .accordion-inner {
+                border-width: 0;
+                padding: 0px 0px;
+
+                ul {
+                    margin: 0 30px 0 30px;
+
+                    li {
+                        @lineHeight: 16px;
+                        list-style: none;
+
+                        .checkbox, .radio {
+                            padding: 3px 5px;
+                            margin: 0 0 3px 0;
+                            color: @black;
+                            font-family: @strongFontFamily;
+                            font-size: @fontSizeSmall;
+                            line-height: @lineHeight;
+                            min-height: initial;
+
+                            &.selected {
+                                background-color: @grayLight;
+                                color: @white;
+
+                                .icon-remove {
+                                    float: right;
+                                    display: inline-block;
+                                }
+                            }
+
+                            input {
+                                display: none;
+                            }
+
+                            .icon-remove {
+                                display: none;
+                                line-height: @lineHeight;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

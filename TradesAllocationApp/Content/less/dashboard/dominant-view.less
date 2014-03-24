@@ -1,0 +1,51 @@
+﻿
+.dominant-view {
+    vertical-align: middle;
+    display: block;
+    overflow-wrap: normal;
+    white-space: nowrap;
+
+    .house-view, [view-horizon], .service-label {
+        margin-top: 5px;
+        color: @gray;
+    }
+
+    .horizon-with-previous {
+        margin-top: -10px;
+    }
+
+    .previous-horizon {
+        font-size: @fontSizeExtraMini;
+        line-height: @fontSizeExtraMini;
+        margin-top: -@fontSizeExtraMini * 0.5;
+
+        span {
+            margin-top: 0;
+        }
+    }
+
+    .relative-view-label {
+        display: none;
+    }
+
+    > * {
+        display: inline-block;
+        margin-right: 4px;
+        vertical-align: middle;
+    }
+
+    .latest-update {
+        float: right;
+        font-size: @fontSizeExtraMini;
+        line-height: 12px;
+        text-align: right;
+
+        b {
+            font-size: @fontSizeExtraMini;
+        }
+
+        .latest-update-label {
+            text-transform: uppercase;
+        }
+    }
+}

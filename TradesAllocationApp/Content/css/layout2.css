@@ -1,0 +1,203 @@
+﻿header a.logo {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+header a.logo > img {
+    height: 40px;
+}
+
+header div.navbar, header {
+    background-color: #083980;
+    border: none;
+    background-image: none;
+}
+
+header div.navbar-inner {
+    background-color: #083980;
+    border: none;
+    background-image: none;
+    filter: none;
+}
+
+header .nav {
+    position: relative;
+    left: 0;
+    display: block;
+    float: left;
+    margin: 0;
+    background-color: #083980;
+    font-size: 13px;
+}
+
+header .nav > li > a {
+    padding: 19px 10px;
+}
+
+.dropdown > .dropdown-menu:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #FFF;
+  position: absolute;
+  top: -6px;
+  left: 10px;
+}
+
+header .nav .dropdown-toggle .caret {
+    border-top-color: #555;
+    border-bottom-color: #555;
+    margin-top: 8px;
+    margin-left: 2px;
+    border-top-color: rgb(85, 85, 85);
+    border-bottom-color: rgb(85, 85, 85);
+}
+
+header .nav .dropdown {
+    background-color: #083980;
+}
+
+header .nav a {
+    color: #FFF;
+}
+
+header .nav > li {
+    float: left;
+}
+
+header .nav li a:focus {
+    background:#000;
+}
+
+header .dropdown-menu li a {
+    font-size: 11px;	
+}
+
+header .dropdown-menu li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;	
+    line-height: 20px;	
+    white-space: nowrap;
+    color: #039;
+}
+
+header .navbar .nav > li > a {
+    text-shadow: none;
+    color: #fff;
+    
+}
+
+header .navbar .nav li a:focus,
+header .nav li a:hover {
+    color: #fff;
+    background-color: #083980;
+}
+
+.userName ul.logout {
+    width: 100px;
+    min-width: 100px;
+    z-index: 100;
+}
+
+header .navbar .nav > li > a {
+    color: #fff !Important;
+}
+
+header .navbar .nav li.dropdown.open>.dropdown-toggle {
+    background-color: #083980;
+}
+
+header .nav-collapse .nav>li>a:hover, .nav-collapse .nav>li>a:focus {
+    background-color: #083980;
+}
+
+header .nav > li > ul > li a:hover {
+    background: #000000 !Important;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    header .navbar .nav li.dropdown>a:hover .caret, 
+    header .navbar .nav li.dropdown>a:focus .caret {
+        color: #777;
+    }
+}
+
+.breadcrumb {
+    font-size: 12px;
+    background-color: inherit;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    background-image: none;
+}
+
+.dropdown-menu .divider {
+    margin: 0px;
+}
+
+.table th, .table td {
+    line-height: 15px;
+}
+
+/********************** Fonts ***********************/
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'ProximaNovaRgBold';
+    src: url('../fonts/proximanova-bold-webfont.eot');
+    src: url('../fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-bold-webfont.woff') format('woff'), url('../fonts/proximanova-bold-webfont.ttf') format('truetype'), url('../fonts/proximanova-bold-webfont.svg#ProximaNovaRgBold') format('svg');
+}
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'ProximaNovaRgRegular';
+    src: url('../fonts/proximanova-regular-webfont.eot');
+    src: url('../fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-regular-webfont.woff') format('woff'), url('../fonts/proximanova-regular-webfont.ttf') format('truetype'), url('../fonts/proximanova-regular-webfont.svg#ProximaNovaRgRegular') format('svg');
+}
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'proxima_nova_ltbold_italic';
+    src: url('../fonts/proxima_nova_semibold_italic-webfont.eot');
+    src: url('../fonts/proxima_nova_semibold_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proxima_nova_semibold_italic-webfont.woff') format('woff'), url('../fonts/proxima_nova_semibold_italic-webfont.ttf') format('truetype'), url('../fonts/proxima_nova_semibold_italic-webfont.svg#proxima_nova_ltbold_italic') format('svg');
+}
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'ProximanovaSemibold';
+    src: url('../fonts/proximanova-semibold-webfont.eot');
+    src: url('../fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-semibold-webfont.woff') format('woff'), url('../fonts/proximanova-semibold-webfont.ttf') format('truetype'), url('../fonts/proximanova-semibold-webfont.svg#ProximanovaSemibold') format('svg');
+}
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'proxima_nova_thbold';
+    src: url('../fonts/proximanova-extrabold-webfont.eot');
+    src: url('../fonts/proximanova-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-extrabold-webfont.woff') format('woff'), url('../fonts/proximanova-extrabold-webfont.ttf') format('truetype'), url('../fonts/proximanova-extrabold-webfont.svg#proxima_nova_thbold') format('svg');
+}
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'proxima_nova_blregular';
+    src: url('../fonts/proximanova-black-webfont.eot');
+    src: url('../fonts/proximanova-black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-black-webfont.woff') format('woff'), url('../fonts/proximanova-black-webfont.ttf') format('truetype'), url('../fonts/proximanova-black-webfont.svg#proxima_nova_blregular') format('svg');
+}
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'proxima_nova_ltregular';
+    src: url('../fonts/proximanova-light-webfont.eot');
+    src: url('../fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-light-webfont.woff') format('woff'), url('../fonts/proximanova-light-webfont.ttf') format('truetype'), url('../fonts/proximanova-light-webfont.svg#proxima_nova_ltregular') format('svg');
+}
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'proxima_nova_ltitalic';
+    src: url('../fonts/proxima_nova_light_italic-webfont.eot');
+    src: url('../fonts/proxima_nova_light_italic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proxima_nova_light_italic-webfont.woff') format('woff'), url('../fonts/proxima_nova_light_italic-webfont.ttf') format('truetype'), url('../fonts/proxima_nova_light_italic-webfont.svg#proxima_nova_ltitalic') format('svg');
+}
+/****************************************************/

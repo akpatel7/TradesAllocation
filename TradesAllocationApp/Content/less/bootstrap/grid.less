@@ -1,0 +1,331 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Fixed (940px)
+//#grid > .core(@gridColumnWidth, @gridGutterWidth);
+
+// Fluid (940px)
+//#grid > .fluid(@fluidGridColumnWidth, @fluidGridGutterWidth);
+
+// Reset utility classes due to specificity
+[class*="span"].hide,
+.row-fluid [class*="span"].hide {
+  display: none;
+}
+
+[class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  float: right;
+}
+
+
+/* Mixins does not work with source map, compiled and added here. */
+
+.row {
+  margin-left: -2px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 2px;
+}
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 862px;
+}
+.span12 {
+  width: 862px;
+}
+.span11 {
+  width: 790px;
+}
+.span10 {
+  width: 718px;
+}
+.span9 {
+  width: 646px;
+}
+.span8 {
+  width: 574px;
+}
+.span7 {
+  width: 502px;
+}
+.span6 {
+  width: 430px;
+}
+.span5 {
+  width: 358px;
+}
+.span4 {
+  width: 286px;
+}
+.span3 {
+  width: 214px;
+}
+.span2 {
+  width: 142px;
+}
+.span1 {
+  width: 70px;
+}
+.offset12 {
+  margin-left: 866px;
+}
+.offset11 {
+  margin-left: 794px;
+}
+.offset10 {
+  margin-left: 722px;
+}
+.offset9 {
+  margin-left: 650px;
+}
+.offset8 {
+  margin-left: 578px;
+}
+.offset7 {
+  margin-left: 506px;
+}
+.offset6 {
+  margin-left: 434px;
+}
+.offset5 {
+  margin-left: 362px;
+}
+.offset4 {
+  margin-left: 290px;
+}
+.offset3 {
+  margin-left: 218px;
+}
+.offset2 {
+  margin-left: 146px;
+}
+.offset1 {
+  margin-left: 74px;
+}
+.row-fluid {
+  width: 100%;
+  *zoom: 1;
+}
+.row-fluid:before,
+.row-fluid:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row-fluid:after {
+  clear: both;
+}
+.row-fluid [class*="span"] {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 0.23201856%;
+  *margin-left: 0.17401392%;
+}
+.row-fluid [class*="span"]:first-child {
+  margin-left: 0;
+}
+.row-fluid .controls-row [class*="span"] + [class*="span"] {
+  margin-left: 0.23201856%;
+}
+.row-fluid .span12 {
+  width: 100%;
+  *width: 99.94199536%;
+}
+.row-fluid .span11 {
+  width: 91.64733179%;
+  *width: 91.58932715%;
+}
+.row-fluid .span10 {
+  width: 83.29466357%;
+  *width: 83.23665893%;
+}
+.row-fluid .span9 {
+  width: 74.94199536%;
+  *width: 74.88399072%;
+}
+.row-fluid .span8 {
+  width: 66.58932715%;
+  *width: 66.53132251%;
+}
+.row-fluid .span7 {
+  width: 58.23665893%;
+  *width: 58.17865429%;
+}
+.row-fluid .span6 {
+  width: 49.88399072%;
+  *width: 49.82598608%;
+}
+.row-fluid .span5 {
+  width: 41.53132251%;
+  *width: 41.47331787%;
+}
+.row-fluid .span4 {
+  width: 33.17865429%;
+  *width: 33.12064965%;
+}
+.row-fluid .span3 {
+  width: 24.82598608%;
+  *width: 24.76798144%;
+}
+.row-fluid .span2 {
+  width: 16.47331787%;
+  *width: 16.41531323%;
+}
+.row-fluid .span1 {
+  width: 8.12064965%;
+  *width: 8.06264501%;
+}
+.row-fluid .offset12 {
+  margin-left: 100.46403712%;
+  *margin-left: 100.34802784%;
+}
+.row-fluid .offset12:first-child {
+  margin-left: 100.23201856%;
+  *margin-left: 100.11600928%;
+}
+.row-fluid .offset11 {
+  margin-left: 92.11136891%;
+  *margin-left: 91.99535963%;
+}
+.row-fluid .offset11:first-child {
+  margin-left: 91.87935035%;
+  *margin-left: 91.76334107%;
+}
+.row-fluid .offset10 {
+  margin-left: 83.7587007%;
+  *margin-left: 83.64269142%;
+}
+.row-fluid .offset10:first-child {
+  margin-left: 83.52668213%;
+  *margin-left: 83.41067285%;
+}
+.row-fluid .offset9 {
+  margin-left: 75.40603248%;
+  *margin-left: 75.2900232%;
+}
+.row-fluid .offset9:first-child {
+  margin-left: 75.17401392%;
+  *margin-left: 75.05800464%;
+}
+.row-fluid .offset8 {
+  margin-left: 67.05336427%;
+  *margin-left: 66.93735499%;
+}
+.row-fluid .offset8:first-child {
+  margin-left: 66.82134571%;
+  *margin-left: 66.70533643%;
+}
+.row-fluid .offset7 {
+  margin-left: 58.70069606%;
+  *margin-left: 58.58468677%;
+}
+.row-fluid .offset7:first-child {
+  margin-left: 58.46867749%;
+  *margin-left: 58.35266821%;
+}
+.row-fluid .offset6 {
+  margin-left: 50.34802784%;
+  *margin-left: 50.23201856%;
+}
+.row-fluid .offset6:first-child {
+  margin-left: 50.11600928%;
+  *margin-left: 50%;
+}
+.row-fluid .offset5 {
+  margin-left: 41.99535963%;
+  *margin-left: 41.87935035%;
+}
+.row-fluid .offset5:first-child {
+  margin-left: 41.76334107%;
+  *margin-left: 41.64733179%;
+}
+.row-fluid .offset4 {
+  margin-left: 33.64269142%;
+  *margin-left: 33.52668213%;
+}
+.row-fluid .offset4:first-child {
+  margin-left: 33.41067285%;
+  *margin-left: 33.29466357%;
+}
+.row-fluid .offset3 {
+  margin-left: 25.2900232%;
+  *margin-left: 25.17401392%;
+}
+.row-fluid .offset3:first-child {
+  margin-left: 25.05800464%;
+  *margin-left: 24.94199536%;
+}
+.row-fluid .offset2 {
+  margin-left: 16.93735499%;
+  *margin-left: 16.82134571%;
+}
+.row-fluid .offset2:first-child {
+  margin-left: 16.70533643%;
+  *margin-left: 16.58932715%;
+}
+.row-fluid .offset1 {
+  margin-left: 8.58468677%;
+  *margin-left: 8.46867749%;
+}
+.row-fluid .offset1:first-child {
+  margin-left: 8.35266821%;
+  *margin-left: 8.23665893%;
+}
+[class*="span"].hide,
+.row-fluid [class*="span"].hide {
+  display: none;
+}
+[class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  float: right;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+.container:before,
+.container:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.container:after {
+  clear: both;
+}
+.container-fluid {
+  padding-right: 2px;
+  padding-left: 2px;
+  *zoom: 1;
+}
+.container-fluid:before,
+.container-fluid:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.container-fluid:after {
+  clear: both;
+}

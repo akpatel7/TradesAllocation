@@ -1,0 +1,31 @@
+a {
+    &:hover {
+        .icon-off, .icon-on, .icon-partial, .icon-half {
+            color: @white;
+            background-color: @black;
+            text-decoration: none;
+        }
+    }
+}
+
+.icon-off, .icon-on, .icon-partial {
+    width: 14px;
+    font-size: 12px;
+    border: 1px solid @BCAgrayLighter;
+}
+// off / muted mode
+.icon-off {
+    color: @BCAgrayLight;
+}
+// on /active mode
+.icon-on {
+    color: @BCAblue;
+    border: 1px solid @BCAblue;
+    background-color: @white;
+}
+// half state mode
+.icon-partial, .icon-half {
+    color: @BCAblue;
+    border: 1px solid @BCAblue;
+    background-color: transparent;
+}

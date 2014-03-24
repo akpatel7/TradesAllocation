@@ -1,0 +1,93 @@
+//
+// Widgets
+// --------------------------------------------------
+
+[widget].widget {
+    border: 1px solid @BCAblue;
+    background-color: @widgetBackgroundColor;
+    min-height: 20px;
+    padding: 0;
+    margin-bottom: 20px;
+    border: 1px solid darken(@wellBackground, 7%);
+    overflow-y: initial;
+
+    &:hover {
+        border: 1px solid #0B4BA5;
+    }
+
+    &.opened .body {
+        display: block;
+    }
+
+    &.closed .body {
+        display: none;
+    }
+
+    .widget-header {
+        margin-bottom: 0px;
+        padding-left: 10px;
+        text-transform: capitalize;
+        border-bottom: 1px solid @BCAgrayLight;
+        background-color: @widgetHeaderColor;
+
+        h3 {
+            text-transform: capitalize;
+        }
+
+        .btn {
+            margin: 12px 10px;
+            background-image: none;
+            background-color: @widgetBackgroundColor;
+            border-color: @widgetBackgroundColor;
+            color: @widgetHeaderColor;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+
+            &:hover {
+                background-color: @white;
+                border-color: @widgetHeaderColor;
+            }
+
+            i {
+                color: @blueD;
+            }
+        }
+    }
+
+    .scrollable {
+        height: auto;
+        min-height: 100px;
+        max-height: 500px;
+        display: block;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .scrollable-x {
+        overflow-x: auto;
+    }
+
+
+    &.maximised {
+        position: absolute;
+        z-index: 1;
+
+        th.require-expanded, td.require-expanded {
+            display: table-cell;
+        }
+
+        .scrollable {
+            height: 100%;
+        }
+    }
+
+    th.require-expanded, td.require-expanded {
+        display: none;
+    }
+}
+
+.widget-container {
+    position: relative;
+}

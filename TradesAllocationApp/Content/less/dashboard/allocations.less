@@ -1,0 +1,436 @@
+﻿div.allocations {
+    background-color: @blueA;
+
+    .tree-grid-container {
+        position: absolute;
+        top: 155px;
+        width: 100%;
+    }
+
+    .icon-download-alt {
+        float: left;
+        margin: 20px;
+        color: @blueF;
+    }
+
+    [pagination] {
+        margin: 10px 10px 0 0;
+        cursor: pointer;
+        float: left;
+    }
+
+    div.allocations-settings {
+        background-color: @blueA;
+        padding: 6px;
+
+        > .columns > a {
+            font-size: @fontSizeLarge;
+            color: @BCAgrayDark;
+            margin-left: 10px;
+            padding: 10px 10px 10px 0;
+
+            i.icon-caret-down {
+                font-size: @fontSizeMedium;
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .popover {
+            left: 10px !Important;
+            border: solid 1px @blueC;
+            background-color: @blueA;
+
+            &.bottom .arrow {
+                left: 13% !Important;
+                margin-left: -20px;
+                border-bottom-color: @blueC;
+
+                &:after {
+                    border-bottom-color: @blueA;
+                }
+            }
+
+            .popover-content {
+                background-color: @blueA;
+                padding: 0;
+
+                h6 {
+                    text-transform: uppercase;
+                    color: @BCAblue;
+                    margin: 0;
+                    font-size: @fontSizeMedium;
+                    padding: 8px;
+                }
+
+                ul.columns-list {
+                    list-style-type: none;
+                    margin: 0;
+                    margin-bottom: 10px;
+
+                    li {
+                        padding: 0 8px 0 8px;
+                        background-color: @blueA;
+
+                        &.divider {
+                            border-bottom: solid 1px @blueBC;
+                            margin-bottom: 8px;
+                            padding: 0;
+                        }
+
+                        > label {
+                            > i.icon-reorder {
+                                margin: 4px 0 0 20px;
+                                color: @blueBC;
+                                font-size: @fontSizeSmall;
+                            }
+                        }
+                    }
+                }
+
+                button.reset {
+                    margin: 0 0 8px 8px;
+                }
+            }
+        }
+
+        > .count {
+            margin-left: 10px;
+        }
+    }
+
+    #allocations-grid {
+        background-color: @white;
+
+
+        table, table td {
+            border-collapse: collapse;
+        }
+
+            table, table td {
+                border-collapse: collapse;
+            }
+
+        .GridMain1 .GridMain2 {
+
+            .BCACellUser {
+                background-color: @blueB;
+                color: @blueE;
+            }
+
+            i {
+                font: 14px FontAwesome;
+            }
+
+            .BCAEditNormalInput {
+                background-color: inherit;
+            }
+
+            .BCAEditCellInput {
+                border: none;
+            }
+
+            .BCAHeadMid {
+
+                .BCACellHeader {
+                    background-color: @blueA;
+                    border: none !Important;
+                    text-transform: uppercase;
+                    text-align: left;
+                    font-size: 11px;
+                    font-weight: bold;
+                    font-family: Arial, Helvetica, sans-serif;
+                    padding-left: 4px;
+                    padding-top: 4px;
+                    padding-bottom: 4px;
+                    color: @BCAblue;
+                }
+
+                .BCACell {
+                    background-color: @blueA;
+                    border: none !Important;
+                }
+
+                .BCAHeaderRow {
+                    .BCAEmpty {
+                        background-color: @blueA;
+                        border: none;
+                    }
+                }
+
+                .BCAFilterRow {
+                    > td.BCACellFilter {
+                        background-color: @blueA;
+                        border: none;
+                    }
+
+                    .favourites-filter {
+                        margin-right: 20px;
+                    }
+
+                    .favourites-filter, .follow-filter {
+                        text-decoration: none;
+
+                        > i.off {
+                            color: @blueD;
+                        }
+                    }
+                }
+            }
+
+            .BCABodyMid {
+                tr.BCADataRow {
+                    border-bottom: solid 1px @blueB;
+
+                    .BCAText,
+                    .BCAFloat,
+                    .BCADate {
+                        font-size: 14px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        white-space: nowrap;
+                        padding: 14px;
+                        color: @BCAblue;
+                    }
+
+                    .BCAFloat,
+                    .BCADate {
+                        text-align: center;
+                    }
+
+                    .BCAHtml {
+                        padding: 4px;
+
+                        .favourite-action {
+                            .favourite-action-func();
+
+                            .icon-star-off {
+                                display: none;
+                            }
+                        }
+
+                        .following-action {
+                            .following-action-func();
+
+                            .icon-arrow-right-off {
+                                display: none;
+                            }
+                        }
+
+                        i {
+                            font-family: FontAwesome;
+                            color: @blueC;
+                            display: none;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: @blueH;
+                            }
+
+                            &.active {
+                                display: block;
+                                color: @blueH;
+                            }
+
+                            &.icon-star-on {
+                                display: inline;
+                                color: @BCAblue;
+
+                                &:hover {
+                                    color: @blueC;
+                                }
+                            }
+
+                            &.icon-star-off:hover {
+                                color: @blueC;
+                            }
+                        }
+                    }
+
+                    .BCACell {
+                        border: none;
+                    }
+
+                    &:hover {
+                        .BCAHtml {
+                            i {
+                                display: inline;
+                            }
+
+                            .favourite-action .icon-star-off {
+                                display: inline-block;
+                            }
+
+                            .following-action .icon-arrow-right-off {
+                                display: inline-block;
+                            }
+                        }
+                    }
+
+                    .BCAEmpty {
+                        background-color: @white;
+                    }
+                }
+            }
+
+            .BCASearchRow {
+                border-bottom: solid 1px @BCAblueDark;
+            }
+
+            .BCAFillRow, .BCAToolbarRow {
+                background-color: @white;
+            }
+
+            .BCACL {
+                background-position: -1173px 0px;
+            }
+
+            .BCA0E {
+                background-position: -1472px 0px;
+            }
+
+            .BCAEL {
+                background-position: -1429px 0px;
+            }
+
+            .BCA0EL {
+                background-position: -1600px 0px;
+            }
+
+            .BCA0C {
+                background-position: -1216px 0px;
+            }
+
+            .BCA01T {
+                background-position: -405px 0px;
+            }
+
+            .BCA0 {
+                background-position: -298px 0px;
+            }
+
+            .BCA00T {
+                background-position: -149px 0px;
+            }
+
+            .BCA1TL {
+                background-position: -1090px 0px;
+            }
+
+            .BCA0TL {
+                background-position: -1024px 0px;
+                margin-left: -2px;
+            }
+
+            .favourite-action,
+            .following-action {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+
+                i {
+                    display: inline-block;
+                }
+            }
+
+            .BCA1T {
+                background-position: -298px 0px;
+            }
+
+            .BCA1 {
+                background-position: -298px 0px;
+            }
+
+            .moreInfo {
+                .nav.nav-tabs {
+                    margin-bottom: 1px;
+                }
+
+                > .indent1 {
+                    margin-left: 50px;
+                }
+
+                > .indent2 {
+                    margin-left: 100px;
+                }
+
+                > .indent3 {
+                    margin-left: 150px;
+                }
+
+                > .indent4 {
+                    margin-left: 200px;
+                }
+
+
+                .history table {
+                    table-layout: fixed;
+
+                    td {
+                        white-space: normal;
+                        width: 50px;
+                    }
+                }
+
+                .reports, .comments, .history {
+                    table {
+                        thead td {
+                            padding: 16px 10px 16px 10px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            background-color: @blueBC;
+                            color: @BCAblue;
+
+                            .annotations-select-box {
+                                position: inherit;
+                                border: solid 1px @blueD;
+                                margin-left: 8px;
+
+                                li a {
+                                    border: none;
+                                }
+
+                                .open .dropdown-toggle {
+                                    color: @BCAblue;
+                                    background-color: inherit;
+                                    border: none;
+                                }
+                            }
+                        }
+
+                        tbody {
+                            td {
+                                padding: 10px 10px;
+                                font-size: @fontSizeMedium;
+                                color: @BCAblue;
+                                font-weight: normal;
+
+                                &.report {
+                                    .openReport {
+                                        display: block;
+                                        margin-bottom: 4px;
+                                    }
+
+                                    .downloadReport {
+                                        color: @blueD;
+                                        padding-left: 12px;
+                                        font-size: @fontSizeSmall;
+                                    }
+                                }
+
+                                &.content {
+                                    white-space: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#GM0_followcaption {
+    padding-bottom: 10px;
+}

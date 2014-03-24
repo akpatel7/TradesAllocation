@@ -1,0 +1,300 @@
+//
+// House View Widget
+// --------------------------------------------------
+
+
+[widget].house.widget {
+    margin-bottom: 20px;
+    background-color: @houseWidgetBackground;
+    border: 1px solid @BCAblue;
+    font-size: @fontSizeSmall;
+
+    h3 {
+        color: @BCAblue;
+        line-height: normal;
+        padding-left: 5px;
+    }
+
+    ul.sortline {
+        display: block;
+        background-color: @white;
+        text-align: left;
+
+        > li {
+
+            > a {
+                text-align: center;
+                line-height: 20px;
+                border: none;
+                color: @BCAblue;
+                width: 62px;
+                display: inline-block;
+                font-size: @fontSizeMedium;
+            }
+
+            &.open > a {
+                color: @white;
+            }
+
+            > .icon-stack {
+                margin-left: -24px;
+                padding: 0;
+                line-height: 18px;
+
+                .icon-stack-base {
+                    font-size: @fontSizeMedium;
+                    color: @red;
+                }
+
+                .icon-remove {
+                    font-size: @fontSizeExtraMini;
+                    color: @white;
+                }
+            }
+        }
+    }
+
+    table.table-bordered {
+        margin-bottom: 0;
+        border-top-width: 0px;
+        border-right: none;
+        border-left: none;
+
+        thead {
+            display: block;
+
+            tr {
+                display: table-row;
+
+                td {
+                    border-collapse: collapse;
+                }
+
+                &.table-sort-filter {
+                    display: block;
+
+                    td {
+                        display: block;
+                    }
+                }
+
+                &.table-headings {
+                    display: block;
+
+                    td {
+                        display: inline-block;
+                        width: 24%;
+                    }
+
+                        td + td {
+                            width: 38%;
+                            margin-left: -4px;
+                        }
+
+                            td + td + td {
+                                width: 38%;
+                            }
+                }
+            }
+        }
+
+        tbody {
+
+            tr {
+
+                td {
+                    width: 24%;
+                }
+
+                    td + td {
+                        width: 38%;
+                    }
+
+                        td + td + td {
+                            width: 38%;
+                        }
+            }
+        }
+
+        thead {
+            .table-sort-filter td {
+                border-top-width: 0px;
+                background-color: @white;
+            }
+
+            td {
+                text-transform: uppercase;
+                text-align: center;
+                font-family: @strongFontFamily;
+                color: @BCAgrayDark;
+
+                ul {
+                    text-align: left;
+                }
+            }
+
+            .sortline {
+                text-transform: none;
+                margin: 0;
+            }
+        }
+
+
+        p {
+            line-height: 110%;
+        }
+
+        td {
+            padding: 0px;
+            border-right: none;
+            border-left: none;
+            position: relative;
+
+            &.viewable-col {
+                @viewableMarginLeft: 19px;
+                position: relative;
+                height: 100%;
+                padding-right: 5px;
+
+                .clearfix {
+                    @iconWidth: 12px;
+                    display: table;
+                    margin-left: @viewableMarginLeft - @iconWidth;
+                    margin-top: 3px;
+                    margin-bottom: 4px;
+
+                    [scroll-into-view] {
+                        display: table-cell;
+                        width: @iconWidth;
+
+                        [expand-icon] {
+                            display: inline-block;
+                            font-size: @fontSizeLarge;
+                            color: @grayLight;
+                        }
+                    }
+
+                    .item-label {
+                        display: table-cell;
+                        font-family: @strongerFontFamily;
+                        font-size: @fontSizeLarge;
+                        color: @BCAblue;
+                    }
+                }
+
+                .type-label {
+                    float: left;
+                    display: inline-block;
+                    margin-left: @viewableMarginLeft;
+                    color: @grayLight;
+                    font-size: @fontSizeMedium;
+                }
+
+                .bottom {
+                    clear: left;
+                    display: block;
+                    float: left;
+                    bottom: 2px;
+                    margin-top: 3px;
+                    font-size: @fontSizeMini;
+                    color: @grayLight;
+                    margin-left: @viewableMarginLeft;
+                    font-family: @strongerFontFamily;
+                }
+            }
+
+            &.short-term-view {
+                padding-right: 1px;
+            }
+
+            &.long-term-view {
+                padding-left: 1px;
+            }
+
+            .bottom {
+                display: block;
+
+                .icon-caret-left {
+                    float: left;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    font-size: @fontSizeMini;
+                    line-height: 16px;
+                    color: @grayLight;
+                }
+
+                .icon-caret-right {
+                    float: right;
+                    margin-right: 5px;
+                    margin-left: 5px;
+                    font-size: @fontSizeMini;
+                    line-height: 16px;
+                    color: @grayLight;
+                }
+
+                .themes {
+                    ul {
+
+                        li {
+
+                            a {
+                                word-wrap: normal;
+                                white-space: normal;
+                                line-height: @fontSizeMedium;
+                                padding-top: 4px;
+                                padding-bottom: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    [house-view] {
+        padding: 4px 8px;
+
+        [view-horizon], [view-position], [view-conviction] {
+            font-family: @strongFontFamily;
+        }
+
+        .top {
+            padding: 0;
+            padding-bottom: 5px;
+
+            > * {
+                display: inline-block;
+                margin-right: 2px;
+                margin-left: 2px;
+                vertical-align: middle;
+            }
+
+            .date {
+                float: right;
+                line-height: 12px;
+                text-align: right;
+
+                span {
+                    display: block;
+                }
+
+                /*.date-label {
+                    text-transform: uppercase;
+                }*/
+            }
+        }
+
+        .description {
+            margin-top: 7px;
+            font-family: @strongFontFamily;
+        }
+
+        .relative-view-label {
+            font-size: @fontSizeMini;
+            color: @black;
+            width: 100%;
+            margin-top: -5px;
+            font-family: @headingsFontFamily;
+        }
+    }
+}

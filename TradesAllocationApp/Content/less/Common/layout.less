@@ -1,0 +1,82 @@
+﻿// Support button
+.oo_feedback_float {
+    // oo_feedback element position is applied in HTML code, next to JS file include.
+    color: @white;
+    background-color: @blueD;
+    border-color: @blueD !important;
+    border-top: none !important;
+    padding: 2px 10px 0 10px;
+    font-family: @strongerFontFamily;
+
+    div.olUp {
+        color: @white;
+        font-weight: normal;
+        font: inherit;
+        font-family: @sansFontFamily;
+        font-size: @fontSizeMedium;
+        line-height: 14px;
+    }
+
+    &:hover {
+        color: @white;
+        background-color: @BCAmidBlue;
+        border-color: @BCAmidBlue !important;
+    }
+}
+
+// The contents of the page.
+.body {
+    .page-contents {
+        position: relative;
+    }
+}
+
+// Authenticating.js directive styling. Hide all elements it is still loading.
+body {
+    > .loading-authenticating {
+            display: none;
+    }
+
+    &.authenticating {
+        * {
+            display: none;
+        }
+
+        > .loading-authenticating {
+            display: block;
+        }
+    }
+}
+
+body {
+    .loading {
+        @imageSize: 150px;
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 1px;
+        height: 1px;
+
+        img {
+            width: @imageSize;
+            height: @imageSize;
+            margin: -@imageSize/2 0 0 -@imageSize/2;
+            max-width: initial;
+            max-height: initial;
+        }
+
+        &.show {
+            display: block;
+        }
+
+        &.hide {
+            display: none;
+        }
+    }
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}

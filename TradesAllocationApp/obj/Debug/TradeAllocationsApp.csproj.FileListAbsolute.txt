@@ -146,4 +146,6 @@ C:\Dev\BCA\TradesAllocation\TradesAllocationApp\bin\zh-Hans\System.Spatial.resou
 C:\Dev\BCA\TradesAllocation\TradesAllocationApp\bin\zh-Hant\System.Spatial.resources.dll
 C:\Dev\BCA\TradesAllocation\TradesAllocationApp\obj\Debug\TradesAllocationApp.dll
 C:\Dev\BCA\TradesAllocation\TradesAllocationApp\obj\Debug\TradesAllocationApp.pdb
+C:\Dev\BCA\TradesAllocation\TradesAllocationApp\bin\BcaResearch.dll
+C:\Dev\BCA\TradesAllocation\TradesAllocationApp\bin\BcaResearch.pdb
 C:\Dev\BCA\TradesAllocation\TradesAllocationApp\obj\Debug\TradeAllocationsApp.csprojResolveAssemblyReference.cache

@@ -1,0 +1,246 @@
+﻿
+/* Loading... ==================================================================== */
+div[loading-widget] {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+img.loading {
+    position: relative;
+    margin-left: -75px;
+    margin-top: -75px;
+}
+
+/* Latest Update ==================================================================== */
+.latest-update {
+    text-align: right;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 12px;
+}
+
+    .latest-update .latest-update-label {
+        display: block;
+        text-transform: uppercase;
+    }
+
+
+/* Themes ==================================================================== */
+.themes > ul > li {
+    padding: 4px 4px 4px 6px;
+    /*font-weight: bold;*/
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.themes > ul {
+    max-width: 300px;
+}
+
+/* House View Widget table layout ==================================================================== */
+table.house-views, table.house-views tr, table.house-views tr td {
+    /*border-style: none;*/
+    font-size: 12px;
+}
+
+    table.house-views tbody tr td {
+        border-bottom-style: solid;
+        border-bottom-color: grey;
+        border-bottom-width: 3px;
+    }
+
+        table.house-views tbody tr td > * {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+            table.house-views tbody tr td > *:first-child {
+                margin-top: 5px;
+            }
+
+        table.house-views tbody tr td:first-child {
+            background-color: whitesmoke;
+        }
+
+    table.house-views tbody tr td {
+        background-color: transparent;
+    }
+
+        table.house-views tbody tr td.viewable-col {
+            width: 22%;
+        }
+
+    table.house-views .first {
+        width: 28%;
+    }
+
+    table.house-views .second, table.house-views .third {
+        width: 36%;
+    }
+
+[widget] .item-label {
+    width: 86%;
+}
+
+table.house-views > tbody td {
+    position: relative;
+    padding: 0;
+}
+
+    table.house-views > tbody td .description {
+        font-size: 10px;
+    }
+
+    table.house-views td ul.nav, table.house-views > tbody td .bottom {
+        position: relative;
+        bottom: 0;
+        margin: 0;
+        list-style-type: none;
+        display: block;
+        width: 100%;
+        background-color: whitesmoke;
+    }
+
+table.house-views td.no-view {
+    background-color: transparent;
+}
+
+table.house-views .viewable .item-label {
+    font-weight: bold;
+}
+
+table.house-views .view {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: white;
+}
+
+    table.house-views .view:last-child {
+        border-bottom-style: inherit;
+        border-bottom-width: inherit;
+        border-bottom-color: inherit;
+    }
+
+.spacer-bottom {
+    margin-bottom: 10px;
+}
+
+.activeViews {
+    padding-left: 8px;
+}
+
+.type-label {
+    color: gray;
+}
+
+/* view horizon ==================================================================== */
+[house-view] .top [view-horizon] {
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+/* Turn on a 13x13 scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 13px;
+}
+/* Track below and above */
+::-webkit-scrollbar-track-piece {
+    background-color: gray;
+}
+/* The thumb itself */
+::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: silver;
+}
+/* The thumb itself */
+::-webkit-scrollbar-thumb:horizontal {
+    height: 50px;
+    background-color: silver;
+}
+/* Corner */
+::-webkit-scrollbar-corner:vertical {
+    background-color: black;
+}
+/* Resizer */
+::-webkit-scrollbar-resizer:vertical {
+    background-color: silver;
+}
+/* IE8 */
+body {
+    scrollbar-3dlight-color: gray;
+    scrollbar-arrow-color: gray;
+    scrollbar-darkshadow-color: gray;
+    scrollbar-face-color: silver;
+    scrollbar-highlight-color: gray;
+    scrollbar-shadow-color: gray;
+}
+
+
+/* Viewables */
+.all-views-help-legend {
+    margin-bottom: 10px;
+}
+.all-views-help-legend.thumbnail {
+    height: 60px;
+}
+
+.viewable-tile {
+    line-height: 10px;
+    padding-bottom: 20px;
+}
+
+.viewable-tile .last-update {
+    float: right;
+}
+
+.span3.thumbnail {
+    min-height: 160px;
+}
+
+.thumbnails.row-fluid {
+    margin-bottom: 20px;
+}
+
+.thumbnails .views-container.selected {
+    margin-left: 0;
+    border: solid 2px red;
+}
+
+.thumbnails .views-container.span12 {
+    min-height: 0;
+}
+
+.thumbnails .views-container ul.bottom {
+    list-style-type: none;
+    margin: 0;
+}
+
+.selectedViewable {
+    border-top: solid 2px red;
+    border-left: solid 2px red;
+    border-right: solid 2px red;
+}
+
+@media (max-width: 1024px) {
+    .span3.thumbnail {
+        min-height: 200px;
+    }
+    .viewable-tile .last-update {
+        float: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .span3.thumbnail {
+        min-height: 160px;
+    }
+    .viewable-tile .last-update {
+        float: right;
+    }
+}

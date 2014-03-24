@@ -1,0 +1,112 @@
+﻿.view-tiles-container, .GridMain1 .GridMain2 .view-tiles-container {
+    margin: 5px;
+    width: 100%;
+
+    .view-tile-container {
+        float: left;
+    }
+
+    .pagination {
+        clear: left;
+    }
+}
+
+div.view-tile[view-tile][view="view"]:hover {
+    background-color: @blueB;
+     border-color: @blueE;
+}
+
+div.view-tile[view-tile][view="view"] {
+    background-color: @blueA;
+    border: 1px solid @blueD;
+    color: @blueE;
+    margin: 5px;
+    float: left;
+    font-family: @sansFontFamily;
+    font-weight: normal;
+    font-size: @fontSizeMedium;
+    width: 240px;
+    height: 150px;
+    line-height: 14px;
+    cursor: pointer;
+  
+    .brick {
+        margin: 10px;
+
+        .view-tile-header {
+            width: 100%;
+            height: 70px;
+            white-space: normal;
+            h5:hover {
+                text-decoration: underline;
+            }
+            .title {
+                display: block;
+                float: left;
+                width: 100%;
+                margin-right: 0px;
+                margin-top: 0px;
+                padding: 0;
+            }
+
+            .sub-title {
+                float: left;
+                width: 100%;
+                font-size: @fontSizeSmall;
+                background-color: @blueD;
+                color: @blueA;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                text-transform: uppercase;
+            }
+
+            h5 {
+                padding: 0;
+            }
+        }
+
+        .context-label {
+            color: @blueD;
+            display: block;
+        }
+
+        .last-update {
+            font-size: @fontSizeSmall;
+            float: right;
+            text-align: right;
+            width: 40%;
+        }
+
+        .created {
+            font-size: @fontSizeSmall;
+            float: left;
+            width: 40%;
+        }
+
+        div [view-horizon] {
+            text-transform: uppercase;
+            width: 40px;
+        }
+
+        [view-position], [conviction], [view-horizon], [service-name] {
+            display: block;
+            margin-right: 10px;
+            line-height: 30px;
+            margin-top: 3px;
+        }
+
+        [service-name] {
+            margin-right: 0;
+            width: 40px;
+            text-align: right;
+        }
+
+        [view-position], [conviction], [view-horizon] {
+            float: left;
+        }
+
+        [service-name], .last-update {
+            float: right;
+        }
+    }
+}

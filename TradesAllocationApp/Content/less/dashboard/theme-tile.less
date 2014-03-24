@@ -1,0 +1,52 @@
+﻿.theme-tiles-container, .GridMain1 .GridMain2 .theme-tiles-container {
+    margin: 5px;
+    width: 100%;
+
+    .view-tile-container {
+        float: left;
+    }
+
+    .pagination {
+        clear: left;
+    }
+}
+
+div.theme-tile[theme-tile][theme="theme"]:hover {
+    background-color: @blueB;
+    border-color: @blueE;
+}
+
+
+div.theme-tile[theme-tile][theme="theme"] {
+    background-color: @blueA;
+    border: 1px solid @blueD;
+    color: @blueE;
+    margin: 5px;
+    float: left;
+    font-family: @sansFontFamily;
+    font-weight: normal;
+    font-size: @fontSizeMedium;
+    width: 240px;
+    height: 150px;
+    cursor: pointer;
+
+    .brick {
+        margin: 10px;
+
+        .theme-tile-header {
+            width: 100%;
+            h5:hover {
+                text-decoration: underline;
+            }
+            .title {
+                display: block;
+                float: left;
+                width: 100%;
+                margin-right: 0px;
+                margin-top: 0px;
+                padding: 0;
+                white-space: normal;
+            }
+        }
+    }
+}

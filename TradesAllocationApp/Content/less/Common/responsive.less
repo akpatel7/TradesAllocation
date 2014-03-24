@@ -1,0 +1,125 @@
+@media (min-width: 480px) and (max-width: 900px) {
+    #ng-app {
+
+        .row-fluid {
+            width: inherit;
+
+            .span1, .span2, span3, span4, span5, span6, span7, span8, span9, span10, span11, span12 {
+                width: inherit;
+            }
+        }
+
+        // GRID & CONTAINERS
+        // -----------------
+        // Remove width from containers
+        .container {
+            width: auto;
+        }
+        // Fluid rows
+        .row-fluid {
+            width: 100%;
+        }
+        // Undo negative margin on rows and thumbnails
+        .row,
+        .thumbnails {
+            margin-left: 0;
+        }
+
+            .thumbnails > li {
+                float: none;
+                margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
+            }
+        // Make all grid-sized elements block level again
+        [class*="span"],
+        .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
+        .row-fluid [class*="span"] {
+            float: none;
+            display: block;
+            width: 100%;
+            margin-left: 0;
+            //.box-sizing(border-box);
+        }
+
+        .span12,
+        .row-fluid .span12 {
+            width: 100%;
+            .box-sizing(border-box);
+        }
+
+        .row-fluid [class*="offset"]:first-child {
+            margin-left: 0;
+        }
+        // Modals
+        .modal {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            width: auto;
+            margin: 0;
+
+            &.fade {
+                top: -100px;
+            }
+
+                &.fade.in {
+                    top: 20px;
+                }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar.navbar-inverse.navbar-fixed-top {
+        margin-bottom: 0px;
+    }
+
+    .container-fluid {
+        .userName {
+            clear: left;
+        }
+    }
+
+    .filters.affix {
+        position: relative;
+    }
+}
+@media (max-width: 480px) {
+
+    .container-fluid {
+        //padding: 0 0;
+        
+        .nav {
+            clear: left;
+        }
+    }
+}
+@media (min-width: 901px) {
+    .container-fluid {
+        //padding: 0 15px;
+    }
+
+    .body {
+        padding-top: 44px;
+    }
+
+    .filters.affix {
+        width: 100%;
+        z-index: 1;
+        top: 44px;
+
+        + .affix-placeholder {
+            display: block;
+        }
+    }
+}
+
+/*@media (min-width: 1200px) {
+    .container-fluid.page-body {
+        //padding-top: 70px;
+    }
+
+    .viewable-tile.tile {
+        min-height: 135px;
+    }
+}*/

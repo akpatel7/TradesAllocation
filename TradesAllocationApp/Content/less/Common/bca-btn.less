@@ -1,0 +1,74 @@
+﻿button,
+[class^="bca-btn-"], [class*=" bca-btn-"] {
+    padding: 3px 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: @BCAgrayLight;
+    display: inline-block;
+    font-family: @strongFontFamily;
+
+    .bca-btn(@backgroundColor, @foregroundColor) {
+        background-color: @backgroundColor;
+        color: @foregroundColor;
+        font-family: @sansFontFamily;
+
+        &:hover {
+            background-color: @foregroundColor;
+            color: @backgroundColor;
+        }
+
+        &.inverse {
+            background-color: @foregroundColor;
+            color: @backgroundColor;
+        }
+    }
+
+    &:active {
+        border-style: solid;
+    }
+
+    &.bca-btn-blue {
+        .bca-btn(@BCAblue, @white);
+    }
+
+    &.bca-btn-blueE {
+        .bca-btn(@blueE, @white);
+    }
+
+    &.bca-btn-white {
+        .bca-btn(@white, @red);
+    }
+
+    &.bca-btn-red {
+        .bca-btn(@red, @white);
+    }
+
+    &.bca-btn-grey, .bca-btn-gray {
+        .bca-btn(@grayLight, @white);
+    }
+
+    &.disabled {
+        background-color: @grayLight;
+        color: @white;
+
+        &:hover {
+            background-color: @grayLight;
+            color: @white;
+        }
+    }
+
+     &.bca-btn-purple {
+        .bca-btn(@BCApurple, @white);
+    }
+    
+}
+
+button.showMore {
+    display: block;
+    text-align: center;
+    border-style: none;
+    color: @BCAgrayDark;
+    background-color: @grayLightest;
+    width: 100%;
+    font-size: @fontSizeMini;
+}

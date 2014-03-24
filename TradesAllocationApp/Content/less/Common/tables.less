@@ -1,0 +1,105 @@
+﻿.table {
+    font-size: @fontSizeSmall;
+    line-height: 100%;
+    text-align: left;
+    font-family: @strongFontFamily;
+    margin: 0;
+    border: 0px;
+    border-right: none;
+    border-left: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+    width: 100%;
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    thead {
+        tr th:nth-child(1) {
+            padding-left: 10px;
+        }
+    }
+
+    tbody + tbody {
+        border-top: none;
+    }
+
+    tr, tbody {
+        &.zebra {
+            &:nth-child(odd) {
+                background-color: @white;
+            }
+
+            &:nth-child(even) {
+                background-color: @blueA;
+            }
+        }
+
+        th, td {
+            border-left: none;
+            line-height: 18px;
+        }
+
+        th {
+            background-color: @blueC;
+            color: @white;
+            text-transform: uppercase;
+            text-align: left;
+            margin: 0;
+            white-space: nowrap;
+            font-size: @fontSizeMini;
+            line-height: @fontSizeMini * 1.25;
+            font-weight: bold;
+            font-family: @headingsFontFamily;
+            padding: 2px 8px;
+            vertical-align: middle;
+
+            &.centred {
+                text-align: center;
+            }
+        }
+
+        td {
+            border-top: none;
+
+            &.message {
+                color: @gray;
+                font-family: @baseFontFamily;
+            }
+
+            &.disabled {
+                color: @gray;
+
+                span {
+                    color: @gray;
+                }
+            }
+
+            &.centred {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+.table-condensed {
+    border: 1px solid @black;
+
+    tr th {
+        color: @black;
+        background-color: @white;
+    }
+
+    tbody {
+        tr td:nth-child(1) {
+            padding-left: 10px;
+        }
+    }
+}
+

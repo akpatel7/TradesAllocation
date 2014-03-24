@@ -1,0 +1,1185 @@
+﻿.trades {
+    width: auto;
+
+    div.help-legend {
+        margin-top: -30px;
+
+        .dropdown-menu {
+            bottom: 100%;
+            top: inherit;
+        }
+    }
+
+
+    .trades-favourites {
+        div.help-legend {
+            margin-top: -111px;
+        }
+    }
+
+    ul.breadcrumb {
+        background-color: #F1F3F8;
+    }
+
+    .bca-btn-blue[disabled=disabled], .bca-btn-blue[disabled=disabled]:hover {
+        background-color: @BCAgrayLighter;
+        color: @grayLight;
+    }
+
+    .trades-favourites {
+        margin-top: 4px;
+    }
+
+    .linked-trades {
+        margin: -10px 0px 10px 5px;
+        height: 35px;
+
+        h2 {
+            margin-right: 10px;
+        }
+    }
+
+    .tab-content {
+        overflow: visible;
+    }
+    /*see legend.less for general legend styles*/
+    div.help-legend {
+        z-index: 1000000000; /*yes, we need this much to overcome the tabs*/
+        ul.dropdown-menu {
+            width: 200px;
+
+            .legend-title {
+                color: @BCAblue;
+                font-family: @strongerFontFamily;
+                text-transform: uppercase;
+                font-size: @fontSizeSmall;
+                margin-bottom: 15px;
+            }
+
+            li.divider {
+                margin-bottom: 15px!important;
+            }
+
+            table {
+                td {
+                    height: 20px;
+
+                    &.col-1 {
+                        width: 110px;
+                    }
+
+                    i {
+                        margin-right: 10px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 16px;
+                        height: 16px;
+                        display: inline-block;
+
+                        &.icon-legend-closed {
+                            background: @minusLo;
+                            border: 1px solid @BCAgray;
+                        }
+
+                        &.icon-legend-open {
+                            background: @plusMed;
+                            border: 1px solid @BCAgray;
+                        }
+
+                        &.icon-legend-strategy {
+                            background-image: url("/Content/img/trades/legend/strategy.png");
+                        }
+
+                        &.icon-legend-tactics {
+                            background-image: url("/Content/img/trades/legend/tactics.png");
+                        }
+
+                        &.icon-legend-drill-down {
+                            background-image: url("/Content/img/trades/legend/drill-down.png");
+                        }
+
+                        &.icon-legend-filter {
+                            background-image: url("/Content/img/trades/legend/filter.png");
+                        }
+
+                        &.icon-legend-more-info {
+                            background-image: url("/Content/img/trades/legend/more-info.png");
+                        }
+
+                        &.icon-legend-sort {
+                            background-image: url("/Content/img/trades/legend/sort.png");
+                        }
+
+                        &.icon-legend-favourite {
+                            background-image: url("/Content/img/trades/legend/favourite.png");
+                        }
+
+                        &.icon-legend-export {
+                            background-image: url("/Content/img/trades/legend/export.png");
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    h2 {
+        float: left;
+        font-size: @fontSizeLarge;
+        line-height: normal;
+    }
+
+    .btn-tiny {
+        padding: 0 2px;
+        font-size: @fontSizeExtraMini;
+        margin-top: 1em;
+        line-height: 12px;
+    }
+
+    .tabbable ul li {
+        margin-right: 2px;
+    }
+
+    a.export-trades {
+        position: absolute;
+        top: 120px;
+        right: 240px;
+    }
+
+    table.trades-list {
+        max-width: none!important;
+        width: 0px; /*must be specific but low number - so table dervives width from column widths */
+        table-layout: fixed;
+        background-color: @white;
+
+        thead {
+            background-color: #fff;
+
+            .column-headers {
+                td {
+                    word-wrap: break-word;
+                    border-right: 1px solid @BCAgrayMid;
+
+                    .ui-resizable-handles-container {
+                        position: relative;
+
+                        .ui-resizable-handle {
+                            position: absolute;
+                            top: -10px;
+                            right: -16px;
+                            cursor: pointer;
+
+                            &.ui-resizable-se {
+                                background-position: -160px -32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+            thead td {
+                text-transform: uppercase;
+            }
+
+        tr th, tr td {
+            font-size: @fontSizeMedium;
+            text-transform: uppercase;
+
+            i.icon-star.off {
+                color: #CBD4EA;
+            }
+
+            i.icon-share {
+                color: #CBD4EA;
+            }
+
+                i.icon-share:hover {
+                    color: @BCAblue;
+                }
+
+
+            i.icon-star.on {
+                color: @BCAblue;
+            }
+
+            &.date {
+                min-width: 80px;
+            }
+
+            &.center {
+                text-align: center;
+            }
+        }
+
+
+
+
+        .trade-comments, .trade-reports {
+            padding: 10px;
+
+            table.table {
+                tr > td {
+                    background-color: @white;
+                    border: none;
+                    text-transform: none;
+                    cursor: default;
+
+                    &.date-added {
+                        width: 100px;
+                    }
+
+                    &.date-published {
+                        width: 100px;
+                    }
+
+                    &.report-title {
+                        width: 300px;
+                        color: @BCAblue;
+
+                        a.view-report {
+                            font-size: @fontSizeMini;
+                            color: @black;
+                            padding: 4px;
+
+                            > i {
+                                color: @red;
+                            }
+                        }
+                    }
+
+                    &.annotation {
+                        > a {
+                            color: @black;
+                        }
+                    }
+                }
+
+                thead {
+
+                    tr > td {
+                        text-transform: uppercase;
+                        color: @black;
+                        font-family: 'Proximanova-Bold';
+
+                        &.report-title {
+                            color: @black;
+                        }
+                    }
+                }
+            }
+        }
+
+        .related {
+            padding: 10px;
+
+            .related-themes {
+                font-size: 17.5px;
+
+                li {
+                    height: 3.5em;
+                    width: 300px;
+                }
+            }
+
+            .related-views {
+                li {
+                    height: 9em;
+                    width: 300px;
+                }
+
+                div > div > a {
+                    width: 250px;
+                    padding-right: 1em;
+                    max-height: 2.25em;
+                }
+            }
+
+            .related-views, .related-themes {
+                list-style-type: none;
+                margin: 0;
+
+                li {
+                    text-transform: none;
+                    padding: 12px;
+                    display: block;
+                    margin: 0 10px 10px 0;
+                    float: left;
+                    word-break: break-all;
+                    white-space: normal;
+                    color: @grayDark;
+                    background-color: @BCAgrayLighter;
+
+                    .created {
+                        margin-right: 68px;
+                    }
+
+                    .date {
+                        padding-top: 0.125em;
+                        width: 80px;
+                        float: left;
+
+                        .l {
+                            font-size: @fontSizeExtraMini;
+                            line-height: @fontSizeExtraMini;
+                            color: @gray;
+                            text-transform: uppercase;
+                            margin-top: 5px;
+                        }
+                    }
+
+                    > div > div > a {
+                        font-size: @fontSizeLarge;
+                        font-family: 'Proximanova-Bold';
+                        display: block;
+                    }
+
+                    .details {
+                        margin-top: 10px;
+                        font-size: @fontSizeLarge;
+                        background-color: @BCAgrayLighter;
+
+                        > div {
+                            margin-right: 20px;
+                        }
+
+                            > div:last-child {
+                                margin-right: 5px;
+                            }
+                    }
+
+                    .relative-to {
+                        font-size: @fontSizeSmall;
+                        margin-top: 4px;
+                        white-space: normal;
+                        max-height: 1.25em;
+                        padding-right: 1em;
+                        width: 250px;
+                        margin-right: 1em;
+                    }
+                }
+            }
+        }
+
+        .trade-comments {
+            padding: 10px;
+
+            table.table {
+                tr > td {
+                    background-color: @white;
+                    border: none;
+                    text-transform: none;
+                    cursor: default;
+
+                    &.date-added {
+                        width: 100px;
+                    }
+                }
+
+                thead {
+                    tr > td {
+                        text-transform: uppercase;
+                        color: @black;
+                        font-family: 'Proximanova-Bold';
+                    }
+                }
+            }
+        }
+    }
+
+    thead > tr.filters {
+
+
+        td {
+            padding: 2px 14px 2px 0px;
+            border-right: 1px solid @BCAgrayMid;
+        }
+
+        a {
+            color: @BCAblue;
+        }
+
+        li > a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    thead {
+        label {
+            font-size: inherit;
+            cursor: default;
+            display: inline;
+        }
+
+        > tr {
+            td, td a {
+                color: #8093BC;
+            }
+
+            > td {
+                &.date {
+                }
+
+                .filter-container {
+                    padding: 0px 5px;
+                    position: relative;
+                    white-space: nowrap;
+                    color: #8093BC;
+
+
+                    input[type=text] {
+                        height: 20px;
+                        border: 1px solid #8093bc;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        padding: 0 12px 0 4px;
+                        text-overflow: ellipsis;
+                        margin-bottom: 0px!important; /*override a general setting*/
+                        min-width: 5px;
+                        color: #8093bc;
+                        width: 70%;
+                    }
+
+                    a.trades-filter-open {
+                        text-decoration: none;
+                        left: -12px;
+                        top: 1px;
+                        position: relative;
+                        z-index: 1000;
+
+                        i.icon-filter {
+                            color: #8093bc;
+                        }
+                    }
+
+                    a.trades-filter-close {
+                        text-decoration: none;
+                        margin-left: -7px;
+                        margin-top: -0px;
+
+                        i.icon-remove {
+                            color: white;
+                        }
+                    }
+
+                    div.trade-filter-option-list-container {
+                        z-index: 1000;
+                        position: absolute;
+                        overflow: auto;
+
+                        ul.trade-filter-option-list, ul.trade-filter-selected-list {
+                            border: 1px solid @BCAgray;
+                            list-style-type: none;
+                            padding: 4px;
+                            margin: 5px 0 0 0;
+                            background-color: #fff;
+                            color: black;
+                            overflow: auto;
+                            max-height: 250px;
+                            min-width: 40px;
+
+
+                            li {
+                                position: relative;
+                                cursor: pointer;
+                                padding: 2px 27px 2px 5px;
+
+                                &.selected {
+                                    background-color: gray;
+                                    color: @white;
+
+                                    > a {
+                                        color: @white;
+                                    }
+                                }
+
+                                &.highlighted {
+                                    background-color: @BCAblue;
+
+                                    > a {
+                                        color: @white;
+                                    }
+                                }
+
+                                .icon-remove {
+                                    position: absolute;
+                                    right: 6px;
+                                    margin-top: 4px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .free-text-filter-container {
+                    ul.trade-filter-option-list, ul.trade-filter-selected-list {
+                        li.selected {
+                            cursor: default;
+
+                            > a {
+                                cursor: default;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                display: inline-block;
+                                width: 100%;
+                            }
+
+                            > i {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+
+                .date-filter-container {
+
+                    input[type=text] {
+                        width: 70%;
+                        min-width: 10px;
+
+                        &.has-date {
+                            padding-left: 15px;
+
+                            &.two-char-operator {
+                                padding-left: 25px;
+                            }
+                        }
+                    }
+
+
+                    a.trade-date-filter-operator {
+                        font-weight: bold;
+                        width: 10px;
+                        left: 10px;
+                        position: absolute;
+                        top: 2px;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+
+                    .datepicker-container {
+                        position: absolute;
+                        top: 26px;
+                        left: 5px;
+                        z-index: 1000;
+                        padding: 5px;
+                        background-color: @BCAgrayLighter;
+                        width: 205px;
+                        border: 1px solid @BCAgray;
+                        /*use along with the generic .option-list (at top of this file) */
+                        .trade-date-filter-operator-list {
+                            margin: 2px;
+                            list-style-type: none;
+
+                            li {
+                                padding: 2px;
+
+                                a {
+                                    display: block;
+                                }
+
+                                i {
+                                    display: none;
+                                    margin-top: 2px;
+                                    margin-right: 2px;
+                                }
+
+                                &.selected {
+                                    background-color: @BCAgrayDark;
+
+                                    a {
+                                        color: @white;
+                                    }
+
+                                    i {
+                                        display: inline;
+                                    }
+                                }
+                            }
+                        }
+
+
+                        hr {
+                            border: 1px solid @BCAgrayMid;
+                            margin: 4px 2px 6px 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    tbody {
+
+        > tr {
+            cursor: pointer;
+        }
+
+        tr.even {
+            background-color: #f2f2f2;
+        }
+
+
+        tr:hover td {
+            background-color: #EAECF5;
+        }
+
+        > tr.closed {
+            color: #7e7e7e;
+        }
+
+        > tr > td {
+            color: #43618E;
+            font-family: 'Proximanova-Semibold';
+            margin-bottom: 10px;
+            word-wrap: break-word;
+
+
+            &.share-trade {
+                padding-top: 15px;
+
+                > a {
+                    &:hover {
+                        text-decoration: none;
+                    }
+
+                    > i {
+                        font-size: @fontSizeLarge;
+                    }
+                }
+
+                .popover {
+                    margin: 10px 0 0;
+                    list-style: none;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    -webkit-background-clip: padding-box;
+                    -moz-background-clip: padding;
+                    background-clip: padding-box;
+                    z-index: 1000000001;
+
+                    .arrow {
+                        display: none;
+                    }
+
+                    .popover-content {
+                        padding-top: 0;
+                    }
+
+                    .popover-title {
+                        color: @BCAblue;
+                    }
+
+                    .popover-content, .popover-title {
+                        border: none;
+                    }
+                }
+
+                .share-form {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+
+                    h4 {
+                        text-transform: uppercase;
+                        color: @BCAgrayDark;
+                    }
+
+                    li {
+                        @lineHeight: 16px;
+
+                        &.buttons {
+                            text-align: right;
+                            margin-top: 8px;
+                        }
+
+                        textarea {
+                            width: 280px;
+                            height: 80px;
+                            border: solid 1px @BCAgrayDark;
+                            font-family: @strongFontFamily;
+                            font-size: @fontSizeSmall;
+                            line-height: @lineHeight;
+                            margin-bottom: 0;
+                        }
+
+                        .error {
+                            color: @red;
+                        }
+
+                        .colleagues {
+                            background: @white;
+                            border: solid 1px @BCAgrayDark;
+                            margin: 0;
+                            height: 80px;
+                            overflow-y: scroll;
+
+                            li {
+                                list-style: none;
+                                margin: 0;
+
+                                &:hover {
+                                    background-color: @grayLighter;
+                                }
+
+                                &.message {
+                                    padding: 2px;
+
+                                    > label {
+                                        color: @BCAgray;
+                                        font-family: @strongFontFamily;
+                                        font-size: @fontSizeSmall;
+                                        line-height: @lineHeight;
+                                    }
+                                }
+
+                                &.error {
+                                    > label {
+                                        color: @red;
+                                    }
+                                }
+
+                                label {
+                                    margin: 0;
+                                    padding: 2px 4px;
+                                }
+
+                                .checkbox, .radio {
+                                    color: @black;
+                                    font-family: @strongFontFamily;
+                                    font-size: @fontSizeSmall;
+                                    line-height: @lineHeight;
+                                    min-height: initial;
+
+                                    &.selected {
+                                        .icon-remove {
+                                            float: right;
+                                            display: inline-block;
+                                        }
+                                    }
+
+                                    .icon-plus {
+                                        float: right;
+                                        padding-top: 1px;
+                                        display: inline-block;
+                                    }
+
+                                    input {
+                                        opacity: 0;
+                                        width: 0px;
+                                        height: 0px;
+                                        display: inline-block;
+                                        padding: 0;
+                                        margin: 0;
+                                        border: 0;
+                                    }
+
+                                    .icon-remove {
+                                        display: none;
+                                        line-height: @lineHeight;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+            > tr > td.trade-information {
+                > a:hover {
+                    text-decoration: none;
+                }
+
+                > a {
+                    text-decoration: none;
+                    font-size: @fontSizeMedium;
+                }
+            }
+
+
+            > tr > td.trade-group-cell {
+                background-color: @white;
+            }
+
+
+
+        .linked-trade {
+            span {
+                min-width: 1.5em;
+                height: 1.5em;
+            }
+
+            .dropdown-menu:hover {
+                color: @grayDark;
+            }
+
+            .dropdown-menu {
+                color: @grayDark;
+                top: auto;
+                right: 1em;
+                padding: 1em;
+
+                .dropdown-header {
+                    text-transform: uppercase;
+                    color: @BCAblue;
+                    font-family: @headingsFontFamily;
+                }
+
+                li {
+                    text-transform: none;
+                    padding: 0.25em;
+
+                    a {
+                        background-color: @BCAblue;
+                        color: @white;
+                        display: inline;
+                        font-family: @headingsFontFamily;
+                    }
+
+                        a:hover {
+                            color: @BCAblue;
+                            background-color: @white;
+                        }
+                }
+
+                    li.empty {
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    li.divider {
+                        background-color: transparent;
+                        border-color: @grayLight;
+                    }
+            }
+        }
+
+            .linked-trade i {
+                margin-left: 0.2em;
+            }
+
+
+
+
+        > tr > td.trade-line-cell {
+            background-color: @white;
+
+            &.not-first-in-group {
+                border-top-color: white;
+            }
+        }
+
+        > tr.last-trade-line > td.trade-line-cell {
+        }
+
+        > tr.first-trade-line > td.trade-line-cell {
+            border-top: 4px solid @BCAgrayLight;
+        }
+
+        .date {
+        }
+    }
+}
+
+
+
+.trade-history-container{
+    padding:10px;
+}
+
+table.trade-history{
+
+    td{
+        background-color:white!important;
+        border: none!important;
+        cursor: default;    
+        padding:8px;
+    }
+    thead td {
+        color: @black!important; 
+        font-family: 'Proximanova-Bold';
+        font-weight:bold;
+        &.first-cell{
+            
+        }
+    }
+    tbody{
+        border: none!important;
+         td{
+            max-width:100px;
+            word-wrap:break-word;
+            font-weight:normal!important;
+            text-transform: none!important;
+
+            &.first-cell{      
+                max-width:120px!important;
+            }
+        }
+    }
+}
+
+.scroll-to-top{
+    position:fixed;
+    right:0px;
+    bottom:100px;
+    z-index:1000;
+    width:10px;
+    height:20px;
+    background-color:@BCAblue;
+    font-weight:bold;
+    padding:10px;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:white;
+   
+
+    &:hover{
+        text-decoration:none;
+        color:white; 
+        opacity:1;
+    }
+
+    /*set by jquery*/
+    &.is-hovering{
+        width:45px;      
+    }
+        span{  
+            width:45px;
+            float:left;
+        }
+
+
+}
+
+.ui-datepicker{
+
+    font-family:Proximanova-Semibold!important;
+    border:0!important;
+    background: none;
+    background-color:@BCAgrayLighter!important;
+
+    div.ui-datepicker-header{
+        background: none;
+        background-color:@BCAgrayLighter!important;
+        font-family:Proximanova-Semibold!important;
+        border: 0;
+        font-size:@fontSizeMedium;
+        margin-bottom:10px;
+
+        .ui-datepicker-prev:hover{
+            left:2px!important;
+            top:2px!important;
+        }
+        .ui-datepicker-next:hover{
+            right:2px!important;
+            top:2px!important;
+        }
+
+        .ui-datepicker-prev, .ui-datepicker-next{
+            border: 0;
+
+            .ui-icon{
+                font-size: @fontSizeMedium;
+    
+               &.ui-icon-circle-triangle-e{
+                   background-position: -32px -16px;
+                }
+                &.ui-icon-circle-triangle-w{
+                   background-position: -96px -16px;
+                }
+            }
+
+            &:hover{
+                background:none!important;
+                background-color:@BCAgrayLighter!important;  
+                cursor:pointer;
+                font-weight:bold;
+            }
+        }
+    }
+
+    table.ui-datepicker-calendar {
+        table-layout: fixed;
+
+        tr{
+            background-color:@BCAgrayLighter!important;
+        }
+
+        thead th{
+            color:@BCAgrayDark!important;
+        }
+        td, th{
+            border-top: 0px solid transparent!important;
+            padding-right:0px!important;
+            background:none;
+            background-color:@BCAgrayLighter!important;
+            font-family:Proximanova-Semibold!important;      
+            
+        }   
+        a{
+            &.ui-state-default{
+                color:black!important;
+                background:none;
+                border:0;
+             
+
+                &.ui-state-hover:not(.ui-state-active){
+                    background-color:@BCAgrayLight;
+                }
+            }
+            &.ui-state-active{
+                background-color:@BCAgrayDark;
+                color:white!important;
+            }
+        }
+
+
+    }
+
+
+}
+
+
+#trades-toolbar {
+
+    a.trades-toolbar-button {
+        text-transform: uppercase;
+        background-color: @BCAgrayLight;
+        font-weight: bold;
+        font-size: @fontSizeMedium;
+        color: @BCAgrayDark;
+        padding: 4px 12px;
+        text-decoration: none;
+        font-family: "ProximaNova-Bold";
+        cursor: pointer;
+        width: 236px;
+
+        &:hover {
+            text-decoration: none;
+            background-color: @BCAgrayMid;
+        }
+    }
+
+    .popover {
+        background-color: @BCAgrayLighter;
+        
+        .popover-content {
+
+            &:before, &:after {
+                display: table;
+                content: "";
+                line-height: 0;
+            }
+
+            &:after {
+                clear: both;
+            }
+
+            a#trades-columns-reset {
+                cursor: pointer;
+                text-transform: uppercase;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            #trades-columns-popover-panel {
+                ul {
+                    margin: 0;
+                }
+
+                .trades-columns-list {
+                    list-style-type: none;
+                    width: 220px;
+
+                    > a {
+                        font-family: "ProximaNova-Bold";
+                        font-size: @fontSizeMedium;
+                        color: @BCAgrayDark;
+                        display: block;
+                        padding: 5px 10px 5px 10px;
+                        margin-top: 2px;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+
+                        &.selected {
+                            background-color: @BCAgrayDark;
+                            color: @white;
+
+                            &.mandatory {
+                                background-color: @BCAgray;
+                                color: @white;
+                            }
+                        }
+
+                        i {
+                            padding-top: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+a[ng-controller="FollowTradeController"] {
+    &.following-action {
+        white-space: nowrap;
+    }
+
+    + div.popover {
+        background-color: @blueB;
+        border-color: @blueC;
+
+        label {
+            position: relative;
+            padding: 0px 25px;
+            text-transform: none;
+        }
+
+        .buttons {
+            height: 28px;
+
+            button {
+                float: right;
+                font-family: @sansFontFamily;
+                text-transform: uppercase;
+
+                &.cancel {
+                    background-color: @blueB;
+                    border-color: @blueC;
+                    color: @blueD;
+                }
+            }
+        }
+
+        .section + .section {
+            margin-top: 20px;
+        }
+
+        &.bottom .arrow {
+            left: 25px;
+
+            &::after {
+                border-bottom-color: @blueB;
+            }
+        }
+
+        &.right .arrow::after {
+            border-right-color: @blueB;
+        }
+    }
+}
+
