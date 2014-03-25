@@ -6,8 +6,13 @@
     <div class="row-fluid path">
         <div breadcrumb></div>
     </div>
-    <div class="container-fluid">
-        <div ng-view></div>
+    <div ng-switch on="renderTemplateKey">
+        <div ng-switch-when="default" class="container-fluid">
+            <h2 ng-bind-template="{{renderTitle}}"></h2>
+        </div>
+        <div class="container-fluid">
+            <div ng-view></div>
+        </div>
     </div>
 
     <div loading-widget class="loading">

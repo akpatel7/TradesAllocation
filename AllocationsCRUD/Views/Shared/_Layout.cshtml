@@ -23,9 +23,28 @@
                             </button>
 
                         </div>
-                        <div class="navbar-collapse collapse">
+                        <div class="navbar-collapse ">
                             <ul class="nav navbar-nav">
                                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("BOWA", "Bowa", "Home")</li>
+                                <li>@Html.ActionLink("About", "About", "Home")</li>
+                                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            </ul>
+                            @Html.Partial("_LoginPartial")
+                        </div>
+                    </div>
+                </div>
+            </header>
+             <header>
+                <div class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="navbar-inner">
+                        <div class="container-fluid">
+                            <a class="logo pull-left" href="/">
+                                <img src="~/Content/img/BCAlogo-DNA.gif" height="38" width="52" title="BCA Research" />
+                            </a>
+                            <div id="topNavigation"></div>  
+                            <ul class="nav navbar-nav">
+                                <li>@Html.ActionLink("CRUD", "Index", "Home")</li>
                                 <li>@Html.ActionLink("BOWA", "Bowa", "Home")</li>
                                 <li>@Html.ActionLink("About", "About", "Home")</li>
                                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
@@ -43,8 +62,6 @@
         <footer>
             @Html.Partial("~/Views/Shared/_Footer.cshtml")
         </footer>
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
         @*@Html.RequireJs("main.js")*@
         @RenderSection("scripts", required: false)
     </body>
