@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Configuration
+@using BCAResearch.Auth
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -7,7 +9,18 @@
     <link rel="shortcut icon" type="image/png" href="/app/images/logo.png">
     @Styles.Render("~/Content/css/bundle")
     @Scripts.Render("~/bundles/modernizr")
-
+ <script type="text/javascript">
+        window.config = {
+        //isisRootApi: "@ConfigurationManager.AppSettings["ServicePath"]",
+        //clientServicePath: "@ConfigurationManager.AppSettings["DashboardClientServicePath"]",
+        //logoutUrl: "@(BcaCms.LoginUrl() + "/logout")",
+        //loginUrl: "@(BcaCms.LoginUrl())",
+        //banBaseUrl: '@ConfigurationManager.AppSettings["BanBaseUrl"]',
+        //forbiddenUrl: "@BcaCms.ForbiddenUrl()",
+         dashboardBaseUrl: 'http://localhost.com:55802' //'@ConfigurationManager.AppSettings["DashboardBaseUrl"]',
+        //reportsBaseUrl: '@ConfigurationManager.AppSettings["ReportsBaseUrl"]'
+    };
+</script>
 </head>
     <body>
         <div class="wrap">
