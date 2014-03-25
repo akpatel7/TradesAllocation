@@ -50,7 +50,6 @@ C:\Dev\BCA\TradesAllocation\BcaResearch\bin\Debug\System.Web.WebPages.Deployment
 C:\Dev\BCA\TradesAllocation\BcaResearch\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Dev\BCA\TradesAllocation\BcaResearch\obj\Debug\BcaResearch.dll
 C:\Dev\BCA\TradesAllocation\BcaResearch\obj\Debug\BcaResearch.pdb
-C:\Dev\BCA\TradesAllocation\BcaResearch\obj\Debug\BcaResearch.csprojResolveAssemblyReference.cache
 C:\Dev\BCA\Allocations_crud\BcaResearch\bin\Debug\BcaResearch.dll
 C:\Dev\BCA\Allocations_crud\BcaResearch\bin\Debug\BcaResearch.pdb
 C:\Dev\BCA\Allocations_crud\BcaResearch\bin\Debug\Microsoft.Web.Infrastructure.dll
@@ -69,3 +68,4 @@ C:\Dev\BCA\Allocations_crud\BcaResearch\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Dev\BCA\Allocations_crud\BcaResearch\obj\Debug\BcaResearch.csprojResolveAssemblyReference.cache
 C:\Dev\BCA\Allocations_crud\BcaResearch\obj\Debug\BcaResearch.dll
 C:\Dev\BCA\Allocations_crud\BcaResearch\obj\Debug\BcaResearch.pdb
+C:\Dev\BCA\TradesAllocation\BcaResearch\obj\Debug\BcaResearch.csprojResolveAssemblyReference.cache

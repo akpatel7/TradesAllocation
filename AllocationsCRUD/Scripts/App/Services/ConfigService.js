@@ -10,7 +10,7 @@
             //loginUrl: $window.config !== undefined ? $window.config.loginUrl : '',
             //reportsBaseUrl: $window.config !== undefined ? $window.config.reportsBaseUrl : '',
             //banBaseUrl: $window.config !== undefined ? $window.config.banBaseUrl : '',
-            treeGridBasePath: $window.config !== undefined ? $window.config.BaseUrl + '/Scripts/Lib/TreeGrid/' : ''
+            treeGridBasePath: 'http://localhost:55802/' + '/Scripts/Lib/TreeGrid/'
         };
     };
     service.$inject = ['$window'];

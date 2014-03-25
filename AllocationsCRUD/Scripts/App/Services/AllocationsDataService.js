@@ -165,6 +165,8 @@
                         { key: '$filter', value: "InstrumentUri eq '" + options.instrumentUri + "' or InstrumentUri eq '<" + options.instrumentUri + ">'" }
                     ])
                     .then(function (url) {
+                        //for testing without odata backend
+                        var url = 'http://localhost:55802/Api/Allocations/GetAllocationsTestData';
                         $http.get(url).success(function (data) {
                             _.each(data.value, _formatAllocation);
                             deferred.resolve({ allocations: data.value, totalCount: parseInt(data['odata.count'], 10) });

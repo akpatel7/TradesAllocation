@@ -36,10 +36,7 @@ namespace AllocationsCRUD
                      "~/Content/css/smoothness/jquery-ui.css",
                      "~/Content/css/autoSuggest.css",
                      "~/Content/css/oo_style.css",
-                     "~/Content/toastr.css",
-                     "~/Content/breeze.directives.css",
-                      "~/Content/site.css",
-                      "~/Content/todo.css"
+                     "~/Content/toastr.css"
                  ));
 
         }
