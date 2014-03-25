@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "BOWA";
+}
+
+@Html.Partial("~/Views/Shared/_BowaHeader.cshtml");
+
+<div data-ng-app="app" data-ng-include="'/app/todolists.html'"></div>
+
+@section scripts
+{
+    <!-- 3rd party libraries -->
+    <script src="~/Scripts/ODataBreezeSample/angular.js"></script>
+    @*<script src="~/Scripts/angular.min.js"></script>*@
+    <script src="~/Scripts/ODataBreezeSample/angular-animate.min.js"></script>
+
+    <!-- Breeze dependencies, Breeze itself, and Breeze extensions -->
+    <script src="~/Scripts/ODataBreezeSample/datajs-1.1.1.js"></script>
+
+    <script src="~/Scripts/ODataBreezeSample/breeze.debug.js"></script>
+    @*<script src="~/Scripts/breeze.min.js"></script>*@
+    <script src="~/Scripts/ODataBreezeSample/breeze.angular.js"></script>
+    <script src="~/Scripts/ODataBreezeSample/breeze.directives.validation.js"></script>
+    <script src="~/Scripts/ODataBreezeSample/toastr.min.js"></script>
+
+    <!-- App libraries -->
+    <script src="~/Scripts/ODataBreezeSample/App/app.js"></script>
+    <script src="~/Scripts/ODataBreezeSample/App/datacontext.js"></script>
+    <script src="~/Scripts/ODataBreezeSample/App/entityManagerFactory.js"></script>
+    <script src="~/Scripts/ODataBreezeSample/App/logger.js"></script>
+    <script src="~/Scripts/ODataBreezeSample/App/todolists.js"></script>
+    <script src="~/Scripts/ODataBreezeSample/App/todolist-detail.js"></script>
+}

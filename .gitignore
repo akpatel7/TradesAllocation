@@ -7,3 +7,7 @@ TradesAllocationApp/bin/TradesAllocationApp.dll
 TradesAllocationApp/bin/TradesAllocationApp.pdb
 TradesAllocationApp/obj/Debug/TradesAllocationApp.dll
 TradesAllocationApp/obj/Debug/TradesAllocationApp.pdb
+AllocationsCRUD/bin/
+AllocationsCRUD/obj/
+*.suo
+*.user

@@ -1,5 +1,0 @@
-﻿label.done {
-    /*Hack for IE9 repaint bug*/
-    padding: 1px;
-    text-decoration: line-through;
-}
