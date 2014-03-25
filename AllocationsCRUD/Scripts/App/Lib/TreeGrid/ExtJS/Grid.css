@@ -1,0 +1,1664 @@
+/* -----------------------------------------------------------------------*/
+/* ----------------- "ExtJS" TreeGrid style definition ------------------*/
+/* -----------------------------------------------------------------------*/
+
+/* ------------- Base tags ------------- */
+
+.GEImage { padding-bottom:100%; padding-bottom:256px!IE; }
+.GENone { display:none; }
+.GESection,.GESectionFF3 { table-layout:fixed; width:0px; font-size:1px; }
+.GESectionFF3 { border-collapse:collapse; }
+
+/* -------------- Sections ------------------ */
+
+.GEMainTable { border-left:1px solid #99BCE8; border-right:1px solid #99BCE8; border-collapse:separate; text-align:left; background:#ced9e7; }
+.GEBodyLeft,.GEBodyMid,.GEBodyRight,.GEHeadLeft,.GEHeadMid,.GEHeadRight,.GEFootLeft,.GEFootMid,.GEFootRight {
+   background:white; margin-left:2px; margin-right:2px;
+   }
+.GEBodyLeft,.GEBodyMid,.GEBodyRight { border-top:1px solid #99BCE8; }
+.GEHeadLeft,.GEHeadMid,.GEHeadRight { margin-top: 0px; border-top:1px solid #99BCE8; }
+.GEFootLeft,.GEFootMid,.GEFootRight { border-top:1px solid #99BCE8; border-bottom:1px solid #99BCE8; }
+.GEHeadLeft,.GEBodyLeft,.GEFootLeft,.GEHScrollLeft {  border-left:1px solid #99BCE8; border-right:1px solid #99BCE8; }	
+.GEHeadMid,.GEBodyMid,.GEFootMid { border-right:1px solid #99BCE8; border-left:1px solid #99BCE8; }
+.GEHeadRight,.GEBodyRight,.GEFootRight,.GEHScrollRight { border-left:1px solid #99BCE8; border-right:1px solid #99BCE8; }	
+.GELeftSplitter,.GERightSplitter,.GELeftSplitterTouch,.GERightSplitterTouch { width:3px;background:#CED9E7; overflow:hidden; cursor:e-resize; font-size:1px; }
+.GELeftSplitterTouch,.GERightSplitterTouch { width:15px; }
+.GELeftSplitter,.GELeftSplitterTouch {  }
+.GERightSplitter,.GERightSplitterTouch {  }
+.GESplitterDisabled { cursor:default }
+.GEVScroll { margin-right:2px; border-right:1px solid #99BCE8; border-bottom:1px solid #99BCE8; border-top:1px solid #99BCE8; } 
+.GEHScrollLeft,.GEHScrollMid,.GEHScrollRight,.GEHScrollWide,
+.GEHScrollLeftResize,.GEHScrollRightResize,.GEHScrollMidLeftResize,.GEHScrollMidRightResize,
+.GEHScrollLeftResizeTouch,.GEHScrollRightResizeTouch,.GEHScrollMidLeftResizeTouch,.GEHScrollMidRightResizeTouch {
+   margin-left:2px; margin-right:2px; border-left:1px solid #99BCE8; border-right:1px solid #99BCE8; border-bottom:1px solid #99BCE8; cursor:default; 
+   }
+.GEHScrollLeftResize,.GEHScrollMidRightResize,.GEHScrollLeftResizeTouch,.GEHScrollMidRightResizeTouch { border-right:2px dotted red; margin-right:2px; }
+.GEHScrollRightResize,.GEHScrollMidLeftResize,.GEHScrollRightResizeTouch,.GEHScrollMidLeftResizeTouch { border-left:2px dotted red; margin-left:2px; }
+.GEHScrollHidden { background:#F4F4F4; }
+.GEXScroll { margin-left:2px; margin-right:2px; }
+.GEScrollSafariMac div::-webkit-scrollbar { -webkit-appearance: none; width: 11px; height: 11px; } 
+.GEScrollSafariMac div::-webkit-scrollbar-thumb { border-radius: 8px; border: 2px solid white; background-color: rgba(0, 0, 0, .5); }
+.GEPageFirst { }
+.GEPage { border-top:1px solid #E0E0E0;}
+.GEPageOne { }
+.GEChildPart {  }
+
+/* ------------- Round corners ------------- */
+
+.GETop { }
+.GETop1 {/* margin-left:5px; margin-right:5px; height:1px; background:#99BCE8; overflow:hidden; */}
+.GETop2 { margin-left:3px; margin-right:3px; border-left:2px solid #ECF2FB; border-right:2px solid #ECF2FB; background:#ECF2FB; height:1px; overflow:hidden; }
+.GETop3 { margin-left:2px; margin-right:2px; border-left:1px solid #ECF2FB; border-right:1px solid #ECF2FB; background:#CED9E7; height:1px; overflow:hidden; }
+.GETop4 { margin-left:1px; margin-right:1px; border-left:1px solid #99BCE8; border-right:1px solid #99BCE8; background:#CED9E7; height:2px; overflow:hidden; }
+.GETop5 { display:none; }
+.GEBottom { }
+.GEBottom5 {/* margin-left:5px; margin-right:5px; height:1px; background:#99BCE8; overflow:hidden; */}
+.GEBottom4 { margin-left:3px; margin-right:3px; border-left:2px solid #CED9E7; border-right:2px solid #CED9E7; background:#99BCE8; height:1px; overflow:hidden; }
+.GEBottom3 { margin-left:2px; margin-right:2px; border-left:1px solid #99BCE8; border-right:1px solid #99BCE8; background:#CED9E7; height:1px; overflow:hidden; }
+.GEBottom2 { margin-left:1px; margin-right:1px; border-left:1px solid #99BCE8; border-right:1px solid #99BCE8; background:#CED9E7; height:2px; overflow:hidden; }
+.GEBottom1 { display:none; }
+
+/* ------------- Rows ------------------ */
+
+.GESpaceRowHeight { height:21px; }
+.GERowHeight { height:18px; }
+.GERowHeightTouch { height:22px; }
+.GESpaceMargin { margin:0px; }
+.GESpaceMarginTouch { margin:5px; }
+
+.GESpaceRow { background:none; white-space:nowrap; font-size:1px; overflow:hidden; padding-top:2px; padding-bottom:2px; margin-left:2px; margin-right:2px; }
+.GEToolbarRow,.GEToolbar1Row,.GEToolbar2Row,.GETopbarRow,.GETopbar1Row,.GETopbar2Row,.GEGroupRow,.GESearchRow,.GEPagerRow {
+   background:url(Backgrounds.gif) repeat-x 0px -500px; white-space:nowrap;
+   font-size:1px; padding-top:5px; padding-bottom:5px; overflow:hidden;
+   margin-left:2px; border-left:1px solid #99BCE8;
+   margin-right:2px; border-right:1px solid #99BCE8;   
+   border-top:1px solid #99BCE8; 
+   }
+.GEGroupRow,.GEPagerRow,.GEToolbar1Row,.GETopbarRow,.GETopbar1Row { background-position:0px -500px; }
+.GEToolbarRow,.GEToolbar1Row,.GEToolbar2Row { padding-left:3px; margin-bottom: 0px; border-bottom:1px solid #99BCE8; border-top:none; }
+.GEToolbar2Row,.GETopbar1Row { padding-left:3px; }
+.GETopbarRow,.GETopbar2Row {  padding-left:3px; }
+.GEFillRow { background:url(Backgrounds.gif) repeat-x 0px -500px;  margin-left:2px; border-left:1px solid #99BCE8;
+   margin-right:2px; border-right:1px solid #99BCE8; border-bottom:1px solid #99BCE8;  }
+.GETabberRow { }
+.GERowAbove,.GERowBelow { border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8; }
+.GERowAbove { 
+  /*background:url(Backgrounds.gif) repeat-x 0px -1800px;*/ 
+  margin-top:0px; overflow:hidden; 
+  margin-left: 5px; margin-right: 5px; 
+	background-color: #ced9e7;  
+  }
+.GERowBelow { background:url(Backgrounds.gif) repeat-x 0px 0px; margin-bottom:0px; overflow:hidden; 
+  margin-left: 5px; margin-right: 5px; }
+.GENoDataRow { border-top:1px solid black; padding-left:5px; padding-top:5px; padding-bottom:5px; color:gray; font-style:italic; }
+
+/*.GEHeaderRow { border-bottom: 1px solid #99BCE8; }*/
+.GEFilterRow { border-top: 1px solid #99BCE8; }
+.GEHeaderRow { padding-bottom: 1px; }
+/* ------------- Cell ------------- */
+
+.GECell,.GECellPanel,.GECellFilter,.GECellFilterPanel,.GEHeaderDrag,.GEHeaderGroup,.GECellUser { 
+	border-bottom:1px solid #dddddd; border-right:1px solid #e0e0ff; border-left:0px none; border-top:0px none;
+	vertical-align:top; white-space:nowrap; overflow:hidden; overflow:auto!IE; height:auto;
+	}
+.GECellFilter { border-bottom:none; }	
+.GECellHeader,.GECellHeaderPanel,.GECellHeaderEmpty {
+   vertical-align:top; overflow:hidden; overflow:auto!IE; height:auto; 
+   background:url(Backgrounds.gif) repeat-x 0px 0px;
+   border-right:1px solid #e0e0ff; 
+   border-top:1px solid #EEF7FF; border-left:0px none; border-top:0px none;
+   }
+.GECellBorderFF3 { border-left:0px none; border-top:0px none; }
+.GECellHeaderPanel { padding-top:4px; }
+.GECellSpace { vertical-align:top; padding-top:5px!important; }
+.GECellSpacePanel,.GECellSpaceBool { vertical-align:top; }
+.GECellSpaceRadio { padding-top:3px!important;}
+.GECellSpaceEdit,.GECellSpaceEditIcon  {
+   vertical-align:top; padding-top:5px!important;
+   background:white url(BackgroundsRight.gif) right 0px; border-bottom:1px solid #c3c3c3; border-left:1px solid #c3c3c3; border-top:none;
+   }
+.GECellSpaceEditIcon  { padding-left:0px!important; }
+.GECellSpaceSelect  {
+   vertical-align:top; background:url(BackgroundsRight.gif) right -250px!important; 
+   border-bottom:1px solid transparent; border-bottom:1px none!IE; border-top:none;
+   }
+.GESpaceSelectInner { border-left:1px solid #c3c3c3; padding-top:5px!important; padding-bottom:3px!important; white-space:nowrap!important; max-height:13px; } 
+.GECellSpaceEditButton { vertical-align:top; padding-top:4px!important; border:1px solid #C3C3C3; background-color:white!important; }
+.GECellSpaceButtonButton { vertical-align:top; }
+.GECellSpaceButton { vertical-align:top; padding-top:4px!important; white-space:nowrap; }
+.GECellSpaceAbove { border-top:1px solid #99BCE8; }
+.GECellSpaceBelow { border-bottom:1px solid #99BCE8; }
+.GECellPanel { background:#EAEFF2 url(Backgrounds.gif) no-repeat 0px -1000px; }
+.GECellPanel,.GECellHeaderPanel { white-space:nowrap; direction:ltr; }
+.GECellFilterPanel { background:url(Backgrounds.gif) repeat-x 0px -505px; text-align:center; padding:0px; border-bottom:0px none; border-right:0px none; direction:ltr; }
+.GECellUser { background-color:#F0F0E0; }
+.GECellEmpty { background: white; border-right:1px solid #e0e0ff; }
+.GECellHeaderEmpty { }
+.GECellHidden { background:transparent!important; border-top:none!important; border-bottom:none!important; }
+
+.GEHeaderButton { padding:0px; }
+.GEHeaderGroup { font:13px "Microsoft Sans Serif",Verdana,Arial; background: #7FA9E6; color:White; padding-left:3px; }
+.GEHeaderGroupFocus { background-color: #C0C0A0; }
+.GEHeaderGroupDelete { background-color: #F0F0E0; color: #F0F0E0; }
+.GEHeaderGroupCustom {
+   font:italic 11px "Microsoft Sans Serif",Verdana,Arial;
+   color:#BBB; padding-left:5px; cursor:default; white-space:nowrap; padding-top:3px;
+   }
+.GEHeaderDrag { background: #9FB9E9; cursor:default; overflow:hidden; }
+.GEHeaderFocus { background: #9FB9E9; }
+.GEPanel { padding-left:80px; }
+.GENoTreeLines1 { text-align:right; }
+.GENoTreeLines2 { text-align:right; vertical-align:middle; padding-top:0px; }
+.GENoTreeLines3 { text-align:left; }
+.GETree { padding-top:0px; white-space:nowrap; }
+.GESpannedTree { vertical-align:top; }
+.GECellClassInner { padding-top:0px; padding-bottom:0px; }
+
+/* ------------- Inside cell ------------- */
+
+.GEHtml,.GEText,.GELines,.GEPass,.GEInt,.GEFloat,.GEDate,.GELink,.GEImg,.GERadio,.GERadioText,.GEList,.GEEnum,.GEDropCols,.GEAbs,.GEPagerEdit,.GEUser,.GEChart {
+   font-size:11px; font-family:"Microsoft Sans Serif",Verdana,Arial; white-space:nowrap;
+   padding-left:3px; padding-right:3px; padding-top:2px; padding-bottom:2px;
+   }  
+.GEInt,.GEFloat,.GEDate { text-align:right; }
+.GELines,.GERadio,.GEHtml,.GEList { white-space:normal; }	
+.GEImg,.GEHtml { padding-top:0px; padding-bottom:0px; }
+.GESelect { padding-top:2px; padding-bottom:2px; }
+.GEChart { padding:5px!important; }
+.GEPass { font-size:14px; padding:0px; padding-left:3px; }
+.GERadio,.GERadioText { padding:0px; font-weight:normal!important; }
+.GEBool { text-align:center; }
+.GEIcon { background-repeat:no-repeat; }
+.GEHidden { }
+.GEHiddenSpace { display:none; }
+.GEDropCols { padding-top:2px!important; }
+.GEHeaderText { font:13px "Trebuchet MS", Tahoma, Arial; line-height:17px; color:#000000; padding-left:3px; padding-right:3px; padding-bottom:2px!important; padding-top:3px!important; }
+.GEAbs { padding:0px; }
+.GEUser { padding:0px; }
+.GEPagerEdit { text-align:center; padding-top:3px; }
+.GERightButton { font:10px "Times New Roman"; padding:0px; height:17px; width:19px; margin:0px; }
+.GERightHtml { font:12px "Times New Roman"; }
+.GERightImg { font:12px "Times New Roman"; }
+.GEMergedCellH { padding:0px; padding-right:5px; }
+.GEMergedCellV { padding:0px; padding-bottom:1px; }
+
+.GEWrap0 { white-space:nowrap; }
+.GEWrap1 { white-space:normal; }
+.GEAlignLeft { text-align:left; }
+.GEAlignCenter { text-align:center; }
+.GEAlignJustify { text-align:center; }
+.GEAlignRight { text-align:right; }
+.GENoSpaceLeft { border-left:0px none; }
+.GENoSpaceRight { border-right:0px none; }
+.GECellRotate1 { vertical-align:bottom; padding-top:1px; padding-bottom:1px; text-align:left; }
+.GECellRotate2 { vertical-align:top; padding-top:1px; padding-bottom:1px; }
+.GECellRotate3 { vertical-align:middle; padding-top:1px; padding-bottom:1px; }
+.GERotate1IEHeader { background-color:#D5E1EF; filter: progid:DXImageTransform.Microsoft.Chroma(color='#D5E1EF') progid:DXImageTransform.Microsoft.BasicImage(rotation=3); overflow:hidden; }
+.GERotate1IE { background-color:#FFFFFF; filter: progid:DXImageTransform.Microsoft.Chroma(color='#FFFFFF') progid:DXImageTransform.Microsoft.BasicImage(rotation=3); overflow:hidden; }
+.GERotate1 { -ms-transform:rotate(-90deg); -moz-transform:rotate(-90deg); -webkit-transform: rotate(-90deg); -o-transform: rotate(-90deg); }
+.GERotate2 { text-align:left; writing-mode:tb-rl; -moz-transform:rotate(-270deg); -webkit-transform: rotate(-270deg); -o-transform: rotate(-270deg); }
+
+/*--------------- Pages type cell ----------------- */
+
+.GEPages { overflow:visible; padding-left:3px; padding-right:3px; padding:0px!important; }
+.GEPagesLink,.GEPagesLinkActive {
+   padding-left:2px; padding-right:1px; padding-top:2px; padding-bottom:2px; margin-top:2px; margin-bottom:2px;
+   display:inline-block; font:11px "Microsoft Sans Serif",Verdana,Arial; cursor:pointer; _cursor:hand; color:blue;
+   }
+/* The :hover remarkably slows down every grid in IE strict mode
+.GEPagesLink:visited { color:blue; }
+.GEPagesLink:hover { color:red; }*/
+.GEPagesLinkActive { color:black; font-weight:bold; border:1px dotted black; margin-top:1px; margin-bottom:1px; }
+
+/*--------------- Gantt type cell ----------------- */
+
+.GEGantt { border:0px none; padding:0px; border-right:1px solid #e0e0ff; cursor:default; background:transparent; -webkit-user-select:none; -moz-user-select:none; }
+.GEGantt0Out,.GEGantt10Out,.GEGantt90Out,.GEGantt100Out,.GEGanttNullOut,.GEGanttHtmlOut {
+   border:1px solid black; margin-top:2px; padding:1px; background:white; overflow:hidden;
+   }  
+.GEGanttHtmlOut { margin-left:1px; margin-right:1px; }  
+.GEGanttHoverOut { border:2px solid red; margin-top:1px; margin-left:0px; margin-right:0px; padding:1px; background:white; overflow:hidden; }
+.GEGantt10Out { padding-left:0px; border-left:0px none; }
+.GEGantt90Out { padding-right:0px; border-right:0px none; }
+.GEGantt0In,.GEGantt10In,.GEGantt90In,.GEGantt100In,.GEGanttNullIn, 
+.GEGantt0InErr,.GEGantt10InErr,.GEGantt90InErr,.GEGantt100InErr,.GEGanttNullInErr, 
+.GEGantt0InCrit,.GEGantt10InCrit,.GEGantt90InCrit,.GEGantt100InCrit,.GEGanttNullInCrit { height:9px; overflow:hidden; font-size:1px; /*background:url(Backgrounds.gif)*/ }
+/*.GEGantt0In {  background-position: 0px -1709px; }
+.GEGantt0InErr {  background-position: 0px -1578px; }
+.GEGantt0InCrit {  background-position: 0px -1682px; }
+.GEGantt10In { background-position: 0px -1695px; }
+.GEGantt10InErr { background-position: 0px -1565px; }
+.GEGantt10InCrit { background-position: 0px -1669px; }
+.GEGantt90In,.GEGantt90InErr,.GEGantt90InCrit { background-position: 0px -1591px; }
+.GEGantt100In,.GEGantt100InErr,.GEGantt100InCrit { background-position: 0px -1604px; }
+.GEGanttNullIn { background-position: 0px -1643px; }
+.GEGanttNullInErr { background-position: 0px -1565px; }
+.GEGanttNullInCrit { background-position: 0px -1669px; }
+.GEGanttG0In { background-position: 0px -1656px; }
+.GEGanttG0InErr { background-position: 0px -1734px; }
+.GEGanttG0InCrit { background-position: 0px -1721px; }
+.GEGanttG10In { background-position: 0px -1617px; }
+.GEGanttG10InErr { background-position: 0px -1734px; }
+.GEGanttG10InCrit { background-position: 0px -1721px; }
+.GEGanttG90In,.GEGanttG90InErr,.GEGanttG90InCrit { background-position: 0px -1630px; }
+.GEGanttG100In,.GEGanttG100InErr,.GEGanttG100InCrit { background-position: 0px -1643px; }
+.GEGanttGNullIn { background-position: 0px -1643px; }
+.GEGanttGNullInErr { background-position: 0px -1734px; }
+.GEGanttGNullInCrit { background-position: 0px -1721px; }
+*/
+.GEGantt0In { background:#6BF; }
+.GEGantt0InErr { background:#F00; }
+.GEGantt0InCrit { background:#FD8; }
+.GEGantt10In { background:#69F; }
+.GEGantt10InErr { background:#B00; }
+.GEGantt10InCrit { background:#FC3; }
+.GEGantt90In,.GEGantt90InErr,.GEGantt90InCrit { background:#0D0; }
+.GEGantt100In,.GEGantt100InErr,.GEGantt100InCrit { background:#9F9; }
+.GEGanttNullIn { background:#777; }
+.GEGanttNullInErr { background:#F00; }
+.GEGanttNullInCrit { background:#FD8; }
+.GEGanttHtmlIn { background:#EEE; overflow:hidden; font-size:9px; font-family:"Microsoft Sans Serif",Verdana,Arial; white-space:nowrap; }
+.GEGanttG0In { background:#FFF; }
+.GEGanttG0InCrit { background:#FD8; }
+.GEGanttG0InErr { background:#FCC; }
+.GEGanttG10In { background:#EEE; }
+.GEGanttG10InCrit { background:#FEC; }
+.GEGanttG10InErr { background:#FAA; }
+.GEGanttG90In,.GEGanttG90InErr,.GEGanttG90InCrit { background:#666; }
+.GEGanttG100In,.GEGanttG100InErr,.GEGanttG100InCrit { background:#000; }
+.GEGanttGNullIn { background:#FFF; }
+.GEGanttGNullInErr { background:#F88; }
+.GEGanttGNullInCrit { background:#FD8; }
+
+.GEGanttRed0In,.GEGanttRed10In { background:white; } .GEGanttRed90In,.GEGanttRed100In,.GEGanttRedNullIn { background:red; }
+.GEGanttBlue0In,.GEGanttBlue10In { background:white; } .GEGanttBlue90In,.GEGanttBlue100In,.GEGanttBlueNullIn { background:blue; }
+.GEGanttGreen0In,.GEGanttGreen10In { background:white; } .GEGanttGreen90In,.GEGanttGreen100In,.GEGanttGreenNullIn { background:green; }
+.GEGanttFuchsia0In,.GEGanttFuchsia10In { background:white; } .GEGanttFuchsia90In,.GEGanttFuchsia100In,.GEGanttFuchsiaNullIn { background:fuchsia; }
+.GEGanttAqua0In,.GEGanttAqua10In { background:white; } .GEGanttAqua90In,.GEGanttAqua100In,.GEGanttAquaNullIn { background:aqua; }
+.GEGanttLime0In,.GEGanttLime10In { background:white; } .GEGanttLime90In,.GEGanttLime100In,.GEGanttLimeNullIn { background:lime; }
+.GEGanttMaroon0In,.GEGanttMaroon10In { background:white; } .GEGanttMaroon90In,.GEGanttMaroon100In,.GEGanttMaroonNullIn { background:maroon; }
+.GEGanttNavy0In,.GEGanttNavy10In { background:white; } .GEGanttNavy90In,.GEGanttNavy100In,.GEGanttNavyNullIn { background:navy; }
+.GEGanttOlive0In,.GEGanttOlive10In { background:white; } .GEGanttOlive90In,.GEGanttOlive100In,.GEGanttOliveNullIn { background:olive; }
+.GEGanttOrange0In,.GEGanttOrange10In { background:white; } .GEGanttOrange90In,.GEGanttOrange100In,.GEGanttOrangeNullIn { background:orange; }
+.GEGanttPurple0In,.GEGanttPurple10In { background:white; } .GEGanttPurple90In,.GEGanttPurple100In,.GEGanttPurpleNullIn { background:purple; }
+.GEGanttSilver0In,.GEGanttSilver10In { background:white; } .GEGanttSilver90In,.GEGanttSilver100In,.GEGanttSilverNullIn { background:silver; }
+.GEGanttTeal0In,.GEGanttTeal10In { background:white; } .GEGanttTeal90In,.GEGanttTeal100In,.GEGanttTealNullIn { background:teal; }
+.GEGanttYellow0In,.GEGanttYellow10In { background:white; } .GEGanttYellow90In,.GEGanttYellow100In,.GEGanttYellowNullIn { background:yellow; }
+.GEGanttBlack0In,.GEGanttBlack10In { background:white; } .GEGanttBlack90In,.GEGanttBlack100In,.GEGanttBlackNullIn { background:black; }
+.GEGanttGray0In,.GEGanttGray10In { background:white; } .GEGanttGray90In,.GEGanttGray100In,.GEGanttGrayNullIn { background:gray; }
+.GEGanttWhite0In,.GEGanttWhite10In,.GEGanttWhite90In,.GEGanttWhite100In,.GEGanttWhiteNullIn { background:white; } 
+.GEGanttWhite90In { border-right:1px solid black; margin-right:1px; } .GEGanttWhite10In { border-left:1px solid black; }
+.GEGanttOutLeft,.GEGanttOutRight,.GEGanttHtmlOutLeft,.GEGanttHtmlOutRight { background:url(Gantt.gif) no-repeat -293px 0px; width:20px; height:16px; overflow:hidden; }
+.GEGanttOutRight { background-position: -353px 0px; }
+.GEGanttHtmlOutLeft { background-position: -292px 0px; }
+.GEGanttHtmlOutRight { background-position: -354px 0px; }
+.GEGanttCustomOutLeft,.GEGanttCustomOutRight { height:16px; overflow:hidden; background-repeat:no-repeat; }
+
+.GEGanttFlowOut,.GEGanttFlowHtmlOut { margin-top:6px; border:1px solid black; overflow:hidden; }
+.GEGanttFlowHtmlOut { margin-left:1px; margin-right:1px; }
+.GEGanttFlowHover { border:2px solid red; margin-top:5px; margin-left:0px; margin-right:0px; overflow:hidden; }  
+.GEGanttFlowIn,.GEGanttFlowInErr,.GEGanttFlowInCrit { height:3px; overflow:hidden; background:yellow; font-size:1px; }
+.GEGanttGFlowIn { background:white; }
+.GEGanttFlowInErr { background:#F55; }
+.GEGanttFlowInCrit { background:#FA0; }
+.GEGanttFlowHtmlIn { background:#FFA; overflow:hidden; font-size:9px; font-family:"Microsoft Sans Serif",Verdana,Arial; white-space:nowrap; }
+
+.GEFGanttBase { height:11px; margin:1px; border:1px solid; padding:1px; padding-left:2px; padding-right:2px; overflow:hidden; }
+.GEFGanttRunEmpty,.GEFGanttRunBox,.GEFGanttRunSolid,.GEFGanttRunLeft,.GEFGanttRunRight,.GEFGanttRunFixed,.GEFGanttRunComplete,
+.GEFGanttRunBound,.GEFGanttRunBoundStart,.GEFGanttRunEnd,.GEFGanttRunEndStart,.GEFGanttRunNbsp {
+   border:1px solid black; padding:1px; padding-left:2px; padding-right:2px; overflow:hidden; font:10px Arial; white-space:nowrap;
+   }
+.GEFGanttRunGroupHover { border:2px solid #fa4 !important; padding:0px!important; padding-left:1px!important;padding-right:1px!important; overflow:hidden; }
+.GEFGanttRunHover { border:2px solid red!important; padding:0px!important; padding-left:1px!important;padding-right:1px!important; overflow:hidden; }
+.GEFGanttRunEmpty { border:none; padding:2px; padding-left:3px; padding-right:3px; }
+.GEFGanttRunNbsp { border:none; border-top:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; padding-left:3px; padding-right:3px; }
+.GEFGanttRunBox { background:url(Backgrounds.gif) left -1500px; }
+.GEFGanttRunSolid { background:url(Backgrounds.gif) left -1539px; }
+.GEFGanttRunFixed,.GEFGanttRunLeft,.GEFGanttRunBound,.GEFGanttRunBoundStart { border-left-style:solid!important; border-left-width:3px!important; padding-left:0px!important;}
+.GEFGanttRunFixed,.GEFGanttRunRight,.GEFGanttRunBound,.GEFGanttRunBoundStart { border-right-style:solid!important; border-right-width:3px!important; padding-right:0px!important; }
+.GEFGanttRunFixed,.GEFGanttRunLeft,.GEFGanttRunRight { background:url(Backgrounds.gif) left -1526px; }
+.GEFGanttRunBound,.GEFGanttRunBoundStart,.GEFGanttRunEnd,.GEFGanttRunEndStart { background:url(Backgrounds.gif) left -1747px; }
+.GEFGanttRunComplete { background:url(Backgrounds.gif) left -1513px; }
+
+.GEGanttRunGroupHover { margin:0px!important; border:2px solid #fa4!important; padding:1px!important; overflow:hidden; }  
+.GEGanttRunHover { margin:0px!important; border:2px solid red!important; padding:1px!important; overflow:hidden; }  
+.GEGanttRunEmptyOut,.GEGanttRunBoxOut,.GEGanttRunSolidOut,.GEGanttRunLeftOut,.GEGanttRunRightOut,.GEGanttRunFixedOut,.GEGanttRunCompleteOut,
+.GEGanttRunBoundOut,.GEGanttRunBoundStartOut,.GEGanttRunEndOut,.GEGanttRunEndStartOut,.GEGanttRunNbspOut {
+   margin-top:1px; border:1px solid black; margin-left:1px; margin-right:1px; overflow:hidden; padding:1px;
+   }
+.GEGanttRunEmptyIn,.GEGanttRunBoxIn,.GEGanttRunSolidIn,.GEGanttRunLeftIn,.GEGanttRunRightIn,.GEGanttRunFixedIn,
+.GEGanttRunBoundIn,.GEGanttRunBoundStartIn,.GEGanttRunEndIn,.GEGanttRunEndStartIn,.GEGanttRunNbspIn,.GEGanttRunCompleteIn {
+   height:11px; overflow:hidden; font:10px Arial; padding-left:1px; width:100%!IE; white-space:nowrap;
+   }
+.GEGanttRunEmptyOut { border:none; }
+.GEGanttRunEmptyIn { }
+.GEGanttRunNbspOut { border:none; border-top:1px solid #EAEAEA; border-bottom:1px solid #EAEAEA; margin-left:0px; margin-right:0px; }
+.GEGanttRunNbspIn { }
+.GEGanttRunBoxOut { }
+.GEGanttRunBoxIn { background:url(Backgrounds.gif) left -1500px; }
+.GEGanttRunSolidOut { }
+.GEGanttRunSolidIn { background:url(Backgrounds.gif) left -1539px; }
+.GEGanttRunFixedOut,.GEGanttRunLeftOut,.GEGanttRunBoundOut,.GEGanttRunBoundStartOut { border-left-style:solid!important; border-left-width:3px!important; margin-left:0px;}
+.GEGanttRunFixedOut,.GEGanttRunRightOut,.GEGanttRunBoundOut,.GEGanttRunBoundStartOut { border-right-style:solid!important; border-right-width:3px!important; }
+.GEGanttRunFixedIn,.GEGanttRunLeftIn,.GEGanttRunRightIn { background:url(Backgrounds.gif) left -1526px; }
+.GEGanttRunBoundOut,.GEGanttRunBoundStartOut,.GEGanttRunEndOut,.GEGanttRunEndStartOut { }
+.GEGanttRunBoundIn,.GEGanttRunBoundStartIn,.GEGanttRunEndIn,.GEGanttRunEndStartIn { background:url(Backgrounds.gif) left -1747px; }
+.GEGanttRunCompleteOut { }
+.GEGanttRunCompleteIn { background:url(Backgrounds.gif) left -1513px; }
+.GEGanttRunRedIn,.GEGanttRunBlueIn,.GEGanttRunGreenIn,.GEGanttRunFuchsiaIn,.GEGanttRunAquaIn,.GEGanttRunLimeIn,.GEGanttRunMaroonIn,
+.GEGanttRunNavyIn,.GEGanttRunOliveIn,.GEGanttRunOrangeIn,.GEGanttRunPurpleIn,.GEGanttRunSilverIn,.GEGanttRunTealIn,.GEGanttRunYellowIn,
+.GEGanttRunBlackIn,.GEGanttRunGrayIn,.GEGanttRunWhiteIn { }
+.GEGanttRunRedIn,.GEFGanttRunRed { background:red; }
+.GEGanttRunBlueIn,.GEFGanttRunBlue { background:blue; color:white; }
+.GEGanttRunGreenIn,.GEFGanttRunGreen { background:green; color:white; }
+.GEGanttRunFuchsiaIn,.GEFGanttRunFuchsia { background:fuchsia; }
+.GEGanttRunAquaIn,.GEFGanttRunAqua { background:aqua; }
+.GEGanttRunLimeIn,.GEFGanttRunLime { background:lime; }
+.GEGanttRunMaroonIn,.GEFGanttRunMaroon { background:maroon; color:white; }
+.GEGanttRunNavyIn,.GEFGanttRunNavy { background:navy; color:white; }
+.GEGanttRunOliveIn,.GEFGanttRunOlive { background:olive; color:white; }
+.GEGanttRunOrangeIn,.GEFGanttRunOrange { background:orange; }
+.GEGanttRunPurpleIn,.GEFGanttRunPurple { background:purple; color:white; }
+.GEGanttRunSilverIn,.GEFGanttRunSilver { background:silver; }
+.GEGanttRunTealIn,.GEFGanttRunTeal { background:teal; color:white; }
+.GEGanttRunYellowIn,.GEFGanttRunYellow { background:yellow; }
+.GEGanttRunBlackIn,.GEFGanttRunBlack { background:black; color:white; }
+.GEGanttRunGrayIn,.GEFGanttRunGray { background:gray; color:white; }
+.GEGanttRunWhiteIn,.GEFGanttRunWhite { background:white; }
+.GEGanttRunErrorIn,.GEFGanttRunError { background:url(Backgrounds.gif) left -1552px; opacity:0.7; filter:alpha(opacity=70); }
+.GEFGanttRunErrorIE { background:url(Backgrounds.gif) left -1552px; filter:alpha(opacity=70); }
+.GEGanttRunCritIn,.GEFGanttRunCrit { background:url(Backgrounds.gif) left -1760px;  }
+.GEGanttRunErrIn,.GEFGanttRunErr { background:url(Backgrounds.gif) left -1773px;  }
+.GEGanttRunJoinLeft,.GEFGanttRunJoinLeft { border-left-style:dotted; border-left-color:red; }
+.GEGanttRunJoinRight,.GEFGanttRunJoinRight { border-right-style:dotted; border-right-color:red; }
+.GEGanttRunMoveOut { border:2px solid #DDD; margin:0px; padding:0px; }
+.GEGanttRunMoveIn { background:#F0F0F0; color:black; }
+.GEGanttRunRemoveOut { border:2px solid #DDD; margin:0px; padding:0px; }
+.GEGanttRunRemoveIn { background:red; color:black; }
+.GEGanttRunCopyOut { border:2px solid blue; margin:0px; padding:0px; }
+.GEGanttRunCopyIn { }
+.GEGanttRunUnknownIn,.GEFGanttRunUnknown { background:black; color:White; font:bold 12px verdana;}
+.GEGanttRunNoneOut { margin:0px; border-color:transparent; border-width:1px!important; padding:0px!important; }
+.GEGanttRunNoneIn { height: auto; padding:0px; background:none; }
+.GEFGanttRunNone { border-color:transparent; background:none; border-width:2px!important; padding:0px!important; }
+
+.GEFGanttRunMove { border:2px solid #DDD; padding:0px; padding-left:1px; padding-right:1px; background:#F0F0F0; color:black; }
+.GEFGanttRunRemove { border:2px solid #DDD; padding:0px; padding-left:1px; padding-right:1px; background:red; color:black; }
+.GEFGanttRunCopy { border:2px solid blue; padding:0px; padding-left:1px; padding-right:1px; }
+
+.GEGanttMilestone,.GEGanttMilestone0,.GEGanttMilestone100,
+.GEGanttMilestoneCrit,.GEGanttMilestone0Crit,.GEGanttMilestone100Crit,
+.GEGanttMilestoneErr,.GEGanttMilestone0Err,.GEGanttMilestone100Err { 
+   background:url(Gantt.gif) no-repeat; width:17px; height:17px; overflow:hidden; 
+   }
+.GEGanttMilestone { background-position: -900px 0px; }
+.GEGanttMilestoneHover { background-position: -950px 0px; }
+.GEGanttMilestone0 { background-position: -1100px 0px; }
+.GEGanttMilestone0Hover { background-position: -1150px 0px; }
+.GEGanttMilestone100,.GEGanttMilestone100Crit,.GEGanttMilestone100Err { background-position: -1800px 0px; }
+.GEGanttMilestone100Hover,.GEGanttMilestone100CritHover,.GEGanttMilestone100CritHover { background-position: -1850px 0px; }
+.GEGanttMilestoneCrit,.GEGanttMilestone0Crit { background-position:-1700px 0px; }
+.GEGanttMilestoneCritHover,.GEGanttMilestone0CritHover { background-position: -1750px 0px; }
+.GEGanttMilestoneErr,.GEGanttMilestone0Err { background-position:-1000px 0px; }
+.GEGanttMilestoneErrHover,.GEGanttMilestone0ErrHover { background-position: -1050px 0px; }
+.GEGanttGMilestone,.GEGanttGMilestone100,.GEGanttGMilestone100Crit,.GEGanttGMilestone100Err { background-position: 0px 0px; }
+.GEGanttGMilestoneHover,.GEGanttGMilestone100Hover,.GEGanttGMilestone100CritHover,.GEGanttGMilestone100ErrHover { background-position: -50px 0px; }
+.GEGanttGMilestone0 { background-position: -1600px 0px; }
+.GEGanttGMilestone0Hover { background-position: -1650px 0px; }
+.GEGanttGMilestoneCrit,.GEGanttGMilestone0Crit { background-position:-1400px 0px; }
+.GEGanttGMilestoneCritHover,.GEGanttGMilestone0CritHover { background-position: -1450px 0px; }
+.GEGanttGMilestoneErr,.GEGanttGMilestone0Err { background-position:-1300px 0px; }
+.GEGanttGMilestoneErrHover,.GEGanttGMilestoneErr0Hover { background-position: -1350px 0px; }
+
+.GEGanttFlag { background:url(Gantt.gif) no-repeat -100px 0px; width:16px; height:15px; overflow:hidden; }
+.GEGanttFlagHover { background-position:-150px 0px; }
+.GEGanttFlagCustom { background-repeat:no-repeat; width:16px; height:15px; overflow:hidden; }
+.GEGanttFlagCustomHover { background-color:red; }
+.GEGanttFlagText, .GEGanttFlagTextNoIcon {  
+   overflow:hidden; margin:1px; padding:2px; border:1px solid; 
+   font-size:9px; line-height:9px; font-family:"Microsoft Sans Serif",Verdana,Arial; white-space:pre; background:yellow; overflow:hidden; 
+   }
+.GEGanttFlagText { margin-left:17px; }
+.GEGanttFlagTextHover, .GEGanttFlagTextNoIconHover { border:1px solid red!important; }
+.GEGanttFlagMenu { padding-right:16px; padding-bottom:256px; font:15px Arial; background-repeat:no-repeat; }
+
+.GEGanttMark,.GEGanttMark1,.GEGanttMark2,.GEGanttMark3,.GEGanttMark4,.GEGanttMark5,.GEGanttMark15 { height:500px; overflow:hidden; background:#880; }
+.GEGanttMark1 { background:red; }
+.GEGanttMark2 { background:green; }
+.GEGanttMark3 { background:yellow; }
+.GEGanttMark4 { background:black; }
+.GEGanttMark5 { background:silver; }
+.GEGanttMark6 { background:#F8F; margin-top:14px!important; height:2px!important; margin-bottom:-16px!important; }
+.GEGanttMark7 { background:#0F0; margin-top:14px!important; height:2px!important; margin-bottom:-16px!important; }
+.GEGanttMark8 { background:silver; margin-top:14px!important; height:2px!important; margin-bottom:-16px!important; }
+.GEGanttMark9 { background:#F8F; margin-top:2px!important; height:2px!important; margin-bottom:-4px!important; }
+.GEGanttMark10 { background:#0F0; margin-top:2px!important; height:2px!important; margin-bottom:-4px!important; }
+.GEGanttMark11 { background:silver; margin-top:2px!important; height:2px!important; margin-bottom:-4px!important; }
+.GEGanttMark12 { background:#F8F; margin-top:8px!important; height:1px!important; margin-bottom:-9px!important; }
+.GEGanttMark13 { background:#0F0; margin-top:8px!important; height:1px!important; margin-bottom:-9px!important; }
+.GEGanttMark14 { background:silver; margin-top:8px!important; height:1px!important; margin-bottom:-9px!important; }
+.GEGanttMark15 { background:#FF00FF; }
+
+.GEGanttPoint1,.GEGanttPoint2,.GEGanttPoint3,.GEGanttPoint4,.GEGanttPoint5,.GEGanttPoint6,.GEGanttPoint7,.GEGanttPoint8 {
+   background:url(Gantt.gif) no-repeat; width:17px; height:17px; overflow:hidden; 
+   }
+.GEGanttPointCustom { background-position:0px 0px!important; background-repeat:no-repeat; width:17px; height:17px; overflow:hidden; }  
+.GEGanttPointCustomHover { background-color:red; }
+.GEGanttPoint1 { background-position:-900px 0px; }
+.GEGanttPoint1Hover { background-position: -950px 0px; }
+.GEGanttPoint2 { background-position:-1000px 0px; }
+.GEGanttPoint2Hover { background-position:-1050px 0px; }
+.GEGanttPoint3 { background-position:-1100px 0px; }
+.GEGanttPoint3Hover { background-position:-1150px 0px; }
+.GEGanttPoint4 { background-position:-1200px 0px; }
+.GEGanttPoint4Hover { background-position:-1250px 0px; }
+.GEGanttPoint5 { background-position:-1300px 0px; }
+.GEGanttPoint5Hover { background-position:-1350px 0px; }
+.GEGanttPoint6 { background-position:-1400px 0px; }
+.GEGanttPoint6Hover { background-position:-1450px 0px; }
+.GEGanttPoint7 { background-position:-1500px 0px; }
+.GEGanttPoint7Hover { background-position:-1550px 0px; }
+.GEGanttPoint8 { background-position:-1600px 0px; }
+.GEGanttPoint8Hover { background-position:-1650px 0px; }
+
+.GEGanttResource { font:bold 12px "Times New Roman"; margin-top:1px; }
+.GEGanttResourceChar { width:6px; }
+
+.GEGanttAvailability { height:500px; background:#ACF; border:1px solid #88F; border-bottom:0px none; }
+.GEGanttAvailabilityNeg { height:500px; background:#FCA; border:1px solid #F88; border-top:0px none; }
+.GEGanttAvailabilityText,.GEGanttAvailabilityTextNeg { color:blue; background:none!important; text-align:center; font:bold 12px Arial; overflow:visible!important; white-space:nowrap; }
+.GEGanttAvailabilityTextNeg { color:red; }
+.GEGanttAvailabilityAxis { background:#CCC; }
+.GEGanttAvailabilityTransparent { opacity:0.7; filter:alpha(opacity=70); }
+.GEGanttAvailabilityTransparentText { opacity:0.99; filter:alpha(opacity=99); }
+.GEGanttAvailabilityRed { color:red; background:#F88; border-color:red; }
+.GEGanttAvailabilityMaroon { color:maroon; background:#B77; border-color:maroon; }
+.GEGanttAvailabilityOrange { color:orange; background:#FD8; border-color:orange; }
+.GEGanttAvailabilityYellow { color:#CC0; background:#EE6; border-color:#CC0; }
+.GEGanttAvailabilityOlive { color:olive; background:#CC8; border-color:olive; }
+.GEGanttAvailabilityLime { color:#0D0; background:#8F8; border-color:#0D0; }
+.GEGanttAvailabilityGreen { color:#080; background:#8B8; border-color:#080; }
+.GEGanttAvailabilityAqua { color:#8DD; background:#8FF; border-color:#8DD; }
+.GEGanttAvailabilityTeal { color:teal; background:#6CC; border-color:teal; }
+.GEGanttAvailabilityBlue { color:blue; background:#99F; border-color:blue; }
+.GEGanttAvailabilityNavy { color:navy; background:#66C; border-color:navy; }
+.GEGanttAvailabilityFuchsia { color:fuchsia; background:#F8F; border-color:fuchsia; }
+.GEGanttAvailabilityPurple { color:purple; background:#C6C; border-color:purple; }
+.GEGanttAvailabilityBlack { color:#AAA; background:black; border-color:#AAA; }
+.GEGanttAvailabilityGray { color:gray; background:#AAA; border-color:gray; }
+.GEGanttAvailabilitySilver { color:silver; background:#DDD; border-color:silver; }
+.GEGanttAvailabilityWhite { color:#CCC; background:#F8F8F8; border-color:#CCC; }
+.GEGanttAvailabilityNB { border-top:0px none; border-bottom:0px none; }
+
+.GEGanttDepFirst { height:500px; overflow:hidden; }
+.GEGanttDepVert,.GEGanttDepVertBottom,.GEGanttDepVertTop,.GEGanttDepVertBottom2,.GEGanttDepVertTop2,.GEGanttDepVertBottom3 {
+   border-left:1px solid #DDF; border-right:1px solid #BBF; background:blue; width:1px; overflow:hidden;
+   }
+.GEGanttDepVert { margin-top:-500px; height:500px; }
+.GEGanttDepVertTop { margin-top:-500px; height:8px; margin-bottom:492px; }
+.GEGanttDepVertTop2 { margin-top:-499px; height:7px; margin-bottom:492px; }
+.GEGanttDepVertBottom { margin-top:-491px; height:491px; }
+.GEGanttDepVertBottom2 { margin-top:-491px; height:8px; margin-bottom:483px; }
+.GEGanttDepVertBottom3 { margin-top:-482px; height:482px; }
+.GEGanttDepHorzIn { border-top:1px solid #DDF; border-bottom:1px solid #BBF; background:blue; margin-top:7px; overflow:hidden; }
+.GEGanttDepHorzInLag { border-top:1px dotted blue; margin-top:8px; overflow:hidden; }
+.GEGanttDepHorzTop { border-bottom:1px solid #BBF; background:blue; overflow:hidden; }
+.GEGanttDepHorzBottom { border-top:1px solid #DDF; background:blue; margin-top:16px; overflow:hidden; }
+.GEGanttDepHorzOut { margin-top:-500px; height:18px; margin-bottom:482px; overflow:hidden; font-size:1px; line-height:1px; }
+.GEGanttDepErr { border-top-color:#FDD; border-bottom-color:#FBB; border-left-color:#FDD; border-right-color:#FBB; background:red; }
+.GEGanttDepLagErr { border-color:red; }
+.GEGanttDepIcon { margin-top:-500px; height:500px; overflow:hidden; }
+.GEGanttDepArrowLeft,.GEGanttDepArrowRight,.GEGanttDepArrowErrLeft,.GEGanttDepArrowErrRight,
+.GEGanttDepArrowLeftRtl,.GEGanttDepArrowRightRtl,.GEGanttDepArrowErrLeftRtl,.GEGanttDepArrowErrRightRtl {
+   height:500px; background:url(Gantt.gif) no-repeat; overflow:hidden; 
+   }
+.GEGanttDepArrowLeft { background-position:-200px 0px; width:12px; }
+.GEGanttDepArrowRight { background-position:-250px 0px; width:12px; }
+.GEGanttDepArrowErrLeft { background-position:-400px 0px; width:12px; }
+.GEGanttDepArrowErrRight { background-position:-450px 0px; width:12px; }
+.GEGanttDepArrowLeftRtl { background-position:-250px 0px; width:12px; }
+.GEGanttDepArrowRightRtl { background-position:-201px 0px; width:12px; }
+.GEGanttDepArrowErrLeftRtl { background-position:-450px 0px; width:12px; }
+.GEGanttDepArrowErrRightRtl { background-position:-401px 0px; width:12px; }
+
+.GEGanttDepStart { width:4px; overflow:hidden; }
+.GEGanttDepEnd { width:10px; overflow:hidden; }
+
+.GEGanttMinStart,.GEGanttMaxStart,.GEGanttMinEnd,.GEGanttMaxEnd { background:url(Gantt.gif) no-repeat; width:7px; height:17px; overflow:hidden; }
+.GEGanttMinStart { background-position:-500px 0px; }
+.GEGanttMaxStart { background-position:-550px 0px; }
+.GEGanttMinEnd { background-position:-600px 0px; }
+.GEGanttMaxEnd { background-position:-650px 0px; }
+.GEGanttMinStartHover { background-position:-700px 0px; }
+.GEGanttMaxStartHover { background-position:-750px 0px; }
+.GEGanttMinEndHover { background-position:-800px 0px; }
+.GEGanttMaxEndHover { background-position:-850px 0px; }
+
+.GEGanttBack { }
+.GEGanttBackRow { background:white; }
+.GEGanttBack0,.GEGanttBack1,.GEGanttBack2,.GEGanttBack3,.GEGanttBack4,.GEGanttBack5 { 
+   height:500px; overflow:hidden; margin-left:auto; margin-right:auto; 
+   }
+.GEGanttBack0 { background:#FFF; }
+.GEGanttBack1 { background:#E8E8E8; }
+.GEGanttBack2 { background:#DDD; }
+.GEGanttBack3 { background:#BBB; }
+.GEGanttBack4 { background:#C72; }
+.GEGanttBack5 { background:#27C; }
+
+.GEGanttExclude,.GEGanttExcludeHidden { height:500px; overflow:hidden; background:#E8F8E8; margin-left:auto; margin-right:auto; }
+.GEGanttExcludeHidden { background:#D8F8D8; }
+
+.GEGanttBase,.GEGanttBaseAuto,.GEGanttFinish,.GEGanttFinishAuto { height:500px; overflow:hidden; border-left:2px solid #FF9E0C; width:2px; margin-left:auto; margin-right:auto; }
+.GEGanttFinishAuto,.GEGanttBaseAuto { border-left:1px solid #FF9E0C; }
+
+.GEGanttHeader {  margin-left:-2px; margin-right:-4px; }
+.GEGanttHeader1,.GEGanttHeader2,.GEGanttHeader3,.GEGanttHeader4,.GEGanttHeader5 {
+   font:12px "Trebuchet MS", Tahoma, Arial; color:#003399; white-space:nowrap;
+   text-align:center; padding-left:1px; padding-right:1px;
+   }
+.GEGanttHeader1 { border-right:1px solid white; }
+/* ------------- Tree Img with lines ------------- */
+
+.GE000,.GE010,.GE001,.GE011,.GE100,.GE110,.GE101,.GE111, 
+.GE000T,.GE010T,.GE001T,.GE011T,.GE100T,.GE110T,.GE101T,.GE111T,
+.GE00,.GE01,.GE10,.GE11,
+.GE00T,.GE01T,.GE10T,.GE11T,
+.GE0T,.GE1T,.GE0TL,.GE1TL,.GE0C,.GE1C,.GE0CL,.GE1CL,.GE0E,.GE1E,.GE0EL,.GE1EL,
+.GE0,.GE1,
+.GET,.GETL,.GEC,.GECL,.GEE,.GEEL,.GED0,.GED1,.GED2,.GED3,.GED4,.GED0L,.GED1L,.GED2L,.GED3L,.GED4L {   
+   font-size:10px; background-image:url(Tree.gif); vertical-align:top;
+   }
+
+u.GE000,u.GE010,u.GE001,u.GE011,u.GE100,u.GE110,u.GE101,u.GE111 { padding-left:63px; }
+u.GE000T,u.GE010T,u.GE001T,u.GE011T,u.GE100T,u.GE110T,u.GE101T,u.GE111T { padding-left:89px; }
+u.GE00,u.GE01,u.GE10,u.GE11 { padding-left:42px; }   
+u.GE00T,u.GE01T,u.GE10T,u.GE11T { padding-left:68px; }   
+u.GE0T,u.GE1T,u.GE0TL,u.GE1TL,u.GE0C,u.GE1C,u.GE0CL,u.GE1CL,u.GE0E,u.GE1E,u.GE0EL,u.GE1EL { padding-left:47px; }   
+u.GE0,u.GE1 { padding-left:21px; }
+u.GET,u.GETL,u.GEC,u.GECL,u.GEE,u.GEEL,u.GED0,u.GED1,u.GED2,u.GED3,u.GED4,u.GED0L,u.GED1L,u.GED2L,u.GED3L,u.GED4L { padding-left:26px; }   
+
+.GE000,.GE000T { background-position:0px 0px; }
+.GE010,.GE010T { background-position:-128px 0px; }
+.GE001,.GE001T { background-position:-256px 0px; }
+.GE011,.GE011T { background-position:-384px 0px; }
+.GE100,.GE100T { background-position:-512px 0px; }
+.GE110,.GE110T { background-position:-640px 0px; }
+.GE101,.GE101T { background-position:-768px 0px; }
+.GE111,.GE111T { background-position:-896px 0px; }
+
+.GE00,.GE00T { background-position:-21px 0px; }
+.GE10,.GE10T { background-position:-149px 0px; }
+.GE01,.GE01T { background-position:-277px 0px; }
+.GE11,.GE11T { background-position:-405px 0px; }
+
+.GE0,.GE0T { background-position:-42px 0px; }
+.GE1,.GE1T { background-position:-298px 0px; }
+
+.GET { background-position:-63px 0px; }
+
+.GE0TL { background-position:-1024px 0px; }
+.GE1TL { background-position:-1088px 0px; }
+.GE0C { background-position:-1152px 0px; }
+.GE1C { background-position:-1216px 0px; }
+.GE0CL { background-position:-1280px 0px; }
+.GE1CL { background-position:-1344px 0px; }
+.GE0E { background-position:-1408px 0px; }
+.GE1E { background-position:-1472px 0px; }
+.GE0EL { background-position:-1536px 0px; }
+.GE1EL { background-position:-1600px 0px; }
+
+.GETL { background-position:-1045px 0px; }
+.GEC { background-position:-1173px 0px; }
+.GECL { background-position:-1301px 0px; }
+.GEE { background-position:-1429px 0px; }
+.GEEL { background-position:-1557px 0px; }
+
+.GED0 { background-position:-1664px 0px; }
+.GED1 { background-position:-1696px 0px; }
+.GED2 { background-position:-1728px 0px; }
+.GED3 { background-position:-1760px 0px; }
+.GED0L { background-position:-1792px 0px; }
+.GED1L { background-position:-1824px 0px; }
+.GED2L { background-position:-1856px 0px; }
+.GED3L { background-position:-1888px 0px; }
+.GED4 { background-position:-1920px 0px; }
+.GED4L { background-position:-1952px 0px; }
+
+/* ------------- Tree Img without lines ------------- */
+
+.GEND0,.GEND1,.GEND2,.GEND3,.GEND4,.GENC,.GENE,.GENCR,.GENER { font-size:10px; background-image:url(TreeN.gif); background-repeat:no-repeat; vertical-align:top; }
+u.GEND0,u.GEND1,u.GEND2,u.GEND3,u.GEND4,u.GENC,u.GENE,u.GENCR,u.GENER { padding-left:20px; }
+.GEND0 { background-position: -6px 0px; }
+.GEND1 { background-position: -56px 0px; }
+.GEND2 { background-position: -106px 0px; }
+.GEND3 { background-position: -156px 0px; }
+.GEND4 { background-position: -206px 0px; }
+.GENC { background-position:right -50px;}
+.GENE { background-position:right -2000px;}
+.GENCR { background-position:-255px -50px;}
+.GENER { background-position:-255px -2000px;}
+u.GENL { padding-left:21px; }
+
+/* ------------- Panel img ------------- */
+
+.GEPanelImage,.GEPanelMove,.GEPanelMoveOff,.GEPanelSelect,.GEPanelSelectOn,.GEPanelSelectOff,.GEPanelDelete,.GEPanelDeleteOff,.GEPanelCopy,.GEPanelCopyOff,.GEPanelEmpty {
+   font-size:10px; padding-left:16px; background-image:url(Panel.gif); background-repeat:no-repeat;
+   }
+.GEPanelEmpty { background:none; }   
+.GEPanelMove { background-position: 0px 0px; }
+.GEPanelMoveOff { background-position: -50px 0px; }
+.GEPanelSelect { background-position: -100px 0px; }
+.GEPanelSelectOn { background-position: -150px 0px; }
+.GEPanelSelectOff { background-position: -200px 0px; }
+.GEPanelDelete { background-position: -250px 0px; }
+.GEPanelDeleteOff { background-position: -300px 0px; }
+.GEPanelCopy { background-position: -350px 0px; }
+.GEPanelCopyOff { background-position: -400px 0px; }
+.GEPanelButton { font:10px "Microsoft Sans Serif",Verdana,Arial; padding:0px; height:17px; width:19px; margin:0px; cursor:pointer; _cursor:hand; }
+
+/* ------------- Fast Panel img ------------- */
+
+.GEP1111,.GEP1211,.GEP1011,.GEP1101,.GEP1201,.GEP1001,.GEP1110,.GEP1210,.GEP1010,.GEP1100,.GEP1200,.GEP1000,
+.GEP0111,.GEP0211,.GEP0011,.GEP0101,.GEP0201,.GEP0001,.GEP0110,.GEP0210,.GEP0010,.GEP0100,.GEP0200,.GEP0000, 
+.GEP111x,.GEP121x,.GEP101x,.GEP110x,.GEP120x,.GEP100x,.GEP011x,.GEP021x,.GEP001x,.GEP010x,.GEP020x,.GEP000x,
+.GEP11xx,.GEP12xx,.GEP10xx,.GEP01xx,.GEP02xx,.GEP00xx,
+.GEPx111,.GEPx211,.GEPx011,.GEPx101,.GEPx201,.GEPx001,.GEPx110,.GEPx210,.GEPx010,.GEPx100,.GEPx200,.GEPx000,
+.GEPx11x,.GEPx21x,.GEPx01x,.GEPx10x,.GEPx20x,.GEPx00x,
+.GEPxx11,.GEPxx10,.GEPxx01,.GEPxx00, 
+.GEPxxx1,.GEPxxx0,.GEPxx1x,.GEPxx0x,.GEPx2xx,.GEPx1xx,.GEPx0xx,.GEP1xxx,.GEP0xxx {
+   font-size:10px; background-image:url(FastPanel1.gif); background-repeat:no-repeat;
+   }
+.GEP1111,.GEP111x,.GEP11xx,.GEP1xxx { background-position:0px 0px; }
+.GEP1211,.GEP121x,.GEP12xx { background-position:-80px 0px; }
+.GEP1011,.GEP101x,.GEP10xx { background-position:-160px 0px; }
+.GEP1101,.GEP110x { background-position:-240px 0px; }
+.GEP1201,.GEP120x { background-position:-320px 0px; }
+.GEP1001,.GEP100x { background-position:-400px 0px; }
+.GEP1110 { background-position:-480px 0px; }
+.GEP1210 { background-position:-560px 0px; }
+.GEP1010 { background-position:-640px 0px; }
+.GEP1100 { background-position:-720px 0px; }
+.GEP1200 { background-position:-800px 0px; }
+.GEP1000 { background-position:-880px 0px; }
+.GEP0111,.GEP011x,.GEP01xx,.GEP0xxx { background-position:-960px 0px; }
+.GEP0211,.GEP021x,.GEP02xx { background-position:-1040px 0px; }
+.GEP0011,.GEP001x,.GEP00xx { background-position:-1120px 0px; }
+.GEP0101,.GEP010x { background-position:-1200px 0px; }
+.GEP0201,.GEP020x { background-position:-1280px 0px; }
+.GEP0001,.GEP000x { background-position:-1360px 0px; }
+.GEP0110 { background-position:-1440px 0px; }
+.GEP0210 { background-position:-1520px 0px; }
+.GEP0010 { background-position:-1600px 0px; }
+.GEP0100 { background-position:-1680px 0px; }
+.GEP0200 { background-position:-1760px 0px; }
+.GEP0000 { background-position:-1840px 0px; }
+
+.GEPx111,.GEPx11x,.GEPx1xx { background-position:-15px 0px; }
+.GEPx211,.GEPx21x,.GEPx2xx { background-position:-95px 0px; }
+.GEPx011,.GEPx01x,.GEPx0xx { background-position:-175px 0px; }
+.GEPx101,.GEPx10x { background-position:-255px 0px; }
+.GEPx201,.GEPx20x { background-position:-335px 0px; }
+.GEPx001,.GEPx00x { background-position:-415px 0px; }
+.GEPx110 { background-position:-495px 0px; }
+.GEPx210 { background-position:-575px 0px; }
+.GEPx010 { background-position:-655px 0px; }
+.GEPx100 { background-position:-735px 0px; }
+.GEPx200 { background-position:-815px 0px; }
+.GEPx000 { background-position:-895px 0px; }
+
+.GEPxx11,.GEPxx1x { background-position:-31px 0px; }
+.GEPxx01,.GEPxx0x { background-position:-271px 0px; }
+.GEPxx10{ background-position:-511px 0px; }
+.GEPxx00 { background-position:-751px 0px; }
+
+.GEPxxx1 { background-position:-48px 0px; }
+.GEPxxx0 { background-position:-528px 0px; }
+
+.GEP11x1,.GEP12x1,.GEP10x1,.GEP11x0,.GEP12x0,.GEP10x0,.GEP01x1,.GEP02x1,.GEP00x1,.GEP01x0,.GEP02x0,.GEP00x0,
+.GEPx1x1,.GEPx2x1,.GEPx0x1,.GEPx1x0,.GEPx2x0,.GEPx0x0,
+.GEP1x11,.GEP1x01,.GEP1x10,.GEP1x00,.GEP0x11,.GEP0x01,.GEP0x10,.GEP0x00,
+.GEP1x1x,.GEP1x0x,.GEP0x1x,.GEP0x0x,
+.GEP1xx1,.GEP1xx0,.GEP0xx1,.GEP0xx0 {
+   font-size:11px; background-image:url(FastPanel2.gif); background-repeat:no-repeat;
+   }
+.GEP11x1 { background-position:0px 0px; }
+.GEP12x1 { background-position:-80px 0px; }
+.GEP10x1 { background-position:-160px 0px; }
+.GEP11x0 { background-position:-240px 0px; }
+.GEP12x0 { background-position:-320px 0px; }
+.GEP10x0 { background-position:-400px 0px; }
+.GEP01x1 { background-position:-480px 0px; }
+.GEP02x1 { background-position:-560px 0px; }
+.GEP00x1 { background-position:-640px 0px; }
+.GEP01x0 { background-position:-720px 0px; }
+.GEP02x0 { background-position:-800px 0px; }
+.GEP00x0 { background-position:-880px 0px; }
+
+.GEPx1x1 { background-position:-15px 0px; }
+.GEPx2x1 { background-position:-95px 0px; }
+.GEPx0x1 { background-position:-175px 0px; }
+.GEPx1x0 { background-position:-255px 0px; }
+.GEPx2x0 { background-position:-335px 0px; }
+.GEPx0x0 { background-position:-415px 0px; }
+
+.GEP1x11,.GEP1x1x { background-position:-960px 0px; }
+.GEP1x01,.GEP1x0x { background-position:-1040px 0px; }
+.GEP1x10 { background-position:-1120px 0px; }
+.GEP1x00 { background-position:-1200px 0px; }
+.GEP0x11,.GEP0x1x { background-position:-1280px 0px; }
+.GEP0x01,.GEP0x0x { background-position:-1360px 0px; }
+.GEP0x10 { background-position:-1440px 0px; }
+.GEP0x00 { background-position:-1520px 0px; }
+
+.GEP1xx1 { background-position:-1600px 0px; }
+.GEP1xx0 { background-position:-1680px 0px; }
+.GEP0xx1 { background-position:-1760px 0px; }
+.GEP0xx0 { background-position:-1840px 0px; }
+
+.GEPSpace1 { padding-left:15px; }
+.GEPSpace2 { padding-left:31px; }
+.GEPSpace3 { padding-left:47px; }
+.GEPSpace4 { padding-left:63px; }
+u.GEPSpace1 { padding-left:16px; }
+u.GEPSpace2 { padding-left:30px; }
+u.GEPSpace3 { padding-left:46px; }
+u.GEPSpace4 { padding-left:62px; }
+
+/* ------------- Button type ------------- */   
+
+.GETabHtml,.GETabHtml1 {
+	font:normal 11px "Microsoft Sans Serif",Verdana,Arial; white-space:nowrap;
+	padding-left:5px; padding-right:5px; text-align:center;
+	/*background:url(Backgrounds.gif) repeat-x left -1400px;*/
+	background-color: #ced9e7; 
+   }
+.GETabHtml1 { background-position:left -1450px; color:white; }
+.GETabSep,.GETabSepLeft,.GETabSepRight {
+   padding-left:2px; background:white!important; border:none; 
+   border-left:1px solid #9cb6c8; border-right:1px solid #9cb6c8; 
+   cursor:default!important;
+   }
+.GETabSepRight,.GETabSepLeft { padding-left:5px; }
+.GETabSepLast { padding-left:1px; background:white!important; border:none; border-left:1px solid #9cb6c8; cursor:default!important; }
+.GETabSepFirst { padding-left:1px; background:white!important; border:none; border-right:1px solid #9cb6c8; cursor:default!important; }
+
+.GEToolHtml,.GEToolHtml1 {
+   font:11px "Microsoft Sans Serif",Verdana,Arial; 
+   padding-left:3px; padding-right:3px; text-align:center; padding-top:2px;
+   }
+.GEToolHtml1 { font-weight:bold; color:blue; }
+.GEToolButton { text-align:center; padding-left:1px; padding-right:1px;}
+.GEToolButtonButton,.GEToolButtonButton1,.GEToolSpaceButton,.GEToolSpaceButton1 {
+ 	font:11px "Microsoft Sans Serif",Verdana,Arial; height:19px; white-space:nowrap;
+ 	padding-left:0px; padding-right:0px; cursor:pointer; _cursor:hand; 
+   }
+.GEToolSpaceButton,.GEToolSpaceButton1 { height:21px; }
+.GEToolButtonButton1,.GEToolSpaceButton1 { color:blue; font-weight:bold; }
+.GEToolIcon { padding:0px!important; }
+.GEToolIconHtml { width:0px; overflow:hidden; height:21px; }
+
+.GEIconHtml { text-align:left; }
+.GEDisabledButton { opacity:0.3; filter:alpha(opacity=30); }
+
+.GEToolHeader { border:none!important; padding-bottom:100px; }
+.GEToolMenuHeader { border:1px solid #e0e0ff!important; }    
+.GEToolMenuItem { background:#E8F4FF!important; }
+.GEToolMenuOuter { border:1px solid #e0e0ff!important; background:#E8F4FF!important; }
+.GEToolMenuBody { background:#E8F4FF!important; }
+
+/* ------------- Special Toolbar buttons ------------- */   
+
+.GEResizeGrid,.GEResizeGridRtl,.GEToolSave,.GEToolReload,.GEToolRepaint,.GEToolRepaint1,.GEToolAdd,.GEToolAddChild,.GEToolJoin,.GEToolSplit,.GEToolSort1,.GEToolSort,.GEToolCalc1,.GEToolCalc,
+.GEToolExpandAll,.GEToolCollapseAll,.GEToolColumns,.GEToolCfg,.GEToolHelp,.GEToolPrint,.GEToolExport,.GEToolExportPDF,.GEToolDebug,.GEToolOutdent,.GEToolIndent,
+.GEToolUndo,.GEToolUndo1,.GEToolRedo,.GEToolRedo1,.GEToolCorrect,.GEToolCorrect1,.GEToolZoomIn,.GEToolZoomIn1,.GEToolZoomOut,.GEToolZoomOut1,.GEToolZoomFit,
+.GEToolPagerFirst,.GEToolPagerFirst1,.GEToolPagerPrev,.GEToolPagerPrev1,.GEToolPagerNext,.GEToolPagerNext1,.GEToolPagerLast,.GEToolPagerLast1 {
+   font-size:11px; background-image:url(Toolbar.png); -background-image:url(Toolbar.gif); background-repeat:no-repeat;
+   padding-right:3px; padding-left:21px;
+   }
+.GEToolPagerFirst,.GEToolPagerFirst1,.GEToolPagerPrev,.GEToolPagerPrev1,.GEToolPagerNext,.GEToolPagerNext1,.GEToolPagerLast,.GEToolPagerLast1 {
+   border:0px none;
+   }   
+.GEToolSave { background-position:0px 0px; }
+.GEToolReload { background-position:-50px 0px; }
+.GEToolRepaint1 { background-position:-100px 0px; }
+.GEToolAdd { background-position:-150px 0px; }
+.GEToolAddChild { background-position:-200px 0px; }
+.GEToolSort1 { background-position:-250px 0px; }
+.GEToolSort { background-position:-300px 0px; }
+.GEToolCalc1 { background-position:-350px 0px; }
+.GEToolCalc { background-position:-400px 0px; }
+.GEToolExpandAll { background-position:-450px 0px; }
+.GEToolCollapseAll { background-position:-500px 0px; }
+.GEToolCfg { background-position:-550px 0px; }
+.GEToolHelp { background-position:-600px 0px; }
+.GEToolColumns { background-position:-650px 0px; }
+.GEToolPrint { background-position:-750px 0px; }
+.GEToolExport { background-position:-800px 0px; }
+.GEToolPagerFirst1 { background-position:-850px 0px; }
+.GEToolPagerFirst { background-position:-900px 0px; }
+.GEToolPagerPrev1 { background-position:-950px 0px; }
+.GEToolPagerPrev { background-position:-1000px 0px; }
+.GEToolPagerNext1 { background-position:-1050px 0px; }
+.GEToolPagerNext { background-position:-1100px 0px; }
+.GEToolPagerLast1 { background-position:-1150px 0px; }
+.GEToolPagerLast { background-position:-1200px 0px; }
+.GEToolDebug { background-position:-1250px 0px; }
+.GEToolUndo1 { background-position:-1350px 0px; }
+.GEToolUndo { background-position:-1400px 0px; }
+.GEToolRedo1 { background-position:-1450px 0px; }
+.GEToolRedo { background-position:-1500px 0px; }
+.GEToolCorrect1 { background-position:-1550px 0px; }
+.GEToolCorrect { background-position:-1600px 0px; }
+.GEToolZoomIn1 { background-position:-1800px 0px; }
+.GEToolZoomIn { background-position:-1850px 0px; }
+.GEToolZoomOut1 { background-position:-1700px 0px; }
+.GEToolZoomOut { background-position:-1750px 0px; }
+.GEToolZoomFit { background-position:-1900px 0px; }
+.GEToolExportPDF { background-position:-1950px 0px; }
+.GEToolJoin { background-position:-2000px 0px; }
+.GEToolSplit { background-position:-2050px 0px; }
+.GEToolRepaint { background-position:-2100px 0px; }
+.GEToolOutdent { background-position:-2150px 0px; }
+.GEToolIndent { background-position:-2200px 0px; }
+
+.GEResizeGrid  {
+   background-position:-705px -2px; 
+   margin-left:auto; margin-right:0px; margin-top:-19px;
+   height:19px; width:19px; overflow:hidden; padding:0px; cursor:nw-resize; 
+   }
+.GEResizeGridRtl {
+   background-position:-1304px -2px; 
+   margin-right:auto; margin-left:0px; margin-top:-19px;
+   height:19px; width:19px; overflow:hidden; padding:0px; cursor:ne-resize;
+   }
+
+/* ------------- Cell images ------------- */
+
+.GEIconLink { text-decoration:none; width:1000px; display:inline-block; }
+.GEIconLeft,.GEIconRight,.GEIconCenter { font-size:11px; background-repeat:no-repeat; }
+.GEIconLeft { background-position:left 0px; padding-left:20px!important; }
+.GEIconRight { background-position:right 0px; padding-right:20px!important; }
+.GEIconCenter { background-position:center 0px; }
+
+.GEDateLeft,.GEDatesLeft,.GEDefaultsLeft,.GEEnumLeft,.GEDateRight,.GEDatesRight,.GEDefaultsRight,.GEEnumRight,
+.GECheck0Left,.GECheck1Left,.GECheck0Right,.GECheck1Right,
+.GECollapseRight,.GEExpandRight,.GECollapseLeft,.GEExpandLeft,.GECollapseHeaderRight,.GEExpandHeaderRight,.GECollapseHeaderLeft,.GEExpandHeaderLeft,
+.GERadio0Left,.GERadio0Right,.GERadio1Left,.GERadio1Right,.GERadio2Left,.GERadio2Right,.GERadio3Left,.GERadio3Right, 
+.GEBoolX,.GEBoolXRO,.GEBool0,.GEBool1,.GEBool0RO,.GEBool1RO,.GEBool2,.GEBool3,.GEBool2RO,.GEBool3RO {
+   background-image:url(Button.gif); background-repeat:no-repeat; }
+.GEDefaultsSpaceLeft,.GEDefaultsSpaceRight,.GEFilter0,.GEFilter1,.GEGroup0,.GEGroup1,.GESearch0,.GESearch1,
+.GECheck2Left,.GECheck2Right,.GEBoolXSpace,.GEBoolXSpaceRO,.GEBool0Space,.GEBool1Space,.GEBool0SpaceRO,.GEBool1SpaceRO {
+   background-image:url(ButtonSpace.gif); background-repeat:no-repeat; }
+.GERadio0Left,.GERadio0Right,.GERadio1Left,.GERadio1Right,.GERadio2Left,.GERadio2Right,.GERadio3Left,.GERadio3Right { font-size:11px; font-family:"Microsoft Sans Serif",Verdana,Arial; }   
+.GEDateLeft,.GEDatesLeft,.GEDefaultsLeft,.GEDefaultsSpaceLeft,.GECheck0Left,.GECheck1Left,.GECheck2Left,
+.GEExpandLeft,.GECollapseLeft,.GEExpandHeaderLeft,.GECollapseHeaderLeft { padding-left:20px!important; }
+.GEDateRight,.GEDatesRight,.GEDefaultsRight,.GEDefaultsSpaceRight,.GECheck0Right,.GECheck1Right,.GECheck2Right,
+.GEExpandRight,.GECollapseRight,.GEExpandHeaderRight,.GECollapseHeaderRight { padding-right:20px!important; }
+u.GEDateRight,u.GEDatesRight,u.GEDefaultsRight,u.GEDefaultsSpaceRight,u.GECheck0Right,u.GECheck1Right,u.GECheck2Right,
+u.GEExpandRight,u.GECollapseRight,u.GEExpandHeaderRight,u.GECollapseHeaderRight { padding-right:0px!important; padding-left:17px; }
+.GEDateLeft,.GEDatesLeft { background-position:left -250px; }
+.GEDateRight,.GEDatesRight { background-position:right -250px; }
+.GEDefaultsLeft { background-position:left 0px; }
+.GEDefaultsRight { background-position:right 0px; }
+.GEDefaultsSpaceLeft { background-position:left -250px; }
+.GEDefaultsSpaceRight { background-position:right 0px; }
+.GECheck0Left { background-position:left -750px; }
+.GECheck1Left { background-position:left -1000px; }
+.GECheck2Left { background-position:left -1750px; }
+.GECheck0Right { background-position:right -750px; }
+.GECheck1Right { background-position:right -1000px; }
+.GECheck2Right { background-position:right -1750px; }
+.GEEnumLeft { background-position:left -500px; padding-left:17px; }
+.GEEnumRight { background-position:right -500px; padding-right:17px; }
+u.GEEnumRight { padding-right:0px; padding-left:17px; }
+.GEExpandLeft { background-position:left -2500px; }
+.GEExpandRight { background-position:right -2500px; }
+.GEExpandHeaderLeft { background-position:left -2498px; }
+.GEExpandHeaderRight { background-position:right -2498px; }
+.GECollapseLeft { background-position:left -2250px;}
+.GECollapseRight { background-position:right -2250px;}
+.GECollapseHeaderLeft { background-position:left -2248px; }
+.GECollapseHeaderRight { background-position:right -2248px; }
+
+.GERadio0Left,.GERadio1Left,.GERadio2Left,.GERadio3Left { padding-left:17px; padding-right:3px; line-height:17px; }
+.GERadio0Right,.GERadio1Right,.GERadio2Right,.GERadio3Right { padding-right:17px; padding-left:3px; line-height:17px;}
+.GERadio0Left { background-position:left -1250px; } 
+.GERadio1Left { background-position:left -1500px;} 
+.GERadio2Left { background-position:left -750px; }
+.GERadio3Left { background-position:left -1000px;}
+.GERadio0Right { background-position:right -1250px; } 
+.GERadio1Right { background-position:right -1500px;} 
+.GERadio2Right { background-position:right -750px; }
+.GERadio3Right { background-position:right -1000px;}
+.GERadioInput { margin-top:0px; margin-bottom:0px; margin-top:-4px!IE; }
+nobr.GERadio0Left,nobr.GERadio1Left,nobr.GERadio2Left,nobr.GERadio3Left,
+nobr.GERadio0Right,nobr.GERadio1Right,nobr.GERadio2Right,nobr.GERadio3Right,
+span.GERadio0Left,span.GERadio1Left,span.GERadio2Left,span.GERadio3Left,
+span.GERadio0Right,span.GERadio1Right,span.GERadio2Right,span.GERadio3Right {
+   padding-top:2px; padding-bottom:2px;
+   }
+
+u.GEBoolX,u.GEBoolXRO,u.GEBool0,u.GEBool1,u.GEBool0RO,u.GEBool1RO,u.GEBool2,u.GEBool3,u.GEBool2RO,u.GEBool3RO { padding-left:18px; }
+u.GEBoolXSpace,u.GEBool0Space,u.GEBool1Space,u.GEBoolXSpaceRO,u.GEBool0SpaceRO,u.GEBool1SpaceRO { padding-left:18px; }
+u.GEFilter0,u.GEFilter1 { padding-left:16px; }
+.GEBoolXSpace { background-position:center -2000px; padding-left:18px; }
+.GEBoolXSpaceRO { background-image:none; }
+.GEBool0Space { background-position:center -750px; padding-left:18px; }
+.GEBool1Space { background-position:center -1000px; padding-left:18px; }
+.GEBool0SpaceRO { background-position:center -1250px; padding-left:18px; }
+.GEBool1SpaceRO { background-position:center -1500px; padding-left:18px; }
+.GEBoolX { background-position:center -1750px; background-image:url(ButtonSpace.gif); }
+.GEBoolXRO { background-image:none; }
+.GEBool0 { background-position:center -750px; }
+.GEBool1 { background-position:center -1000px; }
+.GEBool2,.GEBool2RO { background-position:center -1250px; }
+.GEBool3,.GEBool3RO { background-position:center -1500px; }
+.GEBool0RO { background-position:center -1750px; }
+.GEBool1RO { background-position:center -2000px; }
+.GEFilter0 { background-position:right -752px; }
+.GEFilter1 { background-position:right -1002px; }
+.GEGroup0 { background-position:center -750px; }
+.GEGroup1 { background-position:center -1000px; }
+.GESearch0 { background-position:center -750px; }
+.GESearch1 { background-position:center -1000px; }
+.GEBoolInput { margin-top:2px; margin-bottom:0px; padding:0px; margin-top:-2px!IE;margin-bottom:-6px!IE; }
+
+.GEBoolChar0,.GEBoolChar1,.GEBoolChar2,.GEBoolChar0RO,.GEBoolChar1RO,.GEBoolChar2RO {
+   border:2px ridge white; color:blue; text-align:center;
+   height:10px; width:8px; overflow:hidden;
+   font:bold 9px Arial; margin:auto; margin-top:1px;
+   }
+.GEBoolChar2 { color:green; }
+.GEBoolChar0RO,.GEBoolChar1RO,.GEBoolChar2RO { color:gray; }
+.GEBoolCharIE { height:14px; width:12px; }
+
+.GEPopupLeft,.GEPopupRight { font-size:11px; background-image:url(Menu.gif); background-repeat:no-repeat; }
+.GEPopupLeft { background-position:-6px -250px; padding-left:14px;}
+.GEPopupRight { background-position:right -250px; padding-right:14px;}
+.GEPopupNone { padding-right:14px; }
+
+.GEIconRotate { padding-left:2px!important; padding-top:20px!important; }
+.GEIconRotateLeft { margin-left:0px; padding-top:20px!important; }
+.GEIconRotateHeaderLeft { margin-left:5px; padding-top:20px!important; }
+.GEIconRotateHeaderRight { margin-left:2px; padding-top:20px!important; }
+
+/* ------------- Filter images ------------- */
+.GEFilter0Left,.GEFilter1Left,.GEFilter2Left,.GEFilter3Left,.GEFilter4Left,.GEFilter5Left,.GEFilter6Left,.GEFilter7Left,.GEFilter8Left,.GEFilter9Left,.GEFilter10Left,.GEFilter11Left,.GEFilter12Left,
+.GEFilter0Right,.GEFilter1Right,.GEFilter2Right,.GEFilter3Right,.GEFilter4Right,.GEFilter5Right,.GEFilter6Right,.GEFilter7Right,.GEFilter8Right,.GEFilter9Right,.GEFilter10Right,.GEFilter11Right,.GEFilter12Right {
+   font-size:11px; background-image:url(Filter.gif); background-repeat:no-repeat;
+   }
+.GEFilter0Left,.GEFilter1Left,.GEFilter2Left,.GEFilter3Left,.GEFilter4Left,.GEFilter5Left,.GEFilter6Left,.GEFilter7Left,.GEFilter8Left,.GEFilter9Left,.GEFilter10Left,.GEFilter11Left,.GEFilter12Left {
+   padding-left:17px;
+   }
+.GEFilter0Right,.GEFilter1Right,.GEFilter2Right,.GEFilter3Right,.GEFilter4Right,.GEFilter5Right,.GEFilter6Right,.GEFilter7Right,.GEFilter8Right,.GEFilter9Right,.GEFilter10Right,.GEFilter11Right,.GEFilter12Right {
+   padding-right:17px;
+   }
+u.GEFilter0Right,u.GEFilter1Right,u.GEFilter2Right,u.GEFilter3Right,u.GEFilter4Right,u.GEFilter5Right,u.GEFilter6Right,u.GEFilter7Right,u.GEFilter8Right,u.GEFilter9Right,u.GEFilter10Right,u.GEFilter11Right,u.GEFilter12Right {  
+   padding-right:0px; padding-left:17px;
+   }
+.GEFilter0Left,.GEFilter0Menu { background-position:left 0px; }   
+.GEFilter1Left,.GEFilter1Menu { background-position:left -150px; }
+.GEFilter2Left,.GEFilter2Menu { background-position:left -300px; }
+.GEFilter3Left,.GEFilter3Menu { background-position:left -450px; }
+.GEFilter4Left,.GEFilter4Menu { background-position:left -600px; }
+.GEFilter5Left,.GEFilter5Menu { background-position:left -750px; }   
+.GEFilter6Left,.GEFilter6Menu { background-position:left -900px; }
+.GEFilter7Left,.GEFilter7Menu { background-position:left -1050px; }
+.GEFilter8Left,.GEFilter8Menu { background-position:left -1200px; }
+.GEFilter9Left,.GEFilter9Menu { background-position:left -1350px; }
+.GEFilter10Left,.GEFilter10Menu { background-position:left -1500px; }
+.GEFilter11Left,.GEFilter11Menu { background-position:left -1650px; }
+.GEFilter12Left,.GEFilter12Menu { background-position:left -1800px; }
+.GEFilter0Right { background-position:right 0px; }   
+.GEFilter1Right { background-position:right -150px; }
+.GEFilter2Right { background-position:right -300px; }
+.GEFilter3Right { background-position:right -450px; }
+.GEFilter4Right { background-position:right -600px; }
+.GEFilter5Right { background-position:right -750px; }   
+.GEFilter6Right { background-position:right -900px; }
+.GEFilter7Right { background-position:right -1050px; }
+.GEFilter8Right { background-position:right -1200px; }
+.GEFilter9Right { background-position:right -1350px; }
+.GEFilter10Right { background-position:right -1500px; }
+.GEFilter11Right { background-position:right -1650px; }
+.GEFilter12Right { background-position:right -1800px; }
+
+.GEFilter0Menu,.GEFilter1Menu,.GEFilter2Menu,.GEFilter3Menu,.GEFilter4Menu,.GEFilter5Menu,.GEFilter6Menu,.GEFilter7Menu,.GEFilter8Menu,.GEFilter9Menu,.GEFilter10Menu,.GEFilter11Menu,.GEFilter12Menu {
+   width:17px; height:17px; overflow:hidden; background-image:url(Filter.gif); background-repeat:no-repeat; margin-left:-1px;
+   }
+.GEFilterMenuHeader { padding-left:2px; border-bottom:0px none!important; }   
+
+/* ------------- Sort images ------------- */
+.GESort0Left,.GESort1Left,.GESort2Left,.GESort3Left,.GESort4Left,.GESort5Left,.GESort6Left,
+.GESort0Right,.GESort1Right,.GESort2Right,.GESort3Right,.GESort4Right,.GESort5Right,.GESort6Right {
+   font-size:11px; background-image:url(Sort.gif); background-repeat:no-repeat;  
+   }
+.GESort0Left,.GESort1Left,.GESort2Left,.GESort3Left,.GESort4Left,.GESort5Left,.GESort6Left { padding-left:17px; }
+.GESort0Right,.GESort1Right,.GESort2Right,.GESort3Right,.GESort4Right,.GESort5Right,.GESort6Right{ padding-right:17px; }
+u.GESort0Right,u.GESort1Right,u.GESort2Right,u.GESort3Right,u.GESort4Right,u.GESort5Right,u.GESort6Right { padding-right:0px; padding-left:17px; }
+.GESort0Left { background-position:left 0px; }   
+.GESort1Left { background-position:left -250px; }
+.GESort2Left { background-position:left -500px; }
+.GESort3Left { background-position:left -750px; }
+.GESort4Left { background-position:left -1000px; }
+.GESort5Left { background-position:left -1250px; }
+.GESort6Left { background-position:left -1500px; }
+.GESort0Right { background-position:right 0px; }   
+.GESort1Right { background-position:right -250px; }
+.GESort2Right { background-position:right -500px; }
+.GESort3Right { background-position:right -750px; }
+.GESort4Right { background-position:right -1000px; }
+.GESort5Right { background-position:right -1250px; }
+.GESort6Right { background-position:right -1500px; }
+
+/* -------------- Pager ------------------ */
+.GEPagerMain { border-top:1px solid #99BCE8; border-right:1px solid #99BCE8; border-left:1px solid #99BCE8; border-bottom:1px solid #99BCE8; margin-left:2px; margin-right:2px;}
+.GEPagerBody { background: #E8F4FF; }
+.GEPagerHeader {
+   background:url(Backgrounds.gif) repeat-x; padding-bottom:2px; padding-top:2px;
+   border-bottom:1px solid #99BCE8; cursor:default;
+   }
+.GEPagerCaption {   
+   font:12px "Trebuchet MS", Tahoma, Arial; color:#000;
+   padding-left:3px; padding-right:3px; white-space:nowrap;
+   }
+.GEPagerItem {
+   font:11px "Microsoft Sans Serif",Verdana,Arial; cursor:pointer; _cursor:hand; overflow:hidden;
+   border-top:1px solid #ffffff; border-bottom:1px solid #e0e0ff; padding-left:3px; padding-right:3px;
+   height:13px; overflow:hidden; white-space:nowrap;
+   }
+.GEPagerFocus {
+   position:relative; cursor:pointer; _cursor:hand; overflow:hidden;
+   border:1px solid #369; overflow:hidden; 
+   background:#69C; opacity:0.2; filter:alpha(opacity=30);  
+   }
+.GEPagerHover {
+   position:relative; cursor:pointer; _cursor:hand; overflow:hidden;
+   background:#9CF; opacity:0.3; filter:alpha(opacity=30); 
+   }
+.GEPagerSort1 { color: #006600; }
+.GEPagerSort2 { color: #00AE00; }
+.GEPagerSort3 { color: #00FF00; }
+.GEPagerSortS { color: black; }
+
+/* -------------- State classes ------------- */
+/* The colors must be set by numbers not by names */
+
+.GEColorDefault { background-color:#FFFFFF; }
+
+.GEColorNoFocus { background-color:#E8F4FF; }
+.GEColorReadOnly { background-color:#F4F4F4;}
+.GEColorPreview { background-color:#FFFFFF; }
+.GEColorEdit { background-color:#FFFFFF; }
+
+.GEColorAlternate { background-color:#EBFFFF; }
+
+.GEColorSelected { background-color:#FFF9D0; }
+.GEClassSelected { color:red; }
+
+.GEColorError { background-color:#FF6969; }
+.GEColorDeleted { background-color:#FFEDED; }
+.GEClassDeleted { font-style:italic; }
+.GEColorAdded { background-color:#EDFFED; }
+.GEClassAdded { font-weight:bold; }
+.GEColorMoved1 { background-color:#FFFFFF; }
+.GEColorMoved2 { background-color:#EFF9FF; }
+.GEColorChanged { background-color:#EBEFFF; }
+.GEColorChangedCell { background-color:#E1E1FF; }
+.GEClassChangedCell { font-weight:bold; }
+
+.GEColorMaxChildren { background-color:#FFFFF0; }
+
+.GEColorDetail { background-color:#FFF0FF; }
+.GEColorDetailSelected { background-color:#FFF0E0; }
+
+.GEColorDragged { background-color:#E0E0C0; }
+
+.GEColorFound1 { background-color:#FF87FF; }
+.GEColorFound2 { background-color:#FFC387; }
+.GEColorFound3 { background-color:#87FF87; }
+
+.GEColorHovered { background-color:#F0F0FF; }
+.GEColorHoveredCell { background-color:#D9E0FF; }
+.GEColorHoveredCellReadOnly { background-color:#F0F0F0; }
+.GEColorHoveredCellNoFocus { background-color:#F8F8F8; }
+.GEClassHoveredCellHeader { background-position:0px -250px; }
+.GEClassHoveredCellPanel { background-position:0px -1801px; background-repeat:repeat-x; }
+.GEColorHoveredCellFastPanel { }
+.GEColorHoveredCellSpace { background-color:#FFFFFF; }
+.GEColorHoveredCellSpaceEdit { background-color:#C0C0FF; }
+.GEColorHoveredCellSpaceBool { background-color:#FFFFFF; }
+.GEColorHoveredCellButton { background-color:#FFFFFE; }
+.GEClassHoveredCellButton { color:green; }
+.GEColorHoveredCellButton1 { background-color:#FFFFFE; }
+.GEClassHoveredCellButton1 { color:red; }
+.GEColorHoveredCellTab { background-color:#FFFFFE; }
+.GEClassHoveredCellTab { background-position:0px -1801px; color:green; }
+.GEColorHoveredCellTab1 { background-color:#99bbcc; }
+.GEClassHoveredCellTab1 { background-image:none; }
+
+.GEColorFocused { background-color:#E6E6E6; }
+.GEColorFocusedCell { background-color:#FFFFFE; }
+.GEColorFocusedCellSafari { background-color:#A0A0FF; }
+.GEColorFocusedCellSpace { background-color:#E6E6E6; }
+.GEColorFocusedCellButton { background-color:#BCD; }
+.GEColorFocusedCellHeader { background-color:#FFFFFE; }
+.GEColorFocusedCellPanel { background-color:#FFFFFE; }
+.GEColorEditedCell { background-color:#FFFFFF; }
+.GEColorViewedCell { background-color:#FFFFFF; }
+
+/* --------------- Hover, focus, edit cursors ----------------- */ 
+.GEHoverPanelBackground { }
+.GEHoverRowBackground { opacity:0.05; filter:alpha(opacity=10); background:#06F; }
+.GEHoverRowBorder { z-index:1; border-top:1px solid #BBF; border-bottom:1px solid #BBF; cursor:default; }
+.GEHoverCellBorder { z-index:3; padding:1px; border:1px solid #A0A0F0; background:white; }
+.GEFocusPanelBackground { }
+.GEFocusRowBackground { opacity:0.05; filter:alpha(opacity=10); background:#000; }
+.GEFocusRowBorder { z-index:2; border:1px solid #8099CC; }
+.GEFocusCellBorder,.GEEditCellBorder { z-index:4; border:2px solid #8099CC; }
+.GEFocusCellSpaceBorder,.GEEditCellSpaceBorder { z-index:4; }
+.GEEditCellBorder { border-color:#FF6666; }
+.GEEditCellInput { position:relative; border:1px solid #BBB; overflow:hidden; z-index:2; }
+
+.GECursorBackground { position:relative; border:none; padding:0px; overflow:hidden; }
+.GECursorBorderLeft { position:relative; padding-right:0px; padding-top:0px; padding-bottom:0px; border-right:none; border-top:none; border-bottom:none; overflow:hidden; width:0px; height:0px; }
+.GECursorBorderRight { position:relative; padding-left:0px; padding-top:0px; padding-bottom:0px; border-left:none; border-top:none; border-bottom:none; overflow:hidden; width:0px; height:0px; }
+.GECursorBorderTop { position:relative; padding-bottom:0px; padding-left:0px; padding-right:0px; border-bottom:none; border-left:none; border-right:none; overflow:hidden; width:0px; height:0px; }
+.GECursorBorderBottom { position:relative; padding-top:0px; padding-left:0px; padding-right:0px; border-top:none; border-left:none; border-right:none; overflow:hidden; width:0px; height:0px; }
+   
+/*--------------- Cell edges ----------------- */
+.GENoLeft { border-left:0px none; }
+.GENoRight { border-right:0px none; }
+
+.GEEmpty { text-decoration:none; font-size:1px; line-height:1px;}
+
+/*--------------- Dragging ----------------- */
+.GEMouseObject { opacity:0.5; filter:alpha(opacity=50); z-index:300; overflow:hidden; }
+.GEDragObject {
+   z-index:300; margin-left:10px; margin-top:10px; 
+   font:12px Arial; padding-left:3px; padding-right:3px;
+   background:#E4E5F0 url(Backgrounds.gif) repeat-x 0px -750px; border:1px solid #777; 
+   }
+.GEDragColInsideTop,.GEDragColInsideBottom,.GEDragColOutsideTop,.GEDragColOutsideBottom,.GEDragGanttRunTop,.GEDragGanttRunBottom {
+   position:absolute; background-image:url(Sort.gif); width:10px; height:11px; overflow:hidden; z-index:258;
+   }
+.GEDragColInsideTop  { background-position:0px -1750px;  }
+.GEDragColInsideBottom  { background-position:0px -1770px;  }
+.GEDragColOutsideTop  { background-position:0px -1790px;  }
+.GEDragColOutsideBottom  { background-position:0px -1810px;  }
+.GEDragGanttRunTop  { background-position:0px -1752px;  }
+.GEDragGanttRunBottom  { background-position:0px -1772px;  }
+
+/*--------------- Messages ----------------- */
+.GEDisabled { position:absolute; z-index:264; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+.GEMessage {
+	background:#E2F0FF; border:1px solid #99BCE8; padding:10px; white-space:nowrap; text-align:center;
+	font:13px "Microsoft Sans Serif",Verdana,Arial;
+   position: absolute; left:0px; top:0px; visibility:hidden; z-index:266;
+	}
+.GEMessageShadow {
+   position:absolute; margin-left:3px; margin-top:3px; z-index:265;
+   background:#888; opacity:0.5; filter:alpha(opacity=50);
+   left:0px; top:0px; visibility:hidden;
+   }	
+.GEPageMessage { background:#FAFAFA; border:1px solid #99BCE8; padding:10px; font:13px "Microsoft Sans Serif",Verdana,Arial; }
+
+.GEProgressMain { font:13px "Microsoft Sans Serif",Verdana,Arial; }
+.GEProgressCaption { font-weight:bold; margin-bottom:15px; }
+.GEProgressText { margin-bottom:15px; }
+.GEProgressOuter { text-align:left; width:200px; border:1px solid #99BCE8; padding:2px; margin-bottom:15px; }
+.GEProgressInner { height:10px; background:green; }
+.GEProgressButton,.GEMessageButton { font-size:11px; background:#EEE; text-align:center; border:1px solid #8a8fb5; }
+.GEProgressButton { margin:2px; margin-top:5px; margin-bottom:0px; white-space:nowrap; padding-left:10px; padding-right:10px; }
+.GEMessageButton { margin-top:10px; width:50px; }
+.GEMessageButtonHover,.GEProgressButtonHover { background:#ffeeaa; border:1px solid #aaaadd; }
+
+      
+/*--------------- Other ----------------- */
+/* !!! No .GE style prefix here !!! */
+.GridTmpTag { position:absolute; left:5px; top:5px; visibility:hidden; }
+
+/*--------------- Debug print ----------------- */
+/* !!! No .GE style prefix here !!! */
+.GridDebugTag,.GridDebugTagMax { overflow:auto; overflow-y:scroll; border:1px solid black; background:#DDD; }
+.GridDebugTag,.GridDebugTagMax,.GridDebugButtons,.GridDebugButtonsMax {
+   position:fixed; z-index:256; left:5px; right:5px; bottom:5px; height:200px; padding:4px;
+   position:absolute!IE;
+   left:expression((5+(document.compatMode=="CSS1Compat"?document.documentElement.scrollLeft:document.body.scrollLeft))+"px")!IE;
+   width:expression((-10+(document.compatMode=="CSS1Compat"?document.documentElement.clientWidth-8:document.body.clientWidth))+"px")!IE;
+   top:expression((-205+(document.compatMode=="CSS1Compat"?document.documentElement.scrollTop+document.documentElement.clientHeight-8:document.body.scrollTop+document.body.clientHeight))+"px")!IE;
+   }
+.GridDebugTagMax,.GridDebugButtonsMax {
+   top:5px; height:auto; 
+   top:expression((5+(document.compatMode=="CSS1Compat"?document.documentElement.scrollTop:document.body.scrollTop))+"px")!IE;
+   height:expression((-10+(document.compatMode=="CSS1Compat"?document.documentElement.clientHeight-8:document.body.clientHeight))+"px")!IE;
+   }
+.GridDebugButtons,.GridDebugButtonsMax {
+   text-align:right; margin-right:25px; width:130px; left:auto;
+   left:expression((-155+(document.compatMode=="CSS1Compat"?document.documentElement.clientWidth-8:document.body.clientWidth))+"px")!IE;
+   }
+.GridDebugButton { font-size:10px; width:40px; padding:0px; }
+.GridDebugTitle { font-size:10px; color:blue; font-style:normal;font-weight:normal; }
+.GridDebugMark { font-weight:bold; }
+.GridDebugStop { font-size:18px; font-weight:bold; color:red; }
+.GridDebugError { font-size:12px; color:red; }
+.GridDebugWarning { font-size:12px; color:#A60;}
+.GridDebugList { font-size:10px; color:#888;}
+.GridDebugInfo { font-size:12px; }
+
+/* ------------------- Popup menus, TGLib ------------------- */
+
+.GEMenuMain { position:absolute; left:0px; top:0px; z-index:258; }
+.GEMenuStatic { }
+.GEMenuOuter { overflow:hidden; border:1px solid #9CB6C8; padding:1px; background:white; }
+.GEMenuHeader {
+   overflow:hidden; position:absolute; z-index:258;
+   border:1px solid #b0b0c0; background:white; cursor:pointer; _cursor:hand;
+   }
+.GEMenuHead {
+   background:#183873 url(Backgrounds.gif) repeat-x 0px -2px;
+   font:10px Verdana,Arial; color:white; cursor:default;
+   text-align:center; padding-top:5px; padding-bottom:4px;
+   }
+.GEMenuClose {
+   float:right; width:14px; cursor:pointer; _cursor:hand; display:none;
+   background:url(Menu.gif) no-repeat right -354px;
+   }
+.GEMenuBody { cursor:default; background:white; padding-top:1px; padding-bottom:1px; }
+.GEMenuShadow {
+   position:absolute; margin-left:3px; margin-top:3px; z-index:257;
+   background:#888; opacity:0.5; filter:alpha(opacity=50);
+   }
+
+.GEMenuCheckedIconLeft { background:url(Menu.gif) no-repeat -2px -51px; padding-left:17px; }
+.GEMenuCheckedIconRight { background:url(Menu.gif) no-repeat right -51px; padding-right:17px; }
+.GEMenuUncheckedIconLeft { background:url(Menu.gif) no-repeat -2px -1px; padding-left:17px; }
+.GEMenuUncheckedIconRight { background:url(Menu.gif) no-repeat right -1px; padding-right:17px; }
+.GEMenuCheckedRadioLeft { background:url(Menu.gif) no-repeat -2px -751px; padding-left:17px; }
+.GEMenuCheckedRadioRight { background:url(Menu.gif) no-repeat right -751px; padding-right:17px; }
+.GEMenuUncheckedRadioLeft { background:url(Menu.gif) no-repeat -2px -701px; padding-left:17px; }
+.GEMenuUncheckedRadioRight { background:url(Menu.gif) no-repeat right -701px; padding-right:17px; }
+.GEMenuCursorIcon { background:url(Menu.gif) no-repeat -6px -150px; }
+.GEMenuHoverIcon { background:url(Menu.gif) no-repeat -6px -100px; }   
+.GEMenuCursorIconRtl { background:url(Menu.gif) no-repeat right -1000px; }
+.GEMenuHoverIconRtl { background:url(Menu.gif) no-repeat right -950px; }   
+.GEMenuExpandedIcon { background:url(Menu.gif) no-repeat -6px -200px; }
+.GEMenuCollapsedIcon { background:url(Menu.gif) no-repeat -6px -250px; }
+.GEMenuNextIcon { background:url(Menu.gif) no-repeat right -300px; padding-right:10px; }
+.GEMenuNextIconRtl { background:url(Menu.gif) no-repeat left -900px; padding-left:10px; }
+
+.GEMenuItemText,.GEMenuItemIcon,.GEMenuEnum,.GEMenuEnumHeader,.GEMenuEdit { font:12px "Microsoft Sans Serif",Arial; white-space:nowrap; overflow:hidden; }
+.GEMenuItemDisabled { opacity:0.50; filter:alpha(opacity=30); overflow:hidden; }
+.GEMenuLevel { color:blue; text-align:center; }  
+.GEMenuEnumParent,.GEMenuEditParent { padding-left:5px; padding-right:2px;}
+.GEMenuItemIcon { background-repeat:no-repeat; }
+.GEMenuEnum {
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;
+   background:url(Menu.gif) no-repeat left -800px; padding-left:15px; overflow:hidden;
+   }
+.GEMenuEnumHeader  {
+   padding-left:16px; padding-top:1px; cursor:default; padding-bottom:2px;
+   background:url(Menu.gif) no-repeat 1px -799px;
+   }   
+.GEMenuEdit {
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;
+   background:white; padding-left:2px; padding-right:2px; overflow:hidden; 
+   white-space:nowrap;
+   }
+.GEMenuEditInput,.GEMenuEditTextarea {
+   margin:0px; margin:-1px!IE; border:0px none; background:#FDD; 
+   padding:0px; padding-right:1px!IE; padding-left:1px!IE; font:12px "Microsoft Sans Serif",Arial;
+   }   
+.GEMenuEditTextarea { line-height:13px;  }   
+.GEMenuEditInt,.GEMenuEditFloat,.GEMenuEditDate { text-align:right; } 
+.GEMenuEditText { }
+.GEMenuEditMulti { white-space:normal; }
+
+.GEMenuItem { padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px; background:white; }   
+.GEMenuItemHover { margin-left:2px; margin-right:2px; padding-top:1px; padding-bottom:1px; margin-top:1px; margin-bottom:1px; background:#DAE3FF; }
+.GEMenuFocus {
+   margin-left:1px; margin-right:1px; padding-top:1px; padding-bottom:1px;
+   border:1px solid #aaaadd;
+   background:#CAE1F3 url(Backgrounds.gif) repeat-x 0px -1250px;
+   }
+.GEMenuFocusHover {
+   margin-left:1px; margin-right:1px; padding-top:1px; padding-bottom:1px;
+   background:#CAE1F3; border:1px solid #99BCE8;
+   }
+.GEMenuSeparator {
+   margin-top:1px; margin-right:3px; margin-left:3px; height:1px;   
+   border-top:1px solid #aaaadd; overflow:hidden;
+   }
+.GEMenuCaption { padding-top:2px; padding-bottom:2px; padding-left:2px; padding-right:2px; background:white; color:blue; text-align:center; }
+.GEMenuVSeparator { border-right:1px solid #DDD; }
+.GEMenuSection  { }
+
+.GEMenuFoot { 
+  border-top:1px solid #99BCE8; text-align:center; 
+  /*background:url(Backgrounds.gif) repeat-x 0px -1367px;*/
+  background-color: #EEEEEE; 
+  white-space:nowrap; }  
+.GEMenuButton {
+   font-size:11px;background:#dcecf8; text-align:center; border:1px solid #8a8fb5; 
+   width:48px; margin:2px; margin-top:5px; margin-bottom:4px; white-space:nowrap; padding-left:0px; padding-right:0px;
+   }
+.GEMenuButtonHover { background:#ffeeaa; border:1px solid #aaaadd; }
+
+/*--------------- Grid configuration menus ----------------- */
+
+.GECfgMenuOuter,.GEColumnsMenuOuter { border:1px solid #99BCE8; }
+.GECfgMenuHead,.GEColumnsMenuHead { padding-left:3px; }
+.GECfgMenuBody,.GEColumnsMenuBody { padding-left:4px; padding-right:4px; }
+.GECfgMenuFoot,.GEColumnsMenuFoot { padding-right:3px; padding-left:3px; }
+.GECfgMenuButton { width:70px; } 
+.GECfgMenuItemText,.GEColumnsMenuItemText { padding-left:3px; }
+.GEColumnsMenuItemText { white-space:nowrap; }
+.GECfgMenuItem,.GEColumnsMenuItem { padding-top:3px; padding-bottom:3px; }
+.GECfgMenuItemHover,.GECfgMenuFocus,.GECfgMenuFocusHover,
+.GEColumnsMenuItemHover,.GEColumnsMenuFocus,.GEColumnsMenuFocusHover { padding-top:2px; padding-bottom:2px; }
+
+/*--------------- Popup grid dialog ----------------- */
+
+.GEPopupGridOuter { border:0px none; overflow:visible; }
+.GEPopupGridHead { padding:0px; }
+.GEPopupGridBody { padding:0px; }
+.GEPopupGridFoot { padding:0px; }
+.GEPopupGridButton { width:50px; margin-top:-2px; margin-bottom:3px; } 
+
+/* ------------------- Calendar, TGLib ------------------- */
+
+.GEPickMain { position:absolute; left:0px; top:0px; z-index:258; }
+.GEPickOuter { overflow:hidden; background:white; padding:1px; }
+.GEPickHeader {
+   overflow:hidden; position:absolute; z-index:258;
+   border:1px solid #99BCE8; background:white; cursor:pointer; _cursor:hand;
+   }
+.GEPickHeaderBottom { border-bottom:0px none; padding-bottom:1px; }
+.GEPickHeaderTop { border-top:0px none; padding-bottom:1px; }
+
+.GEPickHead {
+   background:#5c8397; font:10px Verdana,Arial; color:white; cursor:default;
+   padding-left:5px; padding-top:1px; padding-bottom:1px;
+   border-bottom:1px solid white;
+   }
+.GEPickClose {
+   float:right; width:14px; cursor:pointer; _cursor:hand; display:none;
+   background:url(Menu.gif) no-repeat right -354px;
+   }
+.GEPickBody { cursor:default; padding:0px; }
+.GEPickShadow {
+   position:absolute; background:#888; z-index:257; margin-left:3px; margin-top:3px;
+   opacity:0.5; filter:alpha(opacity=50);
+   }   
+.GEPickFooter,.GEPick2Footer {
+   text-align:center; padding-top:1px; cursor:default;
+   /*background:url(Backgrounds.gif) repeat-x 0px -1367px;*/
+   background-color: #EEEEEE; 
+   border-top:1px solid #99BCE8;     
+   }
+.GEPickMY {
+   background:#183873 url(Backgrounds.gif) repeat-x 0px -2px;
+   font:10px Verdana,Arial; color:#455FA4; cursor:default;
+   text-align:center; padding-top:2px; padding-bottom:4px;
+   }   
+.GEPickMYDown { padding-right:13px; background:url(Menu.gif) no-repeat right -400px; cursor:pointer; _cursor:hand; }
+.GEPickMYUp { padding-right:13px; background:url(Menu.gif) no-repeat right -450px; cursor:pointer; _cursor:hand; }
+.GEPickMYRtl { padding-right:0px; padding-left:13px; }
+.GEPickBL,.GEPickBR { padding-top:3px; cursor:pointer; _cursor:hand; width:16px; height:14px; overflow:hidden; }
+.GEPickBL { float:left; background:url(Menu.gif) no-repeat left -500px; display:none; }
+.GEPickBR { float:right; background:url(Menu.gif) no-repeat right -550px; display:none; }
+
+.GEPickTable { table-layout:fixed; width:0px; }
+.GEPickRow { background:white; }
+.GEPickRowW { background:url(Backgrounds.gif) repeat-x 0px -1350px; }
+.GEPickCell { width:22px; }
+.GEPickWDN {
+   background:transparent; color:#333333;
+   padding:1px; font:10px Arial; text-align:center; cursor:default;
+   margin-left:3px; margin-right:3px; margin-top:2px; margin-bottom:2px;
+   }
+.GEPickHover,.GEPickSelHover,.GEPickWD,.GEPickSa,.GEPickSu,.GEPickSel,.GEPickNow,.GEPickWDNE,.GEPickSaNE,.GEPickSuNE,.GEPickSelNE,.GEPickNowNE,.GEPickOM,.GEPickOMNE {
+   text-align:center; border:1px solid white;
+   font:10px "Microsoft Sans Serif",Arial; cursor:pointer; _cursor:hand;
+   margin-left:3px; margin-right:3px; margin-top:2px; margin-bottom:2px;
+   }
+.GEPickWN,.GEPickWNE { 
+   text-align:center; font:10px "Microsoft Sans Serif",Arial; cursor:pointer; _cursor:hand;
+   padding-left:4px; padding-right:4px; padding-top:3px; padding-bottom:3px;
+   border-right:1px solid #8CA9E1; background:url(Backgrounds.gif) no-repeat -25px -1000px;
+   }
+.GEPickWDNE,.GEPickSaNE,.GEPickSuNE,.GEPickSelNE,.GEPickNowNE,.GEPickWNE { cursor:default; }
+.GEPickWD { background-color:#ffffff;   }
+.GEPickSa { background-color:#ffffff;   }
+.GEPickSu { background-color:#ffffff;   }
+.GEPickSel { 
+  /*background-color:#fbea54;*/ 
+  background-color:#FFF9D0;
+  border:1px solid #dad1d1;}                      
+.GEPickSelNE { background-color:#fbea54; border:1px solid #dad1d1;}
+.GEPickNow { background-color:#c0f3ff; border:1px solid #dad1d1;}
+.GEPickNowNE { background-color:#c0f3ff; border:1px solid #dad1d1;}
+.GEPickHover { background-color:#ddd; border:1px solid #ddd; }
+.GEPickSelHover { background-color:#eeeeaa; border:1px solid #ddd;}
+.GEPickOM { background-color:white; color:#aaaaaa; }
+.GEPickOMNE { color:#aaaaaa; }
+.GEPickEmpty { background:url(Menu.gif) no-repeat center -1050px; cursor:pointer; _cursor:hand; }
+
+.GEPickTimeCell {
+   text-align:right; padding-bottom:4px; padding-top:6px; padding-right:5px; 
+   border-top:1px solid #adf; background:#f0f6ff;
+   }
+.GEPickTime {
+   font:11px "Microsoft Sans Serif",Arial;
+   border:0px none; white-space:nowrap; text-align:right; background:#f0f6ff;
+   }
+.GEPickButton {
+   font-size:11px; background:#dcecf8; text-align:center; border:1px solid #8a8fb5; 
+   width:53px; margin:2px; margin-top:5px; margin-bottom:4px; padding-left:0px; padding-right:0px;
+   }
+.GEPickButtonHover { background:#ffeeaa; border:1px solid #aaaadd; }
+
+.GEPick2Table { table-layout:fixed; width:0px; }
+.GEPick2CellM { height:22px; width:55px; }
+.GEPick2CellY { height:22px; width:30px; }
+.GEPick2CellSep { height:22px; width:5px; }
+.GEPick2M,.GEPick2Y,.GEPick2MSel,.GEPick2YSel,.GEPick2MHover,.GEPick2YHover,.GEPick2MSelHover,.GEPick2YSelHover {
+   font:11px "Microsoft Sans Serif",Arial; cursor:pointer; _cursor:hand; text-align:center;
+   margin-left:1px; margin-right:1px; padding-left:1px; padding-right:1px; overflow:hidden;
+   }
+.GEPick2MSel,.GEPick2YSel { background:#c0f3ff; border:1px solid #dad1d1; margin-left:0px; margin-right:0px; }
+.GEPick2MHover,.GEPick2YHover { background:#DDD; border:1px solid white; margin-left:0px; margin-right:0px; }
+.GEPick2MSelHover,.GEPick2YSelHover { background:#80e0f0; border:1px solid white; margin-left:0px; margin-right:0px; }   
+.GEPick2SepH { width:1px; height:1px; overflow:hidden; }
+.GEPick2Sep { width:1px; background:#777; overflow:hidden; margin-left:2px; margin-right:2px; height:22px; }
+
+.GEPick2BL,.GEPick2BR { width:30px; cursor:pointer; _cursor:hand; }
+.GEPick2BL { background:url(Menu.gif) no-repeat center -598px; }
+.GEPick2BR { background:url(Menu.gif) no-repeat center -648px; }
+
+/* ------------------- Edit controls, TGLib ------------------- */
+.GEEdit,.GEEditInline {
+   font:11px "Microsoft Sans Serif",Arial;
+   padding-left:4px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;
+   background:white; white-space:nowrap; overflow:hidden;
+   }
+.GEEditInline { display:inline-block; vertical-align:bottom; }
+.GEEditInput,.GEEditTextarea {
+   font:11px "Microsoft Sans Serif",Arial;
+   border:0px none; margin:0px; margin-top:-1px!IE;
+   padding:0px; padding-left:1px!IE; padding-right:1px!IE; vertical-align:top;
+   }
+.GEEditTextarea { line-height:13px; }
+.GEEditSpaceInput { vertical-align:middle; }
+.GEEditNormalInput,.GEEditNormalTextarea,.GEEditSpaceTextarea { background-color:#FFDCFF; }
+.GEEditInt,.GEEditFloat,.GEEditDate { text-align:right; }
+.GEEditText { }
+.GEEditMulti { white-space:normal; }
+.GEEditReadOnly { background-color:#FFEEFF; }   
+.GEEditParent { position:absolute; z-index:258; overflow:hidden; }
+
+.GEEnumHeaderLeft,.GEEnumHeaderRight,.GEEnumHeaderNone {
+   background:white; font:11px "Microsoft Sans Serif",Arial; cursor:pointer; _cursor:hand;
+   padding-left:2px; padding-right:4px; padding-top:2px; padding-bottom:2px; white-space:nowrap;
+   }
+.GEEnumHeaderLeft { background:white url(Menu.gif) no-repeat 1px -798px; padding-left:17px; }
+.GEEnumHeaderRight { background:white url(Menu.gif) no-repeat right -798px; padding-right:17px;}
+.GEEnumMenuHeader { background:white; }
+
+.GEEnumControl,.GEEnumInline {
+   font:11px "Microsoft Sans Serif",Arial; cursor:pointer; _cursor:hand;
+   padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   border:1px solid #DDD; border-top:1px solid #666; border-left:1px solid #666;
+   background:white url(Menu.gif) no-repeat left -797px; overflow:hidden;
+   }
+.GEEnumInline { display:inline-block; vertical-align:bottom; }
+.GEEnumHeader {
+   background:white url(Menu.gif) no-repeat left -798px; 
+   font:11px "Microsoft Sans Serif",Arial; cursor:pointer; _cursor:hand;
+   padding-left:15px; padding-right:4px; padding-top:2px; padding-bottom:2px;
+   }
+
+/* ------------------- Line chart, TGLib ------------------- */
+
+.GEChartInner { background:white; width:100%; }
+.GEChartLayer { overflow:hidden; height:1000px; }
+.GEChartAxisY { background:black; height:1px; overflow:hidden; }
+.GEChartAxisYLabel { overflow:hidden; }
+.GEChartAxisYText { margin-right:5px; margin-top:12px; text-align:right; font:12px Arial; }
+.GEChartAxisX { width:1px; overflow:hidden; background:black; }
+.GEChartAxisXLabel { overflow:hidden; }
+.GEChartAxisXText { text-align:center; font:12px Arial; }
+.GEChartCaption { text-align:center; font:12px Arial; margin-top:3px; }
+
+.GEChartPoint1,.GEChartPoint2,.GEChartPoint3,.GEChartPoint4,.GEChartPoint5,.GEChartPoint6,.GEChartPoint7,.GEChartPoint8 {
+   background:url(Gantt.gif) no-repeat; width:32px; height:32px; overflow:hidden; 
+   }
+.GEChartPoint1 { background-position:-892px 7px; }
+.GEChartPoint1Hover { background-position: -942px 7px; }
+.GEChartPoint2 { background-position:-992px 7px; }
+.GEChartPoint2Hover { background-position:-1042px 7px; }
+.GEChartPoint3 { background-position:-1092px 7px; }
+.GEChartPoint3Hover { background-position:-1142px 7px; }
+.GEChartPoint4 { background-position:-1192px 7px; }
+.GEChartPoint4Hover { background-position:-1242px 7px; }
+.GEChartPoint5 { background-position:-1292px 7px; }
+.GEChartPoint5Hover { background-position:-1342px 7px; }
+.GEChartPoint6 { background-position:-1392px 7px; }
+.GEChartPoint6Hover { background-position:-1442px 7px; }
+.GEChartPoint7 { background-position:-1492px 7px; }
+.GEChartPoint7Hover { background-position:-1542px 7px; }
+.GEChartPoint8 { background-position:-1592px 7px; }
+.GEChartPoint8Hover { background-position:-1642px 7px; }
+
+/* -------------- Custom scrollbars ------------------ */
+
+.GECustScroll1RightHidden { background:url(VScroll.gif) left -108px; height:18px; overflow:hidden; }
+.GECustScroll1Right { padding-right:18px; background:url(VScroll.gif) right 0px; }
+.GECustScroll1RightHover { padding-right:18px; background:url(VScroll.gif) right -18px; }
+.GECustScroll1Left { padding-left:18px;  background:url(VScroll.gif) left 0px; }
+.GECustScroll1LeftHover { padding-left:18px;  background:url(VScroll.gif) left -18px; }
+.GECustScroll1SliderRight { padding-right:3px; background:url(VScroll.gif) right -36px; }
+.GECustScroll1SliderLeft { padding-left:3px; background:url(VScroll.gif) left -36px; }
+.GECustScroll1SliderHIn { height:18px; overflow:hidden; background:url(VScroll.gif) center -54px; }
+.GECustScroll1SliderRightHover { padding-right:3px; background:url(VScroll.gif) right -72px; }
+.GECustScroll1SliderLeftHover { padding-left:3px; background:url(VScroll.gif) left -72px; }
+.GECustScroll1SliderHInHover { height:18px; overflow:hidden; background:url(VScroll.gif) center -90px; }
+.GECustScroll1X { background:#F4F4F4; }
+
+.GECustScroll2RightHidden { background:url(VScroll.gif) left -364px; height:36px; overflow:hidden; }
+.GECustScroll2Right { padding-right:36px; background:url(VScroll.gif) right -148px; }
+.GECustScroll2RightHover { padding-right:36px; background:url(VScroll.gif) right -184px; }
+.GECustScroll2Left { padding-left:36px;  background:url(VScroll.gif) left -148px; }
+.GECustScroll2LeftHover { padding-left:36px;  background:url(VScroll.gif) left -184px; }
+.GECustScroll2SliderRight { padding-right:6px; background:url(VScroll.gif) right -220px; }
+.GECustScroll2SliderLeft { padding-left:6px; background:url(VScroll.gif) left -220px; }
+.GECustScroll2SliderHIn { height:36px; overflow:hidden; background:url(VScroll.gif) center -256px; }
+.GECustScroll2SliderRightHover { padding-right:6px; background:url(VScroll.gif) right -292px; }
+.GECustScroll2SliderLeftHover { padding-left:6px; background:url(VScroll.gif) left -292px; }
+.GECustScroll2SliderHInHover { height:36px; overflow:hidden; background:url(VScroll.gif) center -328px; }
+.GECustScroll2X { background:#F4F4F4; }
+
+.GECustScroll3Right,.GECustScroll3RightHidden { background:white; height:9px; overflow:hidden; }
+.GECustScroll3SliderRight,.GECustScroll3SliderRightHover { padding-right:3px; height:9px; background:url(VScroll.gif) right -126px; }
+.GECustScroll3SliderLeft,.GECustScroll3SliderLeftHover { height:9px; background:url(VScroll.gif) left -126px; }
+.GECustScroll3SliderRightHover { background-position:right -135px; }
+.GECustScroll3SliderLeftHover { background-position:left -135px; }
+.GECustScroll3X { background:white; }
+
+.GECustScroll4Right,.GECustScroll4RightHidden,.GECustScroll4SliderRight,.GECustScroll4SliderRightHover { height:1px; overflow:hidden; }
+.GECustScroll4X { }
+
+.GECustScroll1DownHidden { background:url(HScroll.png) -108px top; width:18px; overflow:hidden; }
+.GECustScroll1Down { padding-bottom:18px; background:url(HScroll.png) 0px bottom; cursor:default; width:18px; overflow:hidden; }
+.GECustScroll1DownHover { padding-bottom:18px; background:url(HScroll.png) -18px bottom; width:18px; overflow:hidden; }
+.GECustScroll1Up { padding-top:18px; background:url(HScroll.png) 0px top; width:18px; overflow:hidden; }
+.GECustScroll1UpHover { padding-top:18px;  background:url(HScroll.png) -18px top; width:18px; overflow:hidden; }
+.GECustScroll1SliderDown { padding-bottom:3px; background:url(HScroll.png) -36px bottom; width:18px; overflow:hidden; }
+.GECustScroll1SliderUp { padding-top:3px; background:url(HScroll.png) -36px top; width:18px; overflow:hidden; }
+.GECustScroll1SliderVIn { background:url(HScroll.png) -54px center; width:18px; overflow:hidden; }
+.GECustScroll1SliderDownHover { padding-bottom:3px; background:url(HScroll.png) -72px bottom; width:18px; overflow:hidden; }
+.GECustScroll1SliderUpHover { padding-top:3px; background:url(HScroll.png) -72px top; width:18px; overflow:hidden; }
+.GECustScroll1SliderVInHover { background:url(HScroll.png) -90px center; width:18px; overflow:hidden; }
+
+.GECustScroll2DownHidden { background:url(HScroll.png) -364px top; width:36px; overflow:hidden; }
+.GECustScroll2Down { padding-bottom:36px; background:url(HScroll.png) -148px bottom; cursor:default; width:36px; overflow:hidden; }
+.GECustScroll2DownHover { padding-bottom:36px; background:url(HScroll.png) -184px bottom; width:36px; overflow:hidden; }
+.GECustScroll2Up { padding-top:36px; background:url(HScroll.png) -148px top; width:36px; overflow:hidden; }
+.GECustScroll2UpHover { padding-top:36px;  background:url(HScroll.png) -184px top; width:36px; overflow:hidden; }
+.GECustScroll2SliderDown { padding-bottom:6px; background:url(HScroll.png) -220px bottom; width:36px; overflow:hidden; }
+.GECustScroll2SliderUp { padding-top:6px; background:url(HScroll.png) -220px top; width:36px; overflow:hidden; }
+.GECustScroll2SliderVIn { background:url(HScroll.png) -256px center; width:36px; overflow:hidden; }
+.GECustScroll2SliderDownHover { padding-bottom:6px; background:url(HScroll.png) -292px bottom; width:36px; overflow:hidden; }
+.GECustScroll2SliderUpHover { padding-top:6px; background:url(HScroll.png) -292px top; width:36px; overflow:hidden; }
+.GECustScroll2SliderVInHover { background:url(HScroll.png) -328px center; width:36px; overflow:hidden; }
+
+.GECustScroll3Down,.GECustScroll3DownHidden { background:white; width:9px; overflow:hidden; cursor:default; }
+.GECustScroll3SliderDown,.GECustScroll3SliderDownHover { padding-bottom:3px; width:9px; background:url(HScroll.png) -126px bottom; }
+.GECustScroll3SliderUp,.GECustScroll3SliderUpHover { width:9px; background:url(HScroll.png) -126px top; cursor:default; }
+.GECustScroll3SliderDownHover { background-position:-135px bottom; }
+.GECustScroll3SliderUpHover { background-position:-135px top; cursor:default; }
+
+.GECustScroll4Down,.GECustScroll4DownHidden,.GECustScroll4SliderDown,.GECustScroll4SliderDownHover { width:1px; overflow:hidden; }
+
+/* ------------------- Other messages, TGLib ------------------- */
+
+.GEHintMain {
+   position:absolute; margin-left:-2px; margin-top:-2px; padding-left:1px; padding-top:1px; left:0px; top:0px; z-index:260; 
+   background:white; cursor:default; border:1px solid #99BCE8; 
+   }
+.GEHintSpaceMain { margin:0px; padding:0px; overflow:hidden; }
+.GEHintOuter { overflow:hidden; background:white; color:black; text-align:left; border-color:white; }
+.GEHintSpaceOuter { background:white!important; margin-left:-1px; margin-top:-1px; margin-bottom:-1px; }
+.GEHintHeaderOuter { background:url(Backgrounds.gif) repeat-x 0px 0px!important; color:white; border: 1px solid white; }
+.GEHintShadow {
+   position:absolute; margin-left:2px; margin-top:2px; z-index:259;
+   background:#888; opacity:0.3; filter:alpha(opacity=30);
+   }
+.GEHintSpaceShadow { margin-left:4px; margin-top:4px; }
+
+.GETipMain { position:absolute; left:0px; top:0px; z-index:262; visibility:hidden; }
+.GETipOuter  {
+   overflow:hidden; cursor:default; font:12px Arial; padding-left:3px; padding-right:3px;
+   background:#E4E5F0 url(Backgrounds.gif) repeat-x 0px -750px; border:1px solid #777; 
+   }
+.GETipBody { background:#E4E5F0 url(Backgrounds.gif) repeat-x 0px -750px; white-space:nowrap; }   
+.GETipShadow {
+   position:absolute; margin-left:3px; margin-top:3px; z-index:261;
+   background:#888; opacity:0.3; filter:alpha(opacity=30);
+   visibility:hidden;
+   }
+
+.GEMouseOrig { background:yellow!important; opacity:0.5; filter:alpha(opacity=50); }
+.GEMouseDragObject { position:absolute; z-index:260; background:#888; opacity:0.5; filter:alpha(opacity=50); }
+
+.GEFocus { border:1px solid #AAF; border-top:1px solid #00F; border-left:1px solid #00F; background-color:#EEE; } 
+
+.GEBodyPrint { margin:0px!important; padding:0px!important; border:0px none!important; background:none!important; }
+
+.GridDisabled { position:absolute; z-index:256; background:white; opacity:0.5; filter:alpha(opacity=50); } 
+.GridMain { z-index:255; }
+
+/* Do not change, marks the style loaded */
+.GELoaded { border:1px solid black!important; }

@@ -1,0 +1,13 @@
+{
+  "name": "bootstrap-switch",
+  "description" : "Unofficial bootstrap switch",
+  "version": "1.8.1",
+  "main": "./bootstrap-switch.js",
+  "ignore": [ 
+    "examples"
+  ],
+  "dependencies": {
+    "jquery": "~1.9.0"
+  }
+}
+
