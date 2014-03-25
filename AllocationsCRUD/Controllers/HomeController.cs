@@ -13,7 +13,7 @@ namespace AllocationsCRUD.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult PrevDemo()
         {
             ViewBag.Message = "Some page in your MVC app.";
 

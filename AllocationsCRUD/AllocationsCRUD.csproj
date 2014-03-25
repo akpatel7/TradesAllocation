@@ -475,6 +475,7 @@
     <Content Include="Scripts\ODataBreezeSample\app\datacontext - saveSortedChangesAsOne.js" />
     <Content Include="Scripts\ODataBreezeSample\app\datacontext.js" />
     <Content Include="Scripts\ODataBreezeSample\app\entityManagerFactory.js" />
+    <Content Include="Scripts\ODataBreezeSample\app\ezTree.js" />
     <Content Include="Scripts\ODataBreezeSample\app\images\logo.png" />
     <Content Include="Scripts\ODataBreezeSample\app\logger.js" />
     <Content Include="Scripts\ODataBreezeSample\app\new-todolist.html" />
@@ -495,6 +496,7 @@
     <Content Include="Scripts\ODataBreezeSample\jquery-1.10.2.js" />
     <Content Include="Scripts\ODataBreezeSample\jquery-1.10.2.min.js" />
     <None Include="Scripts\ODataBreezeSample\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\ODataBreezeSample\jquery.mjs.nestedSortable.js" />
     <Content Include="Scripts\ODataBreezeSample\jquery.validate.js" />
     <Content Include="Scripts\ODataBreezeSample\jquery.validate.min.js" />
     <Content Include="Scripts\ODataBreezeSample\jquery.validate.unobtrusive.js" />
@@ -536,6 +538,7 @@
     <Content Include="Scripts\ODataBreezeSample\angular.min.js.map" />
     <Content Include="Scripts\ODataBreezeSample\jquery-1.10.2.min.map" />
     <Content Include="Scripts\ODataBreezeSample\toastr.min.js.map" />
+    <Content Include="Views\Home\PrevDemo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
