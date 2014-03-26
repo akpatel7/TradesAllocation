@@ -11,3 +11,5 @@ AllocationsCRUD/bin/
 AllocationsCRUD/obj/
 *.suo
 *.user
+AllocationsCRUD/App_Data/ASPNETDB.MDF
+AllocationsCRUD/App_Data/aspnetdb_log.ldf
