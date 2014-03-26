@@ -1,7 +1,7 @@
 ﻿define(['angular', 'underscore', 'jquery'], function (angular, _, $) {
     'use strict';
 
-    var service = function (DataEndpoint, $http, $q) {
+    var service = function ($http, $q) {
 
         var _formatAllocation = function (allocation) {
 
@@ -108,12 +108,12 @@
             },
             getData: function (options) {
                 var deferred = $q.defer();
-                DataEndpoint.getTemplatedEndpoint(['bca-trades', 'portfolios'], [
-                    { key: '$expand', value: 'Allocations' },
-                    { key: '$inlinecount', value: 'allpages' },
-                    { key: '$orderby', value: 'ServiceCode, LastUpdated desc' }])
-                    .then(function (url) {
-                        $http.get(url).success(function (data) {
+               
+                $http.get({
+                    method: 'GET',
+                    url: '/Api/Allocations/GetAllocationsTestData',
+                    responseType: 'json' // remove this line to make work in IE8,IE9
+                }).success(function (data) {
                             var portfolios = [];
                             _.each(data.value, function (item) {
                                 var portfolio = {
@@ -147,37 +147,28 @@
 
                             deferred.resolve({ portfolios: portfolios, totalCount: parseInt(data['odata.count'], 10) });
                         });
-                    });
-
+                   
                 return deferred.promise;
             },
             getAllocations: function (options) {
                 options = _.extend({ page: 0, pageSize: 10 }, options);
                 var deferred = $q.defer();
-                DataEndpoint.getTemplatedEndpoint(
-                    ['bca-trades', 'allocations'],
-                    [
-                        { key: '$expand', value: 'PortfolioSummary' },
-                        { key: '$inlinecount', value: 'allpages' },
-                        { key: '$skip', value: options.page * options.pageSize },
-                        { key: '$top', value: options.pageSize },
-                        { key: '$orderby', value: 'LastUpdated desc,Instrument' },
-                        { key: '$filter', value: "InstrumentUri eq '" + options.instrumentUri + "' or InstrumentUri eq '<" + options.instrumentUri + ">'" }
-                    ])
-                    .then(function (url) {
-                        //for testing without odata backend
-                        var url = 'http://localhost:55802/Api/Allocations/GetAllocationsTestData';
-                        $http.get(url).success(function (data) {
+                
+                        $http({
+                            method: 'GET',
+                            url: '/Api/Allocations/GetAllocationsTestData',
+                            responseType: 'json' // remove this line to make work in IE8,IE9
+                        }).success(function (data) {
                             _.each(data.value, _formatAllocation);
                             deferred.resolve({ allocations: data.value, totalCount: parseInt(data['odata.count'], 10) });
                         });
-                    });
+                  
 
                 return deferred.promise;
             }
         };
     };
 
-    service.$inject = ['DataEndpoint', '$http', '$q'];
+    service.$inject = ['$http', '$q'];
     return service;
 });
