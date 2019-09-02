@@ -1,4 +1,2 @@
 TradesAllocation
 ================
-
-TA-95
